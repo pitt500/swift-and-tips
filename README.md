@@ -1,2 +1,2 @@
-# swift-and-tips
-Swift &amp;&amp; Tips Repository
+# Swift and Tips
+Repository with all the exercises covered in the Youtube channel
