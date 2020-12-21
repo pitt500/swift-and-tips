@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct StateDemoView: View {
-    @State var isDay = false
+    @State private var isDay = false
     
     var body: some View {
         ChildView(isDay: $isDay)

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct DemoLoginView: View {
-    @State var email = ""
-    @State var password = ""
-    @State var isUserLoggedIn = false
+    @State private var email = ""
+    @State private var password = ""
+    @State private var isUserLoggedIn = false
     
     var body: some View {
         VStack {
