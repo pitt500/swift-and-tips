@@ -23,18 +23,19 @@ struct DemoLoginView: View {
                     )
                 )
                 .padding(.bottom, 60)
-            EmailField (
-                email: $email,
-                placeholder: "Please enter your email",
-                borderColor: .gray
-            )
-            .padding([.leading, .trailing], 24)
-            
-            PasswordField (
-                password: $password,
-                placeholder: "Please enter your password",
-                borderColor: .gray
-            )
+            VStack {
+                EmailField (
+                    email: $email,
+                    placeholder: "Please enter your email",
+                    borderColor: .gray
+                )
+                
+                PasswordField (
+                    password: $password,
+                    placeholder: "Please enter your password",
+                    borderColor: .gray
+                )
+            }
             .padding([.leading, .trailing], 24)
             
             Button(
@@ -50,7 +51,7 @@ struct DemoLoginView: View {
             }
         )
         
-            
+        
     }
 }
 
