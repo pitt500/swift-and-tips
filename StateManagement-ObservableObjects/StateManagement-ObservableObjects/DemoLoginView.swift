@@ -1,8 +1,8 @@
 //
-//  DemoLoginView.swift
-//  StateManagementDemo
+//  ContentView.swift
+//  StateManagement-ObservableObjects
 //
-//  Created by Pedro Rojas on 12/16/20.
+//  Created by Pedro Rojas on 12/23/20.
 //
 
 import SwiftUI
@@ -23,19 +23,18 @@ struct DemoLoginView: View {
                     )
                 )
                 .padding(.bottom, 60)
-            VStack {
-                EmailField (
-                    email: $email,
-                    placeholder: "Please enter your email",
-                    borderColor: .gray
-                )
-                
-                PasswordField (
-                    password: $password,
-                    placeholder: "Please enter your password",
-                    borderColor: .gray
-                )
-            }
+            EmailField (
+                email: $email,
+                placeholder: "Please enter your email",
+                borderColor: .gray
+            )
+            .padding([.leading, .trailing], 24)
+            
+            PasswordField (
+                password: $password,
+                placeholder: "Please enter your password",
+                borderColor: .gray
+            )
             .padding([.leading, .trailing], 24)
             
             Button(
@@ -51,7 +50,7 @@ struct DemoLoginView: View {
             }
         )
         
-        
+            
     }
 }
 
@@ -60,3 +59,5 @@ struct DemoLoginView_Previews: PreviewProvider {
         DemoLoginView()
     }
 }
+
+

@@ -1,19 +1,19 @@
 //
-//  EmailField.swift
-//  StateManagementDemo
+//  PasswordField.swift
+//  StateManagement-ObservableObjects
 //
-//  Created by Pedro Rojas on 12/16/20.
+//  Created by Pedro Rojas on 12/23/20.
 //
 
 import SwiftUI
 
-struct EmailField: View {
-    @Binding var email: String
+struct PasswordField: View {
+    @Binding var password: String
     var placeholder: String
     var borderColor: Color
     
     var body: some View {
-        TextField(placeholder, text: self.$email)
+        SecureField(placeholder, text: self.$password)
             .textContentType(.emailAddress)
             .keyboardType(.emailAddress)
             .autocapitalization(.none)
@@ -30,12 +30,13 @@ struct EmailField: View {
     }
 }
 
-struct EmailField_Previews: PreviewProvider {
+struct PasswordField_Previews: PreviewProvider {
     static var previews: some View {
-        EmailField(
-            email: .constant("hello@pedrorojas.dev"),
-            placeholder: "Please enter your email",
+        PasswordField(
+            password: .constant(""),
+            placeholder: "Enter your password here",
             borderColor: .blue
         )
     }
 }
+

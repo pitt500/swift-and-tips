@@ -7,31 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB01B3E5258A4531005CAEE4 /* StateManagementDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01B3E4258A4531005CAEE4 /* StateManagementDemoApp.swift */; };
-		EB01B3E9258A4534005CAEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB01B3E8258A4534005CAEE4 /* Assets.xcassets */; };
-		EB01B3EC258A4534005CAEE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB01B3EB258A4534005CAEE4 /* Preview Assets.xcassets */; };
-		EB01B3F5258A4562005CAEE4 /* StateDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB01B3F4258A4562005CAEE4 /* StateDemoView.swift */; };
-		EB96C3E7258B22F30035A141 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96C3E6258B22F30035A141 /* PasswordField.swift */; };
-		EB96C3EA258B2C950035A141 /* MainAppDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96C3E9258B2C950035A141 /* MainAppDemo.swift */; };
-		EBCFC8D4258B1B570064AA49 /* DemoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCFC8D3258B1B570064AA49 /* DemoLoginView.swift */; };
-		EBCFC8D7258B1DFE0064AA49 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCFC8D6258B1DFE0064AA49 /* EmailField.swift */; };
+		EB263DCA2593E0F6001E47EB /* StateManagement_ObservableObjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DC92593E0F6001E47EB /* StateManagement_ObservableObjectsApp.swift */; };
+		EB263DCC2593E0F6001E47EB /* DemoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DCB2593E0F6001E47EB /* DemoLoginView.swift */; };
+		EB263DCE2593E0F9001E47EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB263DCD2593E0F9001E47EB /* Assets.xcassets */; };
+		EB263DD12593E0F9001E47EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB263DD02593E0F9001E47EB /* Preview Assets.xcassets */; };
+		EB263DDA2593E13A001E47EB /* MainAppDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DD92593E13A001E47EB /* MainAppDemo.swift */; };
+		EB263DE02593E172001E47EB /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DDF2593E172001E47EB /* EmailField.swift */; };
+		EB263DE42593E18B001E47EB /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DE32593E18B001E47EB /* PasswordField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB01B3E1258A4531005CAEE4 /* StateManagementDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateManagementDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB01B3E4258A4531005CAEE4 /* StateManagementDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDemoApp.swift; sourceTree = "<group>"; };
-		EB01B3E8258A4534005CAEE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EB01B3EB258A4534005CAEE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EB01B3ED258A4534005CAEE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB01B3F4258A4562005CAEE4 /* StateDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDemoView.swift; sourceTree = "<group>"; };
-		EB96C3E6258B22F30035A141 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
-		EB96C3E9258B2C950035A141 /* MainAppDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppDemo.swift; sourceTree = "<group>"; };
-		EBCFC8D3258B1B570064AA49 /* DemoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLoginView.swift; sourceTree = "<group>"; };
-		EBCFC8D6258B1DFE0064AA49 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		EB263DC62593E0F6001E47EB /* StateManagement-ObservableObjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StateManagement-ObservableObjects.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB263DC92593E0F6001E47EB /* StateManagement_ObservableObjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagement_ObservableObjectsApp.swift; sourceTree = "<group>"; };
+		EB263DCB2593E0F6001E47EB /* DemoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLoginView.swift; sourceTree = "<group>"; };
+		EB263DCD2593E0F9001E47EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB263DD02593E0F9001E47EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EB263DD22593E0F9001E47EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB263DD92593E13A001E47EB /* MainAppDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppDemo.swift; sourceTree = "<group>"; };
+		EB263DDF2593E172001E47EB /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		EB263DE32593E18B001E47EB /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB01B3DE258A4531005CAEE4 /* Frameworks */ = {
+		EB263DC32593E0F6001E47EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,97 +39,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB01B3D8258A4531005CAEE4 = {
+		EB263DBD2593E0F6001E47EB = {
 			isa = PBXGroup;
 			children = (
-				EB01B3E3258A4531005CAEE4 /* StateManagementDemo */,
-				EB01B3E2258A4531005CAEE4 /* Products */,
+				EB263DC82593E0F6001E47EB /* StateManagement-ObservableObjects */,
+				EB263DC72593E0F6001E47EB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EB01B3E2258A4531005CAEE4 /* Products */ = {
+		EB263DC72593E0F6001E47EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB01B3E1258A4531005CAEE4 /* StateManagementDemo.app */,
+				EB263DC62593E0F6001E47EB /* StateManagement-ObservableObjects.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB01B3E3258A4531005CAEE4 /* StateManagementDemo */ = {
+		EB263DC82593E0F6001E47EB /* StateManagement-ObservableObjects */ = {
 			isa = PBXGroup;
 			children = (
-				EB96C3E4258B21CF0035A141 /* Password */,
-				EBCFC8DC258B1F500064AA49 /* Email */,
-				EB01B3E4258A4531005CAEE4 /* StateManagementDemoApp.swift */,
-				EB01B3E8258A4534005CAEE4 /* Assets.xcassets */,
-				EB01B3ED258A4534005CAEE4 /* Info.plist */,
-				EB01B3EA258A4534005CAEE4 /* Preview Content */,
-				EB01B3F4258A4562005CAEE4 /* StateDemoView.swift */,
-				EBCFC8D3258B1B570064AA49 /* DemoLoginView.swift */,
-				EB96C3E9258B2C950035A141 /* MainAppDemo.swift */,
+				EB263DDE2593E161001E47EB /* Password */,
+				EB263DDD2593E15C001E47EB /* Email */,
+				EB263DC92593E0F6001E47EB /* StateManagement_ObservableObjectsApp.swift */,
+				EB263DCB2593E0F6001E47EB /* DemoLoginView.swift */,
+				EB263DCD2593E0F9001E47EB /* Assets.xcassets */,
+				EB263DD22593E0F9001E47EB /* Info.plist */,
+				EB263DCF2593E0F9001E47EB /* Preview Content */,
+				EB263DD92593E13A001E47EB /* MainAppDemo.swift */,
 			);
-			path = StateManagementDemo;
+			path = "StateManagement-ObservableObjects";
 			sourceTree = "<group>";
 		};
-		EB01B3EA258A4534005CAEE4 /* Preview Content */ = {
+		EB263DCF2593E0F9001E47EB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EB01B3EB258A4534005CAEE4 /* Preview Assets.xcassets */,
+				EB263DD02593E0F9001E47EB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		EB96C3E4258B21CF0035A141 /* Password */ = {
+		EB263DDD2593E15C001E47EB /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				EB96C3E6258B22F30035A141 /* PasswordField.swift */,
-			);
-			path = Password;
-			sourceTree = "<group>";
-		};
-		EBCFC8DC258B1F500064AA49 /* Email */ = {
-			isa = PBXGroup;
-			children = (
-				EBCFC8D6258B1DFE0064AA49 /* EmailField.swift */,
+				EB263DDF2593E172001E47EB /* EmailField.swift */,
 			);
 			path = Email;
+			sourceTree = "<group>";
+		};
+		EB263DDE2593E161001E47EB /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				EB263DE32593E18B001E47EB /* PasswordField.swift */,
+			);
+			path = Password;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB01B3E0258A4531005CAEE4 /* StateManagementDemo */ = {
+		EB263DC52593E0F6001E47EB /* StateManagement-ObservableObjects */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB01B3F0258A4534005CAEE4 /* Build configuration list for PBXNativeTarget "StateManagementDemo" */;
+			buildConfigurationList = EB263DD52593E0F9001E47EB /* Build configuration list for PBXNativeTarget "StateManagement-ObservableObjects" */;
 			buildPhases = (
-				EB01B3DD258A4531005CAEE4 /* Sources */,
-				EB01B3DE258A4531005CAEE4 /* Frameworks */,
-				EB01B3DF258A4531005CAEE4 /* Resources */,
+				EB263DC22593E0F6001E47EB /* Sources */,
+				EB263DC32593E0F6001E47EB /* Frameworks */,
+				EB263DC42593E0F6001E47EB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = StateManagementDemo;
-			productName = StateManagementDemo;
-			productReference = EB01B3E1258A4531005CAEE4 /* StateManagementDemo.app */;
+			name = "StateManagement-ObservableObjects";
+			productName = "StateManagement-ObservableObjects";
+			productReference = EB263DC62593E0F6001E47EB /* StateManagement-ObservableObjects.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EB01B3D9258A4531005CAEE4 /* Project object */ = {
+		EB263DBE2593E0F6001E47EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					EB01B3E0258A4531005CAEE4 = {
+					EB263DC52593E0F6001E47EB = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = EB01B3DC258A4531005CAEE4 /* Build configuration list for PBXProject "StateManagementDemo" */;
+			buildConfigurationList = EB263DC12593E0F6001E47EB /* Build configuration list for PBXProject "StateManagement-ObservableObjects" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,46 +136,45 @@
 				en,
 				Base,
 			);
-			mainGroup = EB01B3D8258A4531005CAEE4;
-			productRefGroup = EB01B3E2258A4531005CAEE4 /* Products */;
+			mainGroup = EB263DBD2593E0F6001E47EB;
+			productRefGroup = EB263DC72593E0F6001E47EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB01B3E0258A4531005CAEE4 /* StateManagementDemo */,
+				EB263DC52593E0F6001E47EB /* StateManagement-ObservableObjects */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EB01B3DF258A4531005CAEE4 /* Resources */ = {
+		EB263DC42593E0F6001E47EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB01B3EC258A4534005CAEE4 /* Preview Assets.xcassets in Resources */,
-				EB01B3E9258A4534005CAEE4 /* Assets.xcassets in Resources */,
+				EB263DD12593E0F9001E47EB /* Preview Assets.xcassets in Resources */,
+				EB263DCE2593E0F9001E47EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB01B3DD258A4531005CAEE4 /* Sources */ = {
+		EB263DC22593E0F6001E47EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB96C3E7258B22F30035A141 /* PasswordField.swift in Sources */,
-				EB96C3EA258B2C950035A141 /* MainAppDemo.swift in Sources */,
-				EB01B3E5258A4531005CAEE4 /* StateManagementDemoApp.swift in Sources */,
-				EB01B3F5258A4562005CAEE4 /* StateDemoView.swift in Sources */,
-				EBCFC8D4258B1B570064AA49 /* DemoLoginView.swift in Sources */,
-				EBCFC8D7258B1DFE0064AA49 /* EmailField.swift in Sources */,
+				EB263DCC2593E0F6001E47EB /* DemoLoginView.swift in Sources */,
+				EB263DCA2593E0F6001E47EB /* StateManagement_ObservableObjectsApp.swift in Sources */,
+				EB263DDA2593E13A001E47EB /* MainAppDemo.swift in Sources */,
+				EB263DE42593E18B001E47EB /* PasswordField.swift in Sources */,
+				EB263DE02593E172001E47EB /* EmailField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EB01B3EE258A4534005CAEE4 /* Debug */ = {
+		EB263DD32593E0F9001E47EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		EB01B3EF258A4534005CAEE4 /* Release */ = {
+		EB263DD42593E0F9001E47EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,44 +290,44 @@
 			};
 			name = Release;
 		};
-		EB01B3F1258A4534005CAEE4 /* Debug */ = {
+		EB263DD62593E0F9001E47EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"StateManagementDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StateManagement-ObservableObjects/Preview Content\"";
 				DEVELOPMENT_TEAM = LHJA6J73E9;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = StateManagementDemo/Info.plist;
+				INFOPLIST_FILE = "StateManagement-ObservableObjects/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandtips.StateManagementDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftandtips.StateManagement-ObservableObjects";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EB01B3F2258A4534005CAEE4 /* Release */ = {
+		EB263DD72593E0F9001E47EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"StateManagementDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StateManagement-ObservableObjects/Preview Content\"";
 				DEVELOPMENT_TEAM = LHJA6J73E9;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = StateManagementDemo/Info.plist;
+				INFOPLIST_FILE = "StateManagement-ObservableObjects/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandtips.StateManagementDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftandtips.StateManagement-ObservableObjects";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB01B3DC258A4531005CAEE4 /* Build configuration list for PBXProject "StateManagementDemo" */ = {
+		EB263DC12593E0F6001E47EB /* Build configuration list for PBXProject "StateManagement-ObservableObjects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB01B3EE258A4534005CAEE4 /* Debug */,
-				EB01B3EF258A4534005CAEE4 /* Release */,
+				EB263DD32593E0F9001E47EB /* Debug */,
+				EB263DD42593E0F9001E47EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB01B3F0258A4534005CAEE4 /* Build configuration list for PBXNativeTarget "StateManagementDemo" */ = {
+		EB263DD52593E0F9001E47EB /* Build configuration list for PBXNativeTarget "StateManagement-ObservableObjects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB01B3F1258A4534005CAEE4 /* Debug */,
-				EB01B3F2258A4534005CAEE4 /* Release */,
+				EB263DD62593E0F9001E47EB /* Debug */,
+				EB263DD72593E0F9001E47EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EB01B3D9258A4531005CAEE4 /* Project object */;
+	rootObject = EB263DBE2593E0F6001E47EB /* Project object */;
 }

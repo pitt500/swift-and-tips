@@ -1,8 +1,8 @@
 //
 //  MainAppDemo.swift
-//  StateManagementDemo
+//  StateManagement-ObservableObjects
 //
-//  Created by Pedro Rojas on 12/16/20.
+//  Created by Pedro Rojas on 12/23/20.
 //
 
 import SwiftUI
@@ -22,3 +22,4 @@ struct MainAppDemo_Previews: PreviewProvider {
         )
     }
 }
+
