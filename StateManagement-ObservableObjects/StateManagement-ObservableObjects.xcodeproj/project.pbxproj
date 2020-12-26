@@ -20,6 +20,9 @@
 		EB263DFA259415EC001E47EB /* ZeldaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DF9259415EC001E47EB /* ZeldaDetail.swift */; };
 		EB263DFE25941606001E47EB /* MarioDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263DFD25941606001E47EB /* MarioDetail.swift */; };
 		EB263E012594161B001E47EB /* AmiiboDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263E002594161B001E47EB /* AmiiboDetail.swift */; };
+		EB263E1025941958001E47EB /* MainAmiiboView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263E0F25941958001E47EB /* MainAmiiboView.swift */; };
+		EB263E1325941B01001E47EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263E1225941B01001E47EB /* Settings.swift */; };
+		EB263E1625941B1E001E47EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263E1525941B1E001E47EB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		EB263DF9259415EC001E47EB /* ZeldaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeldaDetail.swift; sourceTree = "<group>"; };
 		EB263DFD25941606001E47EB /* MarioDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioDetail.swift; sourceTree = "<group>"; };
 		EB263E002594161B001E47EB /* AmiiboDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetail.swift; sourceTree = "<group>"; };
+		EB263E0F25941958001E47EB /* MainAmiiboView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAmiiboView.swift; sourceTree = "<group>"; };
+		EB263E1225941B01001E47EB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		EB263E1525941B1E001E47EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,8 @@
 				EB263DF32594159D001E47EB /* Model */,
 				EB263DEE25941578001E47EB /* Cell */,
 				EB263DEA25941566001E47EB /* AmiiboList.swift */,
+				EB263E0F25941958001E47EB /* MainAmiiboView.swift */,
+				EB263E1225941B01001E47EB /* Settings.swift */,
 			);
 			path = Amiibos;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				EB263DF4259415C2001E47EB /* Amiibo.swift */,
+				EB263E1525941B1E001E47EB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,10 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB263E1025941958001E47EB /* MainAmiiboView.swift in Sources */,
 				EB263DFA259415EC001E47EB /* ZeldaDetail.swift in Sources */,
+				EB263E1325941B01001E47EB /* Settings.swift in Sources */,
 				EB263E012594161B001E47EB /* AmiiboDetail.swift in Sources */,
 				EB263DF5259415C2001E47EB /* Amiibo.swift in Sources */,
 				EB263DCC2593E0F6001E47EB /* DemoLoginView.swift in Sources */,
+				EB263E1625941B1E001E47EB /* User.swift in Sources */,
 				EB263DCA2593E0F6001E47EB /* StateManagement_ObservableObjectsApp.swift in Sources */,
 				EB263DDA2593E13A001E47EB /* MainAppDemo.swift in Sources */,
 				EB263DFE25941606001E47EB /* MarioDetail.swift in Sources */,

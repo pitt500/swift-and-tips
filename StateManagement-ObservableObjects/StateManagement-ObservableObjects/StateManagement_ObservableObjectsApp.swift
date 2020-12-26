@@ -11,7 +11,7 @@ import SwiftUI
 struct StateManagement_ObservableObjectsApp: App {
     var body: some Scene {
         WindowGroup {
-            DemoLoginView()
+            MainAmiiboView()
         }
     }
 }

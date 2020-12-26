@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AmiiboList: View {
-
-    let amiibos = Amiibo.demo
+    
+    @ObservedObject var user: User
+    private let amiibos = Amiibo.demo
     
     var body: some View {
         NavigationView {
@@ -19,6 +20,17 @@ struct AmiiboList: View {
                     label: { AmiiboCell(amiibo: amiibo) }
                 )
             }
+            .listStyle(PlainListStyle())
+            .navigationBarItems(
+                trailing:
+                    Button(
+                        action: { user.itemCounter += 1 },
+                        label: {
+                            Text("Add to Cart")
+                        }
+                    )
+            )
+            
             .navigationTitle("Amiibos")
         }
     }
@@ -38,6 +50,6 @@ struct AmiiboList: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AmiiboList()
+        AmiiboList(user: User())
     }
 }
