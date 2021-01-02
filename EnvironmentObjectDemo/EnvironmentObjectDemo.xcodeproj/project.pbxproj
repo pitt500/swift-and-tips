@@ -73,7 +73,6 @@
 				EB3C26D725A009C600812779 /* Assets.xcassets */,
 				EB3C26DC25A009C600812779 /* Info.plist */,
 				EB3C26D925A009C600812779 /* Preview Content */,
-				EB3C26E325A00A0600812779 /* User.swift */,
 			);
 			path = EnvironmentObjectDemo;
 			sourceTree = "<group>";
@@ -92,6 +91,7 @@
 				EB3C26E725A00BA400812779 /* ItemCart.swift */,
 				EB3C26EA25A00C1B00812779 /* Food.swift */,
 				EB3C26EE25A00C6800812779 /* Beverage.swift */,
+				EB3C26E325A00A0600812779 /* User.swift */,
 				EB3C26F125A00C7C00812779 /* Dessert.swift */,
 			);
 			path = Model;

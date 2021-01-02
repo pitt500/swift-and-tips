@@ -11,4 +11,6 @@ struct Beverage: ItemCart {
     var id: UUID = UUID()
     var name: String
     var price: Double
+    var description: String
+    var image: String
 }

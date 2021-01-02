@@ -12,7 +12,7 @@ struct OrderCell: View {
     
     var body: some View {
         HStack {
-            Image(item.name)
+            Image(item.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 120, height: 100)
@@ -21,7 +21,7 @@ struct OrderCell: View {
             VStack(alignment: .leading) {
                 Text(item.name.capitalized)
                     .font(.title)
-                Text("Description")
+                Text(item.description)
                     .font(.caption)
             }
             Spacer()
@@ -31,7 +31,7 @@ struct OrderCell: View {
 
 struct OrderCell_Previews: PreviewProvider {
     static var previews: some View {
-        OrderCell(item: Food(name: "burrito", price: 20.5))
+        OrderCell(item: Food.sample[0])
             .previewLayout(.fixed(width: 300, height: 100))
     }
 }

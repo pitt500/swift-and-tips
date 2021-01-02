@@ -9,8 +9,8 @@ import SwiftUI
 
 struct OrderView: View {
     var body: some View {
-        List(0..<5) { index in
-            OrderCell(item: Food(name: "burrito", price: 20.5))
+        List(Food.sample) { item in
+            OrderCell(item: item)
         }
         .navigationTitle("Hello")
     }

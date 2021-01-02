@@ -11,4 +11,6 @@ protocol ItemCart {
     var id: UUID { get set }
     var name: String { get set }
     var price: Double { get set }
+    var image: String { get set }
+    var description: String { get set }
 }
