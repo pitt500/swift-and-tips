@@ -11,6 +11,11 @@
 		EB3C26D625A009C400812779 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26D525A009C400812779 /* ContentView.swift */; };
 		EB3C26D825A009C600812779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3C26D725A009C600812779 /* Assets.xcassets */; };
 		EB3C26DB25A009C600812779 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3C26DA25A009C600812779 /* Preview Assets.xcassets */; };
+		EB3C26E425A00A0600812779 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26E325A00A0600812779 /* User.swift */; };
+		EB3C26E825A00BA400812779 /* ItemCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26E725A00BA400812779 /* ItemCart.swift */; };
+		EB3C26EB25A00C1B00812779 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26EA25A00C1B00812779 /* Food.swift */; };
+		EB3C26EF25A00C6800812779 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26EE25A00C6800812779 /* Beverage.swift */; };
+		EB3C26F225A00C7C00812779 /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26F125A00C7C00812779 /* Dessert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		EB3C26D725A009C600812779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB3C26DA25A009C600812779 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB3C26DC25A009C600812779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB3C26E325A00A0600812779 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB3C26E725A00BA400812779 /* ItemCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCart.swift; sourceTree = "<group>"; };
+		EB3C26EA25A00C1B00812779 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		EB3C26EE25A00C6800812779 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		EB3C26F125A00C7C00812779 /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +62,13 @@
 		EB3C26D225A009C400812779 /* EnvironmentObjectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C26E625A00B9A00812779 /* Model */,
 				EB3C26D325A009C400812779 /* EnvironmentObjectDemoApp.swift */,
 				EB3C26D525A009C400812779 /* ContentView.swift */,
 				EB3C26D725A009C600812779 /* Assets.xcassets */,
 				EB3C26DC25A009C600812779 /* Info.plist */,
 				EB3C26D925A009C600812779 /* Preview Content */,
+				EB3C26E325A00A0600812779 /* User.swift */,
 			);
 			path = EnvironmentObjectDemo;
 			sourceTree = "<group>";
@@ -67,6 +79,17 @@
 				EB3C26DA25A009C600812779 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB3C26E625A00B9A00812779 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C26E725A00BA400812779 /* ItemCart.swift */,
+				EB3C26EA25A00C1B00812779 /* Food.swift */,
+				EB3C26EE25A00C6800812779 /* Beverage.swift */,
+				EB3C26F125A00C7C00812779 /* Dessert.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3C26EF25A00C6800812779 /* Beverage.swift in Sources */,
+				EB3C26E825A00BA400812779 /* ItemCart.swift in Sources */,
+				EB3C26F225A00C7C00812779 /* Dessert.swift in Sources */,
 				EB3C26D625A009C400812779 /* ContentView.swift in Sources */,
+				EB3C26EB25A00C1B00812779 /* Food.swift in Sources */,
 				EB3C26D425A009C400812779 /* EnvironmentObjectDemoApp.swift in Sources */,
+				EB3C26E425A00A0600812779 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
