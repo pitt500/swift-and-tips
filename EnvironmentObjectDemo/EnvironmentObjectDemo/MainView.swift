@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var selectedFood: Food?
+    @State private var startOrder = false
     
     var body: some View {
-        NavigationView {
-            OrderView(itemList: Food.sample)
+        
+        VStack {
+            Text("Welcome! 👋🏼")
+                .font(.title)
+                .sheet(isPresented: $startOrder, content: {
+                    NavigationView {
+                        OrderView(itemList: Food.sample)
+                    }
+                })
+            
+            Button("Make an order", action: { startOrder = true })
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                
         }
     }
 }
