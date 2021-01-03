@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct OrderView: View {
+struct OrderView<Content: View>: View {
     @State var selected: Food?
     let itemList: [Food]
+    let destination: Content
     
     var body: some View {
         VStack {
-            List(Food.sample) { item in
+            List(itemList) { item in
                 Button(
                     action: { selected = item },
                     label: {
@@ -22,11 +23,10 @@ struct OrderView: View {
                 )
             }
             .listStyle(PlainListStyle())
-            .navigationTitle("Hello")
             
             if selected != nil {
                 NavigationLink(
-                    destination: Text("Destination"),
+                    destination: destination,
                     label: {
                         Text("Next")
                             .font(.title2)
@@ -48,7 +48,8 @@ struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             OrderView(
-                itemList: Food.sample
+                itemList: Food.sample,
+                destination: Text("Hello")
             )
         }
     }
