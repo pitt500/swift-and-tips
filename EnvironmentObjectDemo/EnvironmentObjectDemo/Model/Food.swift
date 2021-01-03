@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Food: ItemCart, Identifiable {
+struct Food: Identifiable, Hashable {
     var id: UUID = UUID()
     var name: String
     var price: Double

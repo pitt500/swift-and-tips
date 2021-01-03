@@ -9,7 +9,7 @@ import Combine
 
 class User: ObservableObject {
     let name: String
-    var cart: [ItemCart] = []
+    var cart: [Food] = []
     
     init(name: String) {
         self.name = name

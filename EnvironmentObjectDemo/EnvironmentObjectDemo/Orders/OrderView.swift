@@ -8,18 +8,48 @@
 import SwiftUI
 
 struct OrderView: View {
+    @State var selected: Food?
+    let itemList: [Food]
+    
     var body: some View {
-        List(Food.sample) { item in
-            OrderCell(item: item)
+        VStack {
+            List(Food.sample) { item in
+                Button(
+                    action: { selected = item },
+                    label: {
+                        OrderCell(item: item, isSelected: item == selected)
+                    }
+                )
+            }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Hello")
+            
+            if selected != nil {
+                NavigationLink(
+                    destination: Text("Destination"),
+                    label: {
+                        Text("Next")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                            .padding()
+                            
+                            
+                    }
+                )
+            }
         }
-        .navigationTitle("Hello")
     }
 }
 
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            OrderView()
+            OrderView(
+                itemList: Food.sample
+            )
         }
     }
 }
