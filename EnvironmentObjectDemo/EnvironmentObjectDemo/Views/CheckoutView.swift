@@ -10,7 +10,7 @@ import SwiftUI
 struct CheckoutView: View {
     let finalItems: [Food]
     @Binding var isPresented: Bool
-    @ObservedObject var userSettings: UserSettings
+    @Environment(\.settings) var userSettings: UserSettings
     @State private var isPaying = false
     
     var body: some View {
@@ -56,8 +56,7 @@ struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
         CheckoutView(
             finalItems: Food.sample,
-            isPresented: .constant(true),
-            userSettings: UserSettings(username: "Pitt")
+            isPresented: .constant(true)
         )
     }
 }

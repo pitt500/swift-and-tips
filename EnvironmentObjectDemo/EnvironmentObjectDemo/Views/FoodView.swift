@@ -10,7 +10,6 @@ import SwiftUI
 struct FoodView: View {
     @Binding var isPresented: Bool
     @State private var selectedItems: [Food] = []
-    @ObservedObject var userSettings: UserSettings
     
     var body: some View {
         OrderView(
@@ -18,8 +17,7 @@ struct FoodView: View {
             itemList: Food.sample,
             destination: BeverageView(
                 isPresented: $isPresented,
-                selectedItems: $selectedItems,
-                userSettings: userSettings
+                selectedItems: $selectedItems
             )
         )
         .navigationTitle("Food")
@@ -28,9 +26,6 @@ struct FoodView: View {
 
 struct FoodView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodView(
-            isPresented: .constant(true),
-            userSettings: UserSettings(username: "Pitt")
-        )
+        FoodView(isPresented: .constant(true))
     }
 }
