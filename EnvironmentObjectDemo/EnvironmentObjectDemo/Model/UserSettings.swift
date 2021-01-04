@@ -9,7 +9,7 @@ import Combine
 
 class UserSettings: ObservableObject {
     let username: String
-    var cart: [Food] = []
+    @Published var cart: [Food] = []
     
     init(username: String) {
         self.username = username
