@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State private var startOrder = false
-    @ObservedObject var userSettings: UserSettings
+    @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
         
@@ -19,10 +19,7 @@ struct MainView: View {
                     .font(.title)
                     .sheet(isPresented: $startOrder, content: {
                         NavigationView {
-                            FoodView(
-                                isPresented: $startOrder,
-                                userSettings: userSettings
-                            )
+                            FoodView(isPresented: $startOrder)
                         }
                     })
                 
@@ -46,6 +43,7 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(userSettings: UserSettings(username: "Pitt"))
+        MainView()
+            .environmentObject(UserSettings(username: "Pitt"))
     }
 }
