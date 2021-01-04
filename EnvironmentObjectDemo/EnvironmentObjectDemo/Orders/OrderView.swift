@@ -18,8 +18,7 @@ struct OrderView<Content: View>: View {
             List(itemList) { item in
                 Button(
                     action: {
-                        selected = item
-                        selectedItems.append(item)
+                        addSelectionToList(item)
                     },
                     label: {
                         OrderCell(item: item, isSelected: item == selected)
@@ -45,6 +44,14 @@ struct OrderView<Content: View>: View {
                 )
             }
         }
+    }
+    private func addSelectionToList(_ item: Food) {
+        if selected != nil {
+            _ = selectedItems.popLast()
+        }
+        
+        selected = item
+        selectedItems.append(item)
     }
 }
 
