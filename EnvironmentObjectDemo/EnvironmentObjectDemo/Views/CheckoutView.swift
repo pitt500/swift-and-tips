@@ -10,6 +10,7 @@ import SwiftUI
 struct CheckoutView: View {
     let finalItems: [Food]
     @Binding var isPresented: Bool
+    @State private var isPaying = false
     
     var body: some View {
         VStack(alignment: .center) {
@@ -20,8 +21,12 @@ struct CheckoutView: View {
                 OrderCell(item: $0, isSelected: false)
             }
             
+            if isPaying {
+                ProgressView("Processing your payment")
+            }
+            
             Button(
-                action: { isPresented = false},
+                action: { paymentSimulation() },
                 label: {
                     Text("Pay")
                         .font(.title2)
@@ -31,9 +36,17 @@ struct CheckoutView: View {
                         .cornerRadius(8)
                         .padding()
                 }
-            )
+            ).disabled(isPaying)
+            
         }
         .navigationTitle("Checkout")
+    }
+    
+    private func paymentSimulation() {
+        isPaying = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            isPresented = false
+        }
     }
 }
 
