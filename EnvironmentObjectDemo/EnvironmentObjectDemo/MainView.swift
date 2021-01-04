@@ -44,18 +44,6 @@ struct MainView: View {
     }
 }
 
-extension Binding {
-    func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
-        Binding(
-            get: { self.wrappedValue },
-            set: { newValue in
-                self.wrappedValue = newValue
-                handler(newValue)
-            }
-        )
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(userSettings: UserSettings(username: "Pitt"))
