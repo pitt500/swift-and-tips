@@ -13,7 +13,8 @@ struct EnvironmentObjectDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView(userSettings: userSettings)
+            MainView()
+                .environmentObject(userSettings)
         }
     }
 }
