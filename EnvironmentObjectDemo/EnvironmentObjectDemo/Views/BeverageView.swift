@@ -12,7 +12,7 @@ struct BeverageView: View {
     
     var body: some View {
         OrderView(
-            itemList: Food.sample,
+            itemList: Food.beverages,
             destination: DessertView(isPresented: $isPresented))
             .navigationTitle("Beverage")
     }

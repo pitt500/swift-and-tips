@@ -12,7 +12,7 @@ struct DessertView: View {
     
     var body: some View {
         OrderView(
-            itemList: Food.sample,
+            itemList: Food.desserts,
             destination: CheckoutView(
                 finalItems: Food.sample,
                 isPresented: $isPresented
