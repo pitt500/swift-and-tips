@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct EnvironmentObjectDemoApp: App {
+    @StateObject private var userSettings = UserSettings(username: "Pitt")
+    
     var body: some Scene {
         WindowGroup {
             MainView()

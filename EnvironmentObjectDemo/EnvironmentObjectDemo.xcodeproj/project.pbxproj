@@ -11,7 +11,7 @@
 		EB3C26D625A009C400812779 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26D525A009C400812779 /* MainView.swift */; };
 		EB3C26D825A009C600812779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3C26D725A009C600812779 /* Assets.xcassets */; };
 		EB3C26DB25A009C600812779 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3C26DA25A009C600812779 /* Preview Assets.xcassets */; };
-		EB3C26E425A00A0600812779 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26E325A00A0600812779 /* User.swift */; };
+		EB3C26E425A00A0600812779 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26E325A00A0600812779 /* UserSettings.swift */; };
 		EB3C26EB25A00C1B00812779 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26EA25A00C1B00812779 /* Food.swift */; };
 		EB3C26F625A0105500812779 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26F525A0105500812779 /* OrderView.swift */; };
 		EB3C26F925A0121600812779 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C26F825A0121600812779 /* OrderCell.swift */; };
@@ -28,7 +28,7 @@
 		EB3C26D725A009C600812779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB3C26DA25A009C600812779 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB3C26DC25A009C600812779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB3C26E325A00A0600812779 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB3C26E325A00A0600812779 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		EB3C26EA25A00C1B00812779 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		EB3C26F525A0105500812779 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		EB3C26F825A0121600812779 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				EB3C26EA25A00C1B00812779 /* Food.swift */,
-				EB3C26E325A00A0600812779 /* User.swift */,
+				EB3C26E325A00A0600812779 /* UserSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 				EB3C26D625A009C400812779 /* MainView.swift in Sources */,
 				EB3C26EB25A00C1B00812779 /* Food.swift in Sources */,
 				EB3C26D425A009C400812779 /* EnvironmentObjectDemoApp.swift in Sources */,
-				EB3C26E425A00A0600812779 /* User.swift in Sources */,
+				EB3C26E425A00A0600812779 /* UserSettings.swift in Sources */,
 				EB812E0525A27D4F00064DFA /* DessertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
