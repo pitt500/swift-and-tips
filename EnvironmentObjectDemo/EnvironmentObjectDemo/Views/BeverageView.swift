@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct BeverageView: View {
+    @Binding var isPresented: Bool
+    
     var body: some View {
-        OrderView(itemList: Food.sample, destination: DessertView())
+        OrderView(itemList: Food.sample, destination: DessertView(isPresented: $isPresented))
             .navigationTitle("Beverage")
     }
 }
 
 struct BeverageView_Previews: PreviewProvider {
     static var previews: some View {
-        BeverageView()
+        BeverageView(isPresented: .constant(true))
     }
 }

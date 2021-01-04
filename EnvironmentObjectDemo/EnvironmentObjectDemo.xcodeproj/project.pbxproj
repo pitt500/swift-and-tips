@@ -18,6 +18,7 @@
 		EB812DFE25A27D3B00064DFA /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812DFD25A27D3B00064DFA /* FoodView.swift */; };
 		EB812E0225A27D4600064DFA /* BeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812E0125A27D4600064DFA /* BeverageView.swift */; };
 		EB812E0525A27D4F00064DFA /* DessertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812E0425A27D4F00064DFA /* DessertView.swift */; };
+		EB812E0825A29D6700064DFA /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812E0725A29D6700064DFA /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EB812DFD25A27D3B00064DFA /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		EB812E0125A27D4600064DFA /* BeverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageView.swift; sourceTree = "<group>"; };
 		EB812E0425A27D4F00064DFA /* DessertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertView.swift; sourceTree = "<group>"; };
+		EB812E0725A29D6700064DFA /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				EB812DFD25A27D3B00064DFA /* FoodView.swift */,
 				EB812E0125A27D4600064DFA /* BeverageView.swift */,
 				EB812E0425A27D4F00064DFA /* DessertView.swift */,
+				EB812E0725A29D6700064DFA /* CheckoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				EB3C26F625A0105500812779 /* OrderView.swift in Sources */,
 				EB812E0225A27D4600064DFA /* BeverageView.swift in Sources */,
+				EB812E0825A29D6700064DFA /* CheckoutView.swift in Sources */,
 				EB3C26F925A0121600812779 /* OrderCell.swift in Sources */,
 				EB812DFE25A27D3B00064DFA /* FoodView.swift in Sources */,
 				EB3C26D625A009C400812779 /* MainView.swift in Sources */,

@@ -17,7 +17,7 @@ struct MainView: View {
                 .font(.title)
                 .sheet(isPresented: $startOrder, content: {
                     NavigationView {
-                        FoodView()
+                        FoodView(isPresented: $startOrder)
                     }
                 })
             
