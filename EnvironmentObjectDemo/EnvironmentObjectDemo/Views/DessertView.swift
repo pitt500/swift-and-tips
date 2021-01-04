@@ -13,7 +13,10 @@ struct DessertView: View {
     var body: some View {
         OrderView(
             itemList: Food.sample,
-            destination: CheckoutView(finalItems: Food.sample, isPresented: $isPresented)
+            destination: CheckoutView(
+                finalItems: Food.sample,
+                isPresented: $isPresented
+            )
         )
         .navigationTitle("Dessert")
     }

@@ -11,7 +11,9 @@ struct BeverageView: View {
     @Binding var isPresented: Bool
     
     var body: some View {
-        OrderView(itemList: Food.sample, destination: DessertView(isPresented: $isPresented))
+        OrderView(
+            itemList: Food.sample,
+            destination: DessertView(isPresented: $isPresented))
             .navigationTitle("Beverage")
     }
 }
