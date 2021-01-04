@@ -9,20 +9,18 @@ import SwiftUI
 
 struct MainView: View {
     @State private var startOrder = false
-    @ObservedObject var userSettings: UserSettings
+    @Environment(\.settings) var settings: UserSettings
+    @Environment(\.cart) var cart: [Food]
     
     var body: some View {
         
-        if userSettings.cart.isEmpty {
+        if cart.isEmpty {
             VStack {
-                Text("Welcome back \(userSettings.username)! 👋🏼")
+                Text("Welcome back \(settings.username)! 👋🏼")
                     .font(.title)
                     .sheet(isPresented: $startOrder, content: {
                         NavigationView {
-                            FoodView(
-                                isPresented: $startOrder,
-                                userSettings: userSettings
-                            )
+                            FoodView(isPresented: $startOrder)
                         }
                     })
                 
@@ -37,7 +35,7 @@ struct MainView: View {
             VStack {
                 Text("Thanks for your purchase!")
                     .font(.title)
-                Text("Your order with \(userSettings.cart.count) items is on the go!")
+                Text("Your order with \(cart.count) items is on the go!")
                 
             }
         }
@@ -46,6 +44,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(userSettings: UserSettings(username: "Pitt"))
+        MainView()
     }
 }
