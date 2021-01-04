@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct OrderView<Content: View>: View {
-    @State var selected: Food?
+    @State private var selected: Food?
+    @Binding var selectedItems: [Food]
     let itemList: [Food]
     let destination: Content
     
@@ -16,7 +17,10 @@ struct OrderView<Content: View>: View {
         VStack {
             List(itemList) { item in
                 Button(
-                    action: { selected = item },
+                    action: {
+                        selected = item
+                        selectedItems.append(item)
+                    },
                     label: {
                         OrderCell(item: item, isSelected: item == selected)
                     }
@@ -48,6 +52,7 @@ struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             OrderView(
+                selectedItems: .constant([]),
                 itemList: Food.sample,
                 destination: Text("Hello")
             )

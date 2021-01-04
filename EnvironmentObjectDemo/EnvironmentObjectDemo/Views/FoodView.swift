@@ -9,11 +9,13 @@ import SwiftUI
 
 struct FoodView: View {
     @Binding var isPresented: Bool
+    @State private var selectedItems: [Food] = []
     
     var body: some View {
         OrderView(
+            selectedItems: $selectedItems,
             itemList: Food.sample,
-            destination: BeverageView(isPresented: $isPresented)
+            destination: BeverageView(isPresented: $isPresented, selectedItems: $selectedItems)
         )
         .navigationTitle("Food")
     }

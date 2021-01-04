@@ -31,6 +31,6 @@ extension Food {
     static let desserts: [Food] = [
         Food(name: "Apple Pie", price: 5.99, description: "We love ... I mean 🍎!", image: "applepie"),
         Food(name: "Chocolate Cake", price: 18.99, description: "CHOCOLATE!!!!", image: "chocolate"),
-        Food(name: "Super Ice Cream", price: 10.99, description: "Avoid it if you're a dragon 🐲", image: "icecream"),
+        Food(name: "Ice Cream", price: 10.99, description: "Avoid it if you're a dragon 🐲", image: "icecream"),
     ]
 }

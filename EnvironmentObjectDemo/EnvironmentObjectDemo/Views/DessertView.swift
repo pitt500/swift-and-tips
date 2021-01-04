@@ -9,12 +9,14 @@ import SwiftUI
 
 struct DessertView: View {
     @Binding var isPresented: Bool
+    @Binding var selectedItems: [Food]
     
     var body: some View {
         OrderView(
+            selectedItems: $selectedItems,
             itemList: Food.desserts,
             destination: CheckoutView(
-                finalItems: Food.sample,
+                finalItems: selectedItems,
                 isPresented: $isPresented
             )
         )
@@ -24,6 +26,9 @@ struct DessertView: View {
 
 struct DessertView_Previews: PreviewProvider {
     static var previews: some View {
-        DessertView(isPresented: .constant(true))
+        DessertView(
+            isPresented: .constant(true),
+            selectedItems: .constant([])
+        )
     }
 }
