@@ -19,6 +19,7 @@
 		EB812E0225A27D4600064DFA /* BeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812E0125A27D4600064DFA /* BeverageView.swift */; };
 		EB812E0525A27D4F00064DFA /* DessertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812E0425A27D4F00064DFA /* DessertView.swift */; };
 		EB812E0825A29D6700064DFA /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812E0725A29D6700064DFA /* CheckoutView.swift */; };
+		EBBB34EE25A42DF700A85EB1 /* CartEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB34ED25A42DF700A85EB1 /* CartEnvironmentKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EB812E0125A27D4600064DFA /* BeverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageView.swift; sourceTree = "<group>"; };
 		EB812E0425A27D4F00064DFA /* DessertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertView.swift; sourceTree = "<group>"; };
 		EB812E0725A29D6700064DFA /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		EBBB34ED25A42DF700A85EB1 /* CartEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartEnvironmentKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				EB3C26EA25A00C1B00812779 /* Food.swift */,
 				EB3C26E325A00A0600812779 /* UserSettings.swift */,
+				EBBB34ED25A42DF700A85EB1 /* CartEnvironmentKey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				EB3C26EB25A00C1B00812779 /* Food.swift in Sources */,
 				EB3C26D425A009C400812779 /* EnvironmentObjectDemoApp.swift in Sources */,
 				EB3C26E425A00A0600812779 /* UserSettings.swift in Sources */,
+				EBBB34EE25A42DF700A85EB1 /* CartEnvironmentKey.swift in Sources */,
 				EB812E0525A27D4F00064DFA /* DessertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

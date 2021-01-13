@@ -26,6 +26,8 @@ struct FoodView: View {
 
 struct FoodView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodView(isPresented: .constant(true))
+        FoodView(
+            isPresented: .constant(true)
+        )
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     @State private var startOrder = false
-    @EnvironmentObject var userSettings: UserSettings
+    @Environment(\.settings) var userSettings: UserSettings
+    @Environment(\.cart) var cart: [Food]
     
     var body: some View {
         
@@ -19,7 +20,9 @@ struct MainView: View {
                     .font(.title)
                     .sheet(isPresented: $startOrder, content: {
                         NavigationView {
-                            FoodView(isPresented: $startOrder)
+                            FoodView(
+                                isPresented: $startOrder
+                            )
                         }
                     })
                 
@@ -34,7 +37,7 @@ struct MainView: View {
             VStack {
                 Text("Thanks for your purchase!")
                     .font(.title)
-                Text("Your order with \(userSettings.cart.count) items is on the go!")
+                Text("Your order with \(cart.count) items is on the go!")
                 
             }
         }
@@ -44,6 +47,5 @@ struct MainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .environmentObject(UserSettings(username: "Pitt"))
     }
 }
