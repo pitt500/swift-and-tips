@@ -11,6 +11,7 @@
 		EB214B4725B5EEF70078335D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB214B4625B5EEF70078335D /* ContentView.swift */; };
 		EB214B4925B5EEFB0078335D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB214B4825B5EEFB0078335D /* Assets.xcassets */; };
 		EB214B4C25B5EEFB0078335D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB214B4B25B5EEFB0078335D /* Preview Assets.xcassets */; };
+		EB214B5A25B624590078335D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB214B5925B624590078335D /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		EB214B4825B5EEFB0078335D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB214B4B25B5EEFB0078335D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB214B4D25B5EEFB0078335D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB214B5925B624590078335D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		EB214B4325B5EEF70078335D /* AwesomeQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				EB214B5425B5F2F30078335D /* Model */,
 				EB214B4425B5EEF70078335D /* AwesomeQuotesApp.swift */,
 				EB214B4625B5EEF70078335D /* ContentView.swift */,
 				EB214B4825B5EEFB0078335D /* Assets.xcassets */,
@@ -67,6 +70,14 @@
 				EB214B4B25B5EEFB0078335D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB214B5425B5F2F30078335D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB214B5925B624590078335D /* Quote.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB214B4725B5EEF70078335D /* ContentView.swift in Sources */,
+				EB214B5A25B624590078335D /* Quote.swift in Sources */,
 				EB214B4525B5EEF70078335D /* AwesomeQuotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
