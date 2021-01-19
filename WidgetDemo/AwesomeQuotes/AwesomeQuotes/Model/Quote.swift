@@ -12,6 +12,7 @@ struct Quote: Identifiable {
     let description: String
     let author: String
     let profession: String
+    let randomImageValue = Int.random(in: 1...6)
 }
 
 extension Quote {

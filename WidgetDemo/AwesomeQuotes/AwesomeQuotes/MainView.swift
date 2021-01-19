@@ -13,10 +13,14 @@ struct MainView: View {
         NavigationView {
             List {
                 ForEach(Quote.sample) { quote in
-                    QuoteCell(quote: quote)
-                        .listRowInsets(EdgeInsets())
+                    NavigationLinkNoArrow (
+                        destination: QuoteDetail(quote: quote),
+                        content: QuoteCell(quote: quote)
+                    )
+                    .listRowInsets(EdgeInsets())
                 }
             }
+            .listStyle(PlainListStyle())
             .navigationTitle("Awesome Quotes")
         }
     }

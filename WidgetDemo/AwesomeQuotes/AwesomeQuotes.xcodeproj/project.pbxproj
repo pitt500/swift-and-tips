@@ -13,6 +13,8 @@
 		EB214B4C25B5EEFB0078335D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB214B4B25B5EEFB0078335D /* Preview Assets.xcassets */; };
 		EB214B5A25B624590078335D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB214B5925B624590078335D /* Quote.swift */; };
 		EBD550A625B69A74006A719D /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A525B69A74006A719D /* QuoteCell.swift */; };
+		EBD550A925B6A325006A719D /* QuoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A825B6A325006A719D /* QuoteDetail.swift */; };
+		EBD550AD25B6AA10006A719D /* NavigationLinkNoArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550AC25B6AA10006A719D /* NavigationLinkNoArrow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EB214B4D25B5EEFB0078335D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB214B5925B624590078335D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		EBD550A525B69A74006A719D /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
+		EBD550A825B6A325006A719D /* QuoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetail.swift; sourceTree = "<group>"; };
+		EBD550AC25B6AA10006A719D /* NavigationLinkNoArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkNoArrow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		EB214B4325B5EEF70078335D /* AwesomeQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				EBD550AB25B6A9F6006A719D /* Helpers */,
 				EB214B5425B5F2F30078335D /* Model */,
 				EB214B4425B5EEF70078335D /* AwesomeQuotesApp.swift */,
 				EB214B4625B5EEF70078335D /* MainView.swift */,
@@ -63,6 +68,7 @@
 				EB214B4D25B5EEFB0078335D /* Info.plist */,
 				EB214B4A25B5EEFB0078335D /* Preview Content */,
 				EBD550A525B69A74006A719D /* QuoteCell.swift */,
+				EBD550A825B6A325006A719D /* QuoteDetail.swift */,
 			);
 			path = AwesomeQuotes;
 			sourceTree = "<group>";
@@ -81,6 +87,14 @@
 				EB214B5925B624590078335D /* Quote.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EBD550AB25B6A9F6006A719D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EBD550AC25B6AA10006A719D /* NavigationLinkNoArrow.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +168,8 @@
 			files = (
 				EBD550A625B69A74006A719D /* QuoteCell.swift in Sources */,
 				EB214B4725B5EEF70078335D /* MainView.swift in Sources */,
+				EBD550AD25B6AA10006A719D /* NavigationLinkNoArrow.swift in Sources */,
+				EBD550A925B6A325006A719D /* QuoteDetail.swift in Sources */,
 				EB214B5A25B624590078335D /* Quote.swift in Sources */,
 				EB214B4525B5EEF70078335D /* AwesomeQuotesApp.swift in Sources */,
 			);
