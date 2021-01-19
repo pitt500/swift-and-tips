@@ -20,7 +20,6 @@ struct MainView: View {
                     .listRowInsets(EdgeInsets())
                 }
             }
-            .listStyle(PlainListStyle())
             .navigationTitle("Awesome Quotes")
         }
     }
