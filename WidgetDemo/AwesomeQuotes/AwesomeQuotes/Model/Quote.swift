@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Quote {
+struct Quote: Identifiable {
+    let id = UUID().uuidString
     let description: String
     let author: String
     let profession: String
@@ -23,7 +24,7 @@ extension Quote {
         Quote(
             description: "No one is perfect - that’s why pencils have erasers.",
             author: "Wolfgang Riebe",
-            profession: "Keynote Speaker/Magician"
+            profession: "Keynote Speaker-Magician"
         ),
         Quote(
             description: "You always pass failure on the way to success.",
@@ -33,7 +34,7 @@ extension Quote {
         Quote(
             description: "You’re off to great places, today is your day. Your mountain is waiting, so get on your way.",
             author: "Dr. Seuss",
-            profession: "Author/Poet"
+            profession: "Author-Poet"
         ),
         Quote(
             description: "It always seems impossible until it is done.",
@@ -43,7 +44,7 @@ extension Quote {
         Quote(
             description: "You’re braver than you believe, and stronger than you seem, and smarter than you think.",
             author: "A.A. Mine",
-            profession: "Author/Poet"
+            profession: "Author-Poet"
         ),
         Quote(
             description: "Once you replace negative thoughts with positive ones, you’ll start having positive results.",

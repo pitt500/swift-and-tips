@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(Quote.sample) { quote in
+                    QuoteCell(quote: quote)
+                        .listRowInsets(EdgeInsets())
+                }
+            }
+            .navigationTitle("Awesome Quotes")
+        }
     }
 }
 
