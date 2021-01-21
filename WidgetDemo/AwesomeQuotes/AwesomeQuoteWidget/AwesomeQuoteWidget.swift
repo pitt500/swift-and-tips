@@ -7,63 +7,47 @@
 
 import WidgetKit
 import SwiftUI
-import Intents
-
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
-    }
-
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
-        completion(entry)
-    }
-
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
-}
-
-struct AwesomeQuoteWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        Text(entry.date, style: .time)
-    }
-}
 
 @main
 struct AwesomeQuoteWidget: Widget {
     let kind: String = "AwesomeQuoteWidget"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            AwesomeQuoteWidgetEntryView(entry: entry)
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: QuoteProvider()) { entry in
+            AwesomeWidgetView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Quote of the day")
+        .description("Quotes that change your life!")
+        .supportedFamilies([.systemMedium, .systemLarge])
+        .onBackgroundURLSessionEvents { (identifier, completion) in
+            // handle background events
+        }
     }
 }
 
 struct AwesomeQuoteWidget_Previews: PreviewProvider {
     static var previews: some View {
-        AwesomeQuoteWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group {
+            AwesomeWidgetView(
+                entry: QuoteEntry(
+                    date: Date(),
+                    quote: Quote.sample[0],
+                    configuration: ConfigurationIntent()
+                )
+            )
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            
+            
+            AwesomeWidgetView(
+                entry: QuoteEntry(
+                    date: Date(),
+                    quote: Quote.sample[0],
+                    configuration: ConfigurationIntent()
+                )
+            )
+            .redacted(reason: .placeholder)
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            
+        }
     }
 }
