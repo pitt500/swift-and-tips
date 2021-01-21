@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct QuoteDetail: View {
     let quote: Quote
@@ -15,7 +16,7 @@ struct QuoteDetail: View {
             Color.black
                 .ignoresSafeArea()
             
-            Image("image\(quote.randomImageValue)")
+            Image("image\(quote.imageNumber)")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .opacity(0.6)
@@ -35,6 +36,10 @@ struct QuoteDetail: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
             .padding()
+        }
+        .onAppear {
+            // it forces a reload
+            //WidgetCenter.shared.reloadTimelines(ofKind: "AwesomeQuoteWidget")
         }
     }
 }
