@@ -13,11 +13,11 @@ struct QuoteCell: View {
     var body: some View {
         ZStack {
             Color.black
-            Image("image\(quote.randomImageValue)")
+            Image("image\(quote.imageNumber)")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .opacity(0.6)
-                .frame(maxHeight: 200)
+                .frame(maxHeight: 180)
                 .clipped()
             VStack {
                 Text("\"\(quote.description)\"")
