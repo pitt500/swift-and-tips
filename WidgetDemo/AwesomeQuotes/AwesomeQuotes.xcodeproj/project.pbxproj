@@ -12,10 +12,45 @@
 		EB214B4925B5EEFB0078335D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB214B4825B5EEFB0078335D /* Assets.xcassets */; };
 		EB214B4C25B5EEFB0078335D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB214B4B25B5EEFB0078335D /* Preview Assets.xcassets */; };
 		EB214B5A25B624590078335D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB214B5925B624590078335D /* Quote.swift */; };
+		EB3C30D125B87583005AF5ED /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3C30D025B87583005AF5ED /* WidgetKit.framework */; };
+		EB3C30D325B87583005AF5ED /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3C30D225B87583005AF5ED /* SwiftUI.framework */; };
+		EB3C30D625B87583005AF5ED /* AwesomeQuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C30D525B87583005AF5ED /* AwesomeQuoteWidget.swift */; };
+		EB3C30D925B87585005AF5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3C30D825B87585005AF5ED /* Assets.xcassets */; };
+		EB3C30DB25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */; };
+		EB3C30DC25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */; };
+		EB3C30DF25B87585005AF5ED /* AwesomeQuoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB3C30CE25B87583005AF5ED /* AwesomeQuoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB3C30E625B87632005AF5ED /* QuoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A825B6A325006A719D /* QuoteDetail.swift */; };
+		EB3C30E725B87632005AF5ED /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB214B5925B624590078335D /* Quote.swift */; };
+		EB3C30EA25B876F8005AF5ED /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A525B69A74006A719D /* QuoteCell.swift */; };
+		EB3C30ED25B87844005AF5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB214B4825B5EEFB0078335D /* Assets.xcassets */; };
 		EBD550A625B69A74006A719D /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A525B69A74006A719D /* QuoteCell.swift */; };
 		EBD550A925B6A325006A719D /* QuoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A825B6A325006A719D /* QuoteDetail.swift */; };
 		EBD550AD25B6AA10006A719D /* NavigationLinkNoArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550AC25B6AA10006A719D /* NavigationLinkNoArrow.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB3C30DD25B87585005AF5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB214B3925B5EEF70078335D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB3C30CD25B87583005AF5ED;
+			remoteInfo = AwesomeQuoteWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB3C30E025B87585005AF5ED /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EB3C30DF25B87585005AF5ED /* AwesomeQuoteWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EB214B4125B5EEF70078335D /* AwesomeQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +60,13 @@
 		EB214B4B25B5EEFB0078335D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB214B4D25B5EEFB0078335D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB214B5925B624590078335D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		EB3C30CE25B87583005AF5ED /* AwesomeQuoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeQuoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3C30D025B87583005AF5ED /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EB3C30D225B87583005AF5ED /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EB3C30D525B87583005AF5ED /* AwesomeQuoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeQuoteWidget.swift; sourceTree = "<group>"; };
+		EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = AwesomeQuoteWidget.intentdefinition; sourceTree = "<group>"; };
+		EB3C30D825B87585005AF5ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB3C30DA25B87585005AF5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBD550A525B69A74006A719D /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		EBD550A825B6A325006A719D /* QuoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetail.swift; sourceTree = "<group>"; };
 		EBD550AC25B6AA10006A719D /* NavigationLinkNoArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkNoArrow.swift; sourceTree = "<group>"; };
@@ -38,6 +80,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB3C30CB25B87583005AF5ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3C30D325B87583005AF5ED /* SwiftUI.framework in Frameworks */,
+				EB3C30D125B87583005AF5ED /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				EB214B4325B5EEF70078335D /* AwesomeQuotes */,
+				EB3C30D425B87583005AF5ED /* AwesomeQuoteWidget */,
+				EB3C30CF25B87583005AF5ED /* Frameworks */,
 				EB214B4225B5EEF70078335D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EB214B4125B5EEF70078335D /* AwesomeQuotes.app */,
+				EB3C30CE25B87583005AF5ED /* AwesomeQuoteWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +141,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EB3C30CF25B87583005AF5ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C30D025B87583005AF5ED /* WidgetKit.framework */,
+				EB3C30D225B87583005AF5ED /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB3C30D425B87583005AF5ED /* AwesomeQuoteWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C30D525B87583005AF5ED /* AwesomeQuoteWidget.swift */,
+				EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */,
+				EB3C30D825B87585005AF5ED /* Assets.xcassets */,
+				EB3C30DA25B87585005AF5ED /* Info.plist */,
+			);
+			path = AwesomeQuoteWidget;
+			sourceTree = "<group>";
+		};
 		EBD550AB25B6A9F6006A719D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,15 +189,34 @@
 				EB214B3D25B5EEF70078335D /* Sources */,
 				EB214B3E25B5EEF70078335D /* Frameworks */,
 				EB214B3F25B5EEF70078335D /* Resources */,
+				EB3C30E025B87585005AF5ED /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EB3C30DE25B87585005AF5ED /* PBXTargetDependency */,
 			);
 			name = AwesomeQuotes;
 			productName = AwesomeQuotes;
 			productReference = EB214B4125B5EEF70078335D /* AwesomeQuotes.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EB3C30CD25B87583005AF5ED /* AwesomeQuoteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB3C30E325B87585005AF5ED /* Build configuration list for PBXNativeTarget "AwesomeQuoteWidgetExtension" */;
+			buildPhases = (
+				EB3C30CA25B87583005AF5ED /* Sources */,
+				EB3C30CB25B87583005AF5ED /* Frameworks */,
+				EB3C30CC25B87583005AF5ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwesomeQuoteWidgetExtension;
+			productName = AwesomeQuoteWidgetExtension;
+			productReference = EB3C30CE25B87583005AF5ED /* AwesomeQuoteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -135,6 +228,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					EB214B4025B5EEF70078335D = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					EB3C30CD25B87583005AF5ED = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -153,6 +249,7 @@
 			projectRoot = "";
 			targets = (
 				EB214B4025B5EEF70078335D /* AwesomeQuotes */,
+				EB3C30CD25B87583005AF5ED /* AwesomeQuoteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -167,6 +264,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB3C30CC25B87583005AF5ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3C30ED25B87844005AF5ED /* Assets.xcassets in Resources */,
+				EB3C30D925B87585005AF5ED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -178,12 +284,33 @@
 				EB214B4725B5EEF70078335D /* MainView.swift in Sources */,
 				EBD550AD25B6AA10006A719D /* NavigationLinkNoArrow.swift in Sources */,
 				EBD550A925B6A325006A719D /* QuoteDetail.swift in Sources */,
+				EB3C30DC25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */,
 				EB214B5A25B624590078335D /* Quote.swift in Sources */,
 				EB214B4525B5EEF70078335D /* AwesomeQuotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB3C30CA25B87583005AF5ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3C30EA25B876F8005AF5ED /* QuoteCell.swift in Sources */,
+				EB3C30E725B87632005AF5ED /* Quote.swift in Sources */,
+				EB3C30E625B87632005AF5ED /* QuoteDetail.swift in Sources */,
+				EB3C30D625B87583005AF5ED /* AwesomeQuoteWidget.swift in Sources */,
+				EB3C30DB25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB3C30DE25B87585005AF5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB3C30CD25B87583005AF5ED /* AwesomeQuoteWidgetExtension */;
+			targetProxy = EB3C30DD25B87585005AF5ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EB214B4E25B5EEFB0078335D /* Debug */ = {
@@ -305,6 +432,7 @@
 		EB214B5125B5EEFB0078335D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +455,7 @@
 		EB214B5225B5EEFB0078335D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +470,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandtips.AwesomeQuotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB3C30E125B87585005AF5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHJA6J73E9;
+				INFOPLIST_FILE = AwesomeQuoteWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandtips.AwesomeQuotes.AwesomeQuoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB3C30E225B87585005AF5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHJA6J73E9;
+				INFOPLIST_FILE = AwesomeQuoteWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandtips.AwesomeQuotes.AwesomeQuoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +534,15 @@
 			buildConfigurations = (
 				EB214B5125B5EEFB0078335D /* Debug */,
 				EB214B5225B5EEFB0078335D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB3C30E325B87585005AF5ED /* Build configuration list for PBXNativeTarget "AwesomeQuoteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB3C30E125B87585005AF5ED /* Debug */,
+				EB3C30E225B87585005AF5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
