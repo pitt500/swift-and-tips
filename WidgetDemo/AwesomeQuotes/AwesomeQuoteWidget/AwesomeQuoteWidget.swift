@@ -19,9 +19,6 @@ struct AwesomeQuoteWidget: Widget {
         .configurationDisplayName("Quote of the day")
         .description("Quotes that change your life!")
         .supportedFamilies([.systemMedium, .systemLarge])
-        .onBackgroundURLSessionEvents { (identifier, completion) in
-            // handle background events
-        }
     }
 }
 
