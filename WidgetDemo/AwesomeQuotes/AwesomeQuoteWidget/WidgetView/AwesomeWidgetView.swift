@@ -25,6 +25,7 @@ struct AwesomeWidgetView : View {
             }
         case .systemSmall:
             EmptyView()
+            .widgetURL(entry.quote.url)
         @unknown default:
             EmptyView()
         }
