@@ -8,20 +8,18 @@
 import WidgetKit
 
 struct QuoteProvider: TimelineProvider {
+    private let placeholderEntry = QuoteEntry(
+        date: Date(),
+        quote: Quote.sample[0]
+    )
+    
     func placeholder(in context: Context) -> QuoteEntry {
-        return QuoteEntry(
-            date: Date(),
-            quote: Quote.sample[0]
-        )
+        return placeholderEntry
     }
     
 
     func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> ()) {
-        let entry = QuoteEntry(
-            date: Date(),
-            quote: Quote.sample[0]
-        )
-        completion(entry)
+        completion(placeholderEntry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> ()) {
