@@ -42,7 +42,6 @@ struct AwesomeQuoteWidget_Previews: PreviewProvider {
                     quote: Quote.sample[0]
                 )
             )
-            .redacted(reason: .placeholder)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
             
         }
