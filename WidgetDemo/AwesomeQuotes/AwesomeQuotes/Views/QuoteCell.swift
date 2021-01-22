@@ -17,11 +17,11 @@ struct QuoteCell: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .opacity(0.6)
-                .frame(maxHeight: 180)
+                .frame(maxHeight: 170)
                 .clipped()
             VStack {
                 Text("\"\(quote.description)\"")
-                    .font(.custom("SignPainter", fixedSize: 40))
+                    .font(.custom("SignPainter", fixedSize: 38))
                     .foregroundColor(.white)
                     .frame(maxHeight: .infinity)
                     

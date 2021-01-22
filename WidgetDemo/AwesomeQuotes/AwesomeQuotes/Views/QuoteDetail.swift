@@ -33,7 +33,8 @@ struct QuoteDetail: View {
                         height: 100,
                         alignment: .center
                     )
-                    .cornerRadius(100)
+                    .cornerRadius(50)
+                    .padding(.top, 20)
                 
                 Text("\"\(quote.description)\"")
                     .font(.custom("SignPainter", fixedSize: 40))
@@ -45,7 +46,7 @@ struct QuoteDetail: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
-            .padding()
+            .padding([.leading, .trailing], 34)
         }
         .onAppear {
             // it forces a reload

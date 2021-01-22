@@ -16,8 +16,6 @@
 		EB3C30D325B87583005AF5ED /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3C30D225B87583005AF5ED /* SwiftUI.framework */; };
 		EB3C30D625B87583005AF5ED /* AwesomeQuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C30D525B87583005AF5ED /* AwesomeQuoteWidget.swift */; };
 		EB3C30D925B87585005AF5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB3C30D825B87585005AF5ED /* Assets.xcassets */; };
-		EB3C30DB25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */; };
-		EB3C30DC25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */; };
 		EB3C30DF25B87585005AF5ED /* AwesomeQuoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EB3C30CE25B87583005AF5ED /* AwesomeQuoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB3C30E625B87632005AF5ED /* QuoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD550A825B6A325006A719D /* QuoteDetail.swift */; };
 		EB3C30E725B87632005AF5ED /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB214B5925B624590078335D /* Quote.swift */; };
@@ -67,7 +65,6 @@
 		EB3C30D025B87583005AF5ED /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		EB3C30D225B87583005AF5ED /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EB3C30D525B87583005AF5ED /* AwesomeQuoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeQuoteWidget.swift; sourceTree = "<group>"; };
-		EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = AwesomeQuoteWidget.intentdefinition; sourceTree = "<group>"; };
 		EB3C30D825B87585005AF5ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB3C30DA25B87585005AF5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB3C30FC25B97117005AF5ED /* QuoteEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEntry.swift; sourceTree = "<group>"; };
@@ -163,7 +160,6 @@
 				EB3C310525B97143005AF5ED /* Providers */,
 				EB3C30FB25B97108005AF5ED /* Entries */,
 				EB3C30D525B87583005AF5ED /* AwesomeQuoteWidget.swift */,
-				EB3C30D725B87583005AF5ED /* AwesomeQuoteWidget.intentdefinition */,
 				EB3C30D825B87585005AF5ED /* Assets.xcassets */,
 				EB3C30DA25B87585005AF5ED /* Info.plist */,
 			);
@@ -317,7 +313,6 @@
 				EB214B4725B5EEF70078335D /* MainView.swift in Sources */,
 				EBD550AD25B6AA10006A719D /* NavigationLinkNoArrow.swift in Sources */,
 				EBD550A925B6A325006A719D /* QuoteDetail.swift in Sources */,
-				EB3C30DC25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */,
 				EB214B5A25B624590078335D /* Quote.swift in Sources */,
 				EB214B4525B5EEF70078335D /* AwesomeQuotesApp.swift in Sources */,
 			);
@@ -334,7 +329,6 @@
 				EB3C30E625B87632005AF5ED /* QuoteDetail.swift in Sources */,
 				EB3C310225B9711E005AF5ED /* QuoteEntry.swift in Sources */,
 				EB3C30D625B87583005AF5ED /* AwesomeQuoteWidget.swift in Sources */,
-				EB3C30DB25B87585005AF5ED /* AwesomeQuoteWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

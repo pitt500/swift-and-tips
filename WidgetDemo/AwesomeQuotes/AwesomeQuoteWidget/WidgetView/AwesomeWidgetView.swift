@@ -10,11 +10,21 @@ import SwiftUI
 
 struct AwesomeWidgetView : View {
     var entry: QuoteProvider.Entry
+    @Environment(\.widgetFamily) var family
     
     var body: some View {
-        Link(destination: entry.quote.url) {
-            QuoteCell(quote: entry.quote)
+        
+        switch family {
+        case .systemLarge:
+            Link(destination: entry.quote.url) {
+                QuoteDetail(quote: entry.quote)
+            }
+        default:
+            Link(destination: entry.quote.url) {
+                QuoteCell(quote: entry.quote)
+            }
         }
+        
         //For small family
         //.widgetURL(entry.quote.url)
     }

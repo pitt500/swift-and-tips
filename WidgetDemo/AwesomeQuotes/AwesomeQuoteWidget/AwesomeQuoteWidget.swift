@@ -13,9 +13,11 @@ struct AwesomeQuoteWidget: Widget {
     let kind: String = "AwesomeQuoteWidget"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: QuoteProvider()) { entry in
-            AwesomeWidgetView(entry: entry)
-        }
+        StaticConfiguration(
+            kind: kind,
+            provider: QuoteProvider(),
+            content: { AwesomeWidgetView(entry: $0) }
+        )
         .configurationDisplayName("Quote of the day")
         .description("Quotes that change your life!")
         .supportedFamilies([.systemMedium, .systemLarge])
@@ -28,8 +30,7 @@ struct AwesomeQuoteWidget_Previews: PreviewProvider {
             AwesomeWidgetView(
                 entry: QuoteEntry(
                     date: Date(),
-                    quote: Quote.sample[0],
-                    configuration: ConfigurationIntent()
+                    quote: Quote.sample[0]
                 )
             )
             .previewContext(WidgetPreviewContext(family: .systemMedium))
@@ -38,8 +39,7 @@ struct AwesomeQuoteWidget_Previews: PreviewProvider {
             AwesomeWidgetView(
                 entry: QuoteEntry(
                     date: Date(),
-                    quote: Quote.sample[0],
-                    configuration: ConfigurationIntent()
+                    quote: Quote.sample[0]
                 )
             )
             .redacted(reason: .placeholder)

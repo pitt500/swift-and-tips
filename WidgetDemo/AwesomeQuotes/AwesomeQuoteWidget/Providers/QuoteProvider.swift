@@ -7,34 +7,32 @@
 
 import WidgetKit
 
-struct QuoteProvider: IntentTimelineProvider {
+struct QuoteProvider: TimelineProvider {
     func placeholder(in context: Context) -> QuoteEntry {
-        QuoteEntry(
+        return QuoteEntry(
             date: Date(),
-            quote: Quote.sample[0],
-            configuration: ConfigurationIntent()
+            quote: Quote.sample[0]
         )
     }
+    
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (QuoteEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> ()) {
         let entry = QuoteEntry(
             date: Date(),
-            quote: Quote.sample[0],
-            configuration: configuration
+            quote: Quote.sample[0]
         )
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> ()) {
         var entries: [QuoteEntry] = []
 
         let currentDate = Date()
-        let entryDate = Calendar.current.date(byAdding: .second, value: 5, to: currentDate)!
+        let entryDate = Calendar.current.date(byAdding: .minute, value: 6, to: currentDate)!
         let randomIndex = Int.random(in: 0..<Quote.sample.count)
         let entry = QuoteEntry(
             date: entryDate,
-            quote: Quote.sample[randomIndex],
-            configuration: configuration
+            quote: Quote.sample[randomIndex]
         )
         entries.append(entry)
 

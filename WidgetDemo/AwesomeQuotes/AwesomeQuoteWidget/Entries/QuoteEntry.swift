@@ -10,5 +10,4 @@ import WidgetKit
 struct QuoteEntry: TimelineEntry {
     let date: Date
     let quote: Quote
-    let configuration: ConfigurationIntent
 }
