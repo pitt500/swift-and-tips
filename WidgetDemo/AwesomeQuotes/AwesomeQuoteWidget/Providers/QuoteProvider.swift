@@ -26,15 +26,19 @@ struct QuoteProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> ()) {
         var entries: [QuoteEntry] = []
-
         let currentDate = Date()
-        let entryDate = Calendar.current.date(byAdding: .minute, value: 6, to: currentDate)!
-        let randomIndex = Int.random(in: 0..<Quote.sample.count)
-        let entry = QuoteEntry(
-            date: entryDate,
-            quote: Quote.sample[randomIndex]
-        )
-        entries.append(entry)
+        
+        for _ in 1...4 {
+            let randomIndex = Int.random(in: 0..<Quote.sample.count)
+            let entryDate = Calendar.current.date(byAdding: .minute, value: 6, to: currentDate)!
+            let entry = QuoteEntry(
+                date: entryDate,
+                quote: Quote.sample[randomIndex]
+            )
+            entries.append(entry)
+        }
+        
+        
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
