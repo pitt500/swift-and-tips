@@ -19,10 +19,14 @@ struct AwesomeWidgetView : View {
             Link(destination: entry.quote.url) {
                 QuoteDetail(quote: entry.quote)
             }
-        default:
+        case .systemMedium:
             Link(destination: entry.quote.url) {
                 QuoteCell(quote: entry.quote)
             }
+        case .systemSmall:
+            EmptyView()
+        @unknown default:
+            EmptyView()
         }
         
         //For small family
