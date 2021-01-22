@@ -25,6 +25,16 @@ struct QuoteDetail: View {
                 .ignoresSafeArea()
             
             VStack {
+                Image(quote.bioImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(
+                        width: 100,
+                        height: 100,
+                        alignment: .center
+                    )
+                    .cornerRadius(100)
+                
                 Text("\"\(quote.description)\"")
                     .font(.custom("SignPainter", fixedSize: 40))
                     .foregroundColor(.white)

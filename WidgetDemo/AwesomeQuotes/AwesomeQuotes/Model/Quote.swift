@@ -14,6 +14,7 @@ struct Quote: Identifiable {
     let profession: String
     let imageNumber: Int
     let url: URL
+    let bioImage: String
 }
 
 extension Quote {
@@ -23,35 +24,40 @@ extension Quote {
             author: "Wolfgang Riebe",
             profession: "Keynote Speaker-Magician",
             imageNumber: 1,
-            url: URL(string: "awesomeQuotes:///quote2")!
+            url: URL(string: "awesomeQuotes:///quote2")!,
+            bioImage: "wolfgang"
         ),
         Quote(
             description: "You always pass failure on the way to success.",
             author: "Mickey Rooney",
             profession: "Actor",
             imageNumber: 2,
-            url: URL(string: "awesomeQuotes:///quote3")!
+            url: URL(string: "awesomeQuotes:///quote3")!,
+            bioImage: "mickey"
         ),
         Quote(
             description: "It always seems impossible until it is done.",
             author: "Nelson Mandela",
             profession: "Political Leader",
             imageNumber: 3,
-            url: URL(string: "awesomeQuotes:///quote5")!
+            url: URL(string: "awesomeQuotes:///quote5")!,
+            bioImage: "nelson"
         ),
         Quote(
             description: "If opportunity doesn’t knock, build a door.",
             author: "Milton Berle",
             profession: "Comedian",
             imageNumber: 4,
-            url: URL(string: "awesomeQuotes:///quote9")!
+            url: URL(string: "awesomeQuotes:///quote9")!,
+            bioImage: "milton"
         ),
         Quote(
             description: "Success is the sum of small efforts repeated day in and day out.",
             author: "Robert Collier",
             profession: "Author",
             imageNumber: 5,
-            url: URL(string: "awesomeQuotes:///quote10")!
+            url: URL(string: "awesomeQuotes:///quote10")!,
+            bioImage: "robert"
         ),
     ]
 }
