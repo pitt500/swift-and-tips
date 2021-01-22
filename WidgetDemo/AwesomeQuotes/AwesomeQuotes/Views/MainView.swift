@@ -30,7 +30,6 @@ struct MainView: View {
                 
                 selected = Quote.sample[index].id
             }
-            .navigationViewStyle(StackNavigationViewStyle())
             .navigationTitle("Awesome Quotes")
         }
     }
