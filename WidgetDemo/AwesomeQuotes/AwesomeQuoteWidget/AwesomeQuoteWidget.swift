@@ -42,8 +42,7 @@ struct AwesomeQuoteWidget_Previews: PreviewProvider {
                     quote: Quote.sample[0]
                 )
             )
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-            
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
         }
     }
 }
