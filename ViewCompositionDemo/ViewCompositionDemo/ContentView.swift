@@ -174,7 +174,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(
             viewModel: .init(
                 media: Media(
-                    name: "bohemian rhapsody",
+                    name: "Bohemian Rhapsody",
                     artist: "Queen",
                     duration: 330000,
                     imageName: "queen",
