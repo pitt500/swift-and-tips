@@ -57,8 +57,8 @@
 		B53A3B9E25C44DF800DE8A9D /* DemoConditional */ = {
 			isa = PBXGroup;
 			children = (
-				B53A3B9F25C44E7200DE8A9D /* BadDemoConditional.swift */,
-				B53A3BA825C4538800DE8A9D /* BetterDemoConditional.swift */,
+				B53A3BAD25C4543500DE8A9D /* FixedVersion */,
+				B53A3BAC25C4542B00DE8A9D /* BadView */,
 			);
 			path = DemoConditional;
 			sourceTree = "<group>";
@@ -75,6 +75,22 @@
 			isa = PBXGroup;
 			children = (
 				B5C6BF9425C43C8500BCA8CA /* BetterView.swift */,
+			);
+			path = FixedVersion;
+			sourceTree = "<group>";
+		};
+		B53A3BAC25C4542B00DE8A9D /* BadView */ = {
+			isa = PBXGroup;
+			children = (
+				B53A3B9F25C44E7200DE8A9D /* BadDemoConditional.swift */,
+			);
+			path = BadView;
+			sourceTree = "<group>";
+		};
+		B53A3BAD25C4543500DE8A9D /* FixedVersion */ = {
+			isa = PBXGroup;
+			children = (
+				B53A3BA825C4538800DE8A9D /* BetterDemoConditional.swift */,
 			);
 			path = FixedVersion;
 			sourceTree = "<group>";
