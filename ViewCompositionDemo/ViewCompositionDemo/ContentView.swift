@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let isEmpty = false
-    @State private var progress: Float = 0.5
+    @StateObject var viewModel: PlayerViewModel
     
     var body: some View {
         ZStack {
@@ -18,8 +17,8 @@ struct ContentView: View {
             LinearGradient(
                 gradient: Gradient(
                     colors: [
-                        Color.pink.opacity(0.6),
-                        Color.pink.opacity(0.3)
+                        viewModel.media.color.opacity(0.6),
+                        viewModel.media.color.opacity(0.3)
                     ]
                 ),
                 startPoint: .top,
@@ -41,7 +40,7 @@ struct ContentView: View {
                         )
 
                     Spacer()
-                    Text("Queen")
+                    Text(viewModel.media.artist)
                         .foregroundColor(.white)
                         .font(
                             .system(
@@ -67,14 +66,14 @@ struct ContentView: View {
 
                 Spacer()
 
-                Image("queen")
+                Image(viewModel.media.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(minHeight: 150, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(minHeight: 150, maxHeight: 300, alignment: .center)
                     .padding(.bottom, 30)
                 
                 VStack (alignment: .leading) {
-                    Text("Bohemian Rhapsody")
+                    Text(viewModel.media.name)
                         .foregroundColor(.white)
                         .font(
                             .system(
@@ -84,7 +83,7 @@ struct ContentView: View {
                             )
                         )
 
-                    Text("Queen")
+                    Text(viewModel.media.artist)
                         .foregroundColor(Color.white.opacity(0.8))
                         .font(.callout)
 
@@ -108,7 +107,7 @@ struct ContentView: View {
                     HStack {
                         Text("0:00")
                         Spacer()
-                        Text("-5:53")
+                        Text("-\(viewModel.durationInMinutes)")
                     }
                     .foregroundColor(.white)
                     .font(.caption)
@@ -168,6 +167,16 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(
+            viewModel: .init(
+                media: Media(
+                    name: "bohemian rhapsody",
+                    artist: "Queen",
+                    duration: 5300,
+                    imageName: "queen",
+                    color: .pink
+                )
+            )
+        )
     }
 }

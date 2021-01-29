@@ -11,7 +11,17 @@ import SwiftUI
 struct ViewCompositionDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                viewModel: .init(
+                    media: Media(
+                        name: "Bohemian Rhapsody",
+                        artist: "Queen",
+                        duration: 330000,
+                        imageName: "queen",
+                        color: .pink
+                    )
+                )
+            )
         }
     }
 }
