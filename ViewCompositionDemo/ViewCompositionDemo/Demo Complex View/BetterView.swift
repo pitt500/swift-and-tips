@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct BetterView: View {
-    @State var value: Float = 0
     var body: some View {
-        Slider(value: $value)
-            
+        Text("Hello")
     }
 }
 
