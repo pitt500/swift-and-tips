@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct BadView: View {
     @StateObject var viewModel: PlayerViewModel
     
     var body: some View {
@@ -62,7 +62,6 @@ struct ContentView: View {
 
                 }
                 .frame(minHeight: 0, maxHeight: 100)
-
 
                 Spacer()
 
@@ -171,7 +170,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
+        BadView(
             viewModel: .init(
                 media: Media(
                     name: "Bohemian Rhapsody",

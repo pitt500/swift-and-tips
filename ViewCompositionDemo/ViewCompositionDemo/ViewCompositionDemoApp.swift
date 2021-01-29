@@ -11,7 +11,7 @@ import SwiftUI
 struct ViewCompositionDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(
+            BadView(
                 viewModel: .init(
                     media: Media(
                         name: "Bohemian Rhapsody",
