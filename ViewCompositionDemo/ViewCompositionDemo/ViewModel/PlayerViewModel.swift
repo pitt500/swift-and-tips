@@ -5,10 +5,12 @@
 //  Created by Pedro Rojas on 28/01/21.
 //
 
-import Foundation
+import SwiftUI
 
 class PlayerViewModel: ObservableObject {
     let media: Media
+    @Published private(set) var isPlaying = true
+    @Published private(set) var progressOffset: CGFloat = 80
 
     init(media: Media) {
         self.media = media
@@ -21,4 +23,23 @@ class PlayerViewModel: ObservableObject {
 
         return "\(minutes):\(remainingSeconds)"
     }
+
+    func play() {
+        progressOffset = 80
+        isPlaying.toggle()
+    }
+
+    func backward() {
+        progressOffset = 0
+    }
+
+    func forward() {
+        //Dummy value, just for demo
+        progressOffset = UIScreen.main.bounds.width - 40
+    }
+
+    func onChange(_ value: DragGesture.Value) {
+        self.progressOffset = value.location.x
+    }
+
 }

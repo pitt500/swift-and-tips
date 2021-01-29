@@ -87,22 +87,25 @@ struct ContentView: View {
                         .foregroundColor(Color.white.opacity(0.8))
                         .font(.callout)
 
-                    ZStack(alignment: .leading){
-                        Capsule()
-                            .fill(Color.white.opacity(0.2))
-                            .frame(height: 5)
+                    GeometryReader { geometry in
+                        ZStack(alignment: .leading){
+                            Capsule()
+                                .fill(Color.white.opacity(0.2))
+                                .frame(width:geometry.size.width , height: 5)
 
-                        Capsule()
-                            .fill(Color.white)
-                            .frame(width: 150, height: 5)
+                            Capsule()
+                                .fill(Color.white)
+                                .frame(width: viewModel.progressOffset, height: 5)
 
-                        Circle()
-                            .fill(Color.white)
-                            .shadow(radius: 10)
-                            .frame(width: 15, height: 15)
-                            .offset(x: 150)
-                        //.gesture(DragGesture().onChanged(30))
+                            Circle()
+                                .fill(Color.white)
+                                .shadow(radius: 10)
+                                .frame(width: 15, height: 15)
+                                .offset(x: viewModel.progressOffset)
+                                .gesture(DragGesture().onChanged(viewModel.onChange(_:)))
+                        }
                     }
+                    .frame(height: 10)
 
                     HStack {
                         Text("0:00")
@@ -117,7 +120,7 @@ struct ContentView: View {
                             .foregroundColor(Color.white.opacity(0.7))
                         Spacer()
                         Button(
-                            action: {},
+                            action: { viewModel.backward() },
                             label: {
                                 Image(systemName: "backward.end.fill")
                                     .resizable()
@@ -127,9 +130,9 @@ struct ContentView: View {
                         )
                         Spacer()
                         Button(
-                            action: {},
+                            action: { viewModel.play() },
                             label: {
-                                Image(systemName: "play.circle.fill")
+                                Image(systemName: viewModel.isPlaying ? "play.circle.fill" : "pause.circle.fill")
                                     .resizable()
                                     .foregroundColor(.white)
                                     .frame(width: 80, height: 80)
@@ -137,7 +140,7 @@ struct ContentView: View {
                         )
                         Spacer()
                         Button(
-                            action: {},
+                            action: { viewModel.forward() },
                             label: {
                                 Image(systemName: "forward.end.fill")
                                     .resizable()
@@ -149,6 +152,7 @@ struct ContentView: View {
                         Image(systemName: "repeat")
                             .foregroundColor(Color.white.opacity(0.7))
                     }
+                    .frame(maxHeight: .infinity)
 
                     Spacer()
                     HStack (alignment: .bottom){
@@ -172,7 +176,7 @@ struct ContentView_Previews: PreviewProvider {
                 media: Media(
                     name: "bohemian rhapsody",
                     artist: "Queen",
-                    duration: 5300,
+                    duration: 330000,
                     imageName: "queen",
                     color: .pink
                 )
