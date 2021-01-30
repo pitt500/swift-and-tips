@@ -17,11 +17,9 @@ struct TrackProgressView: View {
                     Capsule()
                         .fill(Color.white.opacity(0.2))
                         .frame(width:geometry.size.width , height: 5)
-
                     Capsule()
                         .fill(Color.white)
                         .frame(width: viewModel.progressOffset, height: 5)
-
                     Circle()
                         .fill(Color.white)
                         .shadow(radius: 10)

@@ -21,7 +21,6 @@ struct MediaInfoView: View {
                         design: .default
                     )
                 )
-
             Text(media.artist)
                 .foregroundColor(Color.white.opacity(0.8))
                 .font(.callout)

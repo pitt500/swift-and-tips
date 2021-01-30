@@ -21,7 +21,6 @@ struct HeaderView: View {
                         design: .default
                     )
                 )
-
             Spacer()
             Text(title)
                 .foregroundColor(.white)
