@@ -59,5 +59,8 @@ struct ControlMediaView_Previews: PreviewProvider {
         ControlMediaView(
             viewModel: .init(media: Media.demo)
         )
+        .background(Color.red)
+        .previewLayout(.fixed(width: 300, height: 100))
+        
     }
 }

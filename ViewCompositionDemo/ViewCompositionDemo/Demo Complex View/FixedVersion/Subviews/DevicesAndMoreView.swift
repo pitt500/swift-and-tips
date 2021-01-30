@@ -21,5 +21,7 @@ struct DevicesAndMoreView: View {
 struct DevicesAndMoreView_Previews: PreviewProvider {
     static var previews: some View {
         DevicesAndMoreView()
+            .background(Color.red)
+            .previewLayout(.fixed(width: 300, height: 100))
     }
 }
