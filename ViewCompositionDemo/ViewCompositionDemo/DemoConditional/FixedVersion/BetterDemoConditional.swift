@@ -7,15 +7,22 @@
 
 import SwiftUI
 
+struct Person {
+    let name: String
+    let imageName: String
+    let email: String
+}
+
 struct BetterDemoConditional: View {
-    @State var isEmpty = false
+    @State private var isEmpty = false
+    let person: Person
 
     var body: some View {
         VStack {
             if isEmpty {
                 NoDataView()
             } else {
-                ProfileView()
+                ProfileView(person: person)
             }
 
             //Just for demo
@@ -27,7 +34,13 @@ struct BetterDemoConditional: View {
 
 struct BetterDemoConditional_Previews: PreviewProvider {
     static var previews: some View {
-        BetterDemoConditional()
+        BetterDemoConditional(
+            person: Person(
+                name: "Mario Bros.",
+                imageName: "mario",
+                email: "mbros@nintendo.com"
+            )
+        )
     }
 }
 
@@ -44,6 +57,8 @@ struct NoDataView: View {
 }
 
 struct ProfileView: View {
+    let person: Person
+
     var body: some View {
         ZStack {
             ZStack {
@@ -52,17 +67,17 @@ struct ProfileView: View {
             }
             .ignoresSafeArea()
             VStack {
-                Image("mario")
+                Image(person.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
                     .clipped()
                     .cornerRadius(75)
 
-                Text("Mario Bros.")
+                Text(person.name)
                     .foregroundColor(.white)
                     .font(.largeTitle)
-                Text("mbros@nintendo.com")
+                Text(person.email)
                     .foregroundColor(.white)
                     .font(.callout)
 
