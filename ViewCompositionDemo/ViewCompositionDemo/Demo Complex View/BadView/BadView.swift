@@ -168,7 +168,7 @@ struct BadView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BadView_Previews: PreviewProvider {
     static var previews: some View {
         BadView(
             viewModel: .init(
