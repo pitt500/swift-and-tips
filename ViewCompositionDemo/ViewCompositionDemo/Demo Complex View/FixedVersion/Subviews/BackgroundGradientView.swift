@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackgroundView: View {
+struct BackgroundGradientView: View {
     let color: Color
 
     var body: some View {
@@ -31,6 +31,6 @@ struct BackgroundView: View {
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView(color: .pink)
+        BackgroundGradientView(color: .pink)
     }
 }

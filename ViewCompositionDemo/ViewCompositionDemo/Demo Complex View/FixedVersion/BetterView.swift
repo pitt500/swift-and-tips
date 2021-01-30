@@ -12,13 +12,11 @@ struct BetterView: View {
 
     var body: some View {
         ZStack {
-            BackgroundView(color: viewModel.media.color)
+            BackgroundGradientView(color: viewModel.media.color)
 
             VStack {
-
                 HeaderView(title: viewModel.media.artist)
                 Spacer()
-
                 AlbumCoverView(media: viewModel.media)
 
                 VStack (alignment: .leading) {
@@ -30,7 +28,9 @@ struct BetterView: View {
                     Spacer()
                     DevicesAndMoreView()
                 }
-            }.padding([.leading, .trailing, .bottom])
+            }.padding(
+                [.leading, .trailing, .bottom]
+            )
         }
     }
 }
