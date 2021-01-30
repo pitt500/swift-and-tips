@@ -14,7 +14,7 @@ struct BetterView: View {
         ZStack {
             BackgroundView(color: viewModel.media.color)
 
-            VStack(alignment: .center) {
+            VStack {
 
                 HeaderView(title: viewModel.media.artist)
 
@@ -31,52 +31,10 @@ struct BetterView: View {
 
                     TrackProgressView(viewModel: viewModel)
 
-                    HStack {
-                        Image(systemName: "shuffle")
-                            .foregroundColor(Color.white.opacity(0.7))
-                        Spacer()
-                        Button(
-                            action: { viewModel.backward() },
-                            label: {
-                                Image(systemName: "backward.end.fill")
-                                    .resizable()
-                                    .foregroundColor(.white)
-                                    .frame(width: 30, height: 30)
-                            }
-                        )
-                        Spacer()
-                        Button(
-                            action: { viewModel.play() },
-                            label: {
-                                Image(systemName: viewModel.isPlaying ? "play.circle.fill" : "pause.circle.fill")
-                                    .resizable()
-                                    .foregroundColor(.white)
-                                    .frame(width: 80, height: 80)
-                            }
-                        )
-                        Spacer()
-                        Button(
-                            action: { viewModel.forward() },
-                            label: {
-                                Image(systemName: "forward.end.fill")
-                                    .resizable()
-                                    .foregroundColor(.white)
-                                    .frame(width: 30, height: 30)
-                            }
-                        )
-                        Spacer()
-                        Image(systemName: "repeat")
-                            .foregroundColor(Color.white.opacity(0.7))
-                    }
-                    .frame(maxHeight: .infinity)
+                    ControlMediaView(viewModel: viewModel)
 
                     Spacer()
-                    HStack (alignment: .bottom){
-                        Image(systemName: "tv.and.hifispeaker.fill")
-                        Spacer()
-                        Image(systemName: "list.triangle")
-                    }
-                    .foregroundColor(.white)
+                    DevicesAndMoreView()
 
 
                 }
