@@ -14,3 +14,13 @@ struct Media {
     let imageName: String
     let color: Color
 }
+
+extension Media {
+    static let demo = Media(
+        name: "Bohemian Rhapsody",
+        artist: "Queen",
+        duration: 330000,
+        imageName: "queen",
+        color: .pink
+    )
+}

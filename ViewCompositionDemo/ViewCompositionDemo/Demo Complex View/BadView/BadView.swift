@@ -172,13 +172,7 @@ struct BadView_Previews: PreviewProvider {
     static var previews: some View {
         BadView(
             viewModel: .init(
-                media: Media(
-                    name: "Bohemian Rhapsody",
-                    artist: "Queen",
-                    duration: 330000,
-                    imageName: "queen",
-                    color: .pink
-                )
+                media: Media.demo
             )
         )
     }

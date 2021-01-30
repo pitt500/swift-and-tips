@@ -27,47 +27,9 @@ struct BetterView: View {
                     .padding(.bottom, 30)
 
                 VStack (alignment: .leading) {
-                    Text(viewModel.media.name)
-                        .foregroundColor(.white)
-                        .font(
-                            .system(
-                                size: 30,
-                                weight: .bold,
-                                design: .default
-                            )
-                        )
+                    MediaInfoView(media: viewModel.media)
 
-                    Text(viewModel.media.artist)
-                        .foregroundColor(Color.white.opacity(0.8))
-                        .font(.callout)
-
-                    GeometryReader { geometry in
-                        ZStack(alignment: .leading){
-                            Capsule()
-                                .fill(Color.white.opacity(0.2))
-                                .frame(width:geometry.size.width , height: 5)
-
-                            Capsule()
-                                .fill(Color.white)
-                                .frame(width: viewModel.progressOffset, height: 5)
-
-                            Circle()
-                                .fill(Color.white)
-                                .shadow(radius: 10)
-                                .frame(width: 15, height: 15)
-                                .offset(x: viewModel.progressOffset)
-                                .gesture(DragGesture().onChanged(viewModel.onChange(_:)))
-                        }
-                    }
-                    .frame(height: 10)
-
-                    HStack {
-                        Text("0:00")
-                        Spacer()
-                        Text("-\(viewModel.durationInMinutes)")
-                    }
-                    .foregroundColor(.white)
-                    .font(.caption)
+                    TrackProgressView(viewModel: viewModel)
 
                     HStack {
                         Image(systemName: "shuffle")
