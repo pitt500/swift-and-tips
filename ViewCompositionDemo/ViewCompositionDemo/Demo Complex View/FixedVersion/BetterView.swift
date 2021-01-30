@@ -16,40 +16,7 @@ struct BetterView: View {
 
             VStack(alignment: .center) {
 
-                HStack(alignment: .top) {
-                    Image(systemName: "chevron.down")
-                        .foregroundColor(.white)
-                        .font(
-                            .system(
-                                size: 20,
-                                weight: .regular,
-                                design: .default
-                            )
-                        )
-
-                    Spacer()
-                    Text(viewModel.media.artist)
-                        .foregroundColor(.white)
-                        .font(
-                            .system(
-                                size: 15,
-                                weight: .bold,
-                                design: .default
-                            )
-                        )
-                    Spacer()
-                    Image(systemName: "ellipsis")
-                        .foregroundColor(.white)
-                        .font(
-                            .system(
-                                size: 20,
-                                weight: .bold,
-                                design: .default
-                            )
-                        )
-
-                }
-                .frame(minHeight: 0, maxHeight: 100)
+                HeaderView(title: viewModel.media.artist)
 
                 Spacer()
 
