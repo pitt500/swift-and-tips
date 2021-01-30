@@ -21,6 +21,6 @@ struct AlbumCoverView: View {
 
 struct AlbumCoverView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumCoverView(imageName: "queen")
+        AlbumCoverView(media: Media.demo)
     }
 }
