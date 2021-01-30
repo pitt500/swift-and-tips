@@ -12,19 +12,7 @@ struct BetterView: View {
 
     var body: some View {
         ZStack {
-            Color.black
-                .ignoresSafeArea()
-            LinearGradient(
-                gradient: Gradient(
-                    colors: [
-                        viewModel.media.color.opacity(0.6),
-                        viewModel.media.color.opacity(0.3)
-                    ]
-                ),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            BackgroundView(color: viewModel.media.color)
 
             VStack(alignment: .center) {
 
