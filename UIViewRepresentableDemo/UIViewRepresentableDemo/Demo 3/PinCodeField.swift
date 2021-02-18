@@ -15,11 +15,11 @@ struct PinCodeField: UIViewRepresentable {
         let spacing = 20
         textfield.keyboardType = .numberPad
         textfield.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        textfield.textColor = .red
+        textfield.textColor = .white
         textfield.defaultTextAttributes.updateValue(spacing, forKey: .kern)
-        textfield.attributedPlaceholder = NSAttributedString(string: "______", attributes: [.kern: spacing])
+        textfield.attributedPlaceholder = NSAttributedString(string: "______", attributes: [.kern: spacing, .foregroundColor: UIColor.white])
+
         textfield.delegate = context.coordinator
-        textfield.contentHorizontalAlignment = .fill
 
         return textfield
     }
@@ -37,7 +37,8 @@ extension PinCodeField {
 
     class Coordinator: NSObject, UITextFieldDelegate {
         var parent: PinCodeField
-        let maxLength = 6
+        private let maxLength = 6
+
 
         init(_ parent: PinCodeField) {
             self.parent = parent
