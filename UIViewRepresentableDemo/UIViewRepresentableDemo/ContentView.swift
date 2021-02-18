@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text = ""
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+//        HeartButtonComponent(
+//            action: { print("hello") }
+//        )
+//        .frame(width: 150, height: 50)
+        VStack(alignment: .center) {
+            PinCodeField(text: $text)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding()
+
+        }
     }
 }
 
