@@ -10,6 +10,8 @@
 		B52BF16325DEDD6B0011D56D /* BankTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF16225DEDD6B0011D56D /* BankTitle.swift */; };
 		B52BF16825DEE2A20011D56D /* LoginBankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF16725DEE2A20011D56D /* LoginBankViewModel.swift */; };
 		B52BF16F25E008C80011D56D /* MainBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF16E25E008C80011D56D /* MainBankView.swift */; };
+		B52BF17325E00C560011D56D /* DemoActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF17225E00C560011D56D /* DemoActivityIndicator.swift */; };
+		B52BF17725E00C620011D56D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF17625E00C620011D56D /* ActivityIndicator.swift */; };
 		B5616E3B25DED9A1004F362B /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5616E3A25DED9A1004F362B /* BackgroundGradientView.swift */; };
 		B5B00DFD25DAC82800D38982 /* UIViewRepresentableDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B00DFC25DAC82800D38982 /* UIViewRepresentableDemoApp.swift */; };
 		B5B00DFF25DAC82800D38982 /* LoginBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B00DFE25DAC82800D38982 /* LoginBankView.swift */; };
@@ -22,6 +24,8 @@
 		B52BF16225DEDD6B0011D56D /* BankTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTitle.swift; sourceTree = "<group>"; };
 		B52BF16725DEE2A20011D56D /* LoginBankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBankViewModel.swift; sourceTree = "<group>"; };
 		B52BF16E25E008C80011D56D /* MainBankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBankView.swift; sourceTree = "<group>"; };
+		B52BF17225E00C560011D56D /* DemoActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoActivityIndicator.swift; sourceTree = "<group>"; };
+		B52BF17625E00C620011D56D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		B5616E3A25DED9A1004F362B /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
 		B5B00DF925DAC82800D38982 /* UIViewRepresentableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewRepresentableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B00DFC25DAC82800D38982 /* UIViewRepresentableDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableDemoApp.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		B5B00E0E25DD54D600D38982 /* Demo 1 */ = {
 			isa = PBXGroup;
 			children = (
+				B52BF17225E00C560011D56D /* DemoActivityIndicator.swift */,
+				B52BF17625E00C620011D56D /* ActivityIndicator.swift */,
 			);
 			path = "Demo 1";
 			sourceTree = "<group>";
@@ -190,7 +196,9 @@
 				B52BF16F25E008C80011D56D /* MainBankView.swift in Sources */,
 				B5B00DFF25DAC82800D38982 /* LoginBankView.swift in Sources */,
 				B52BF16825DEE2A20011D56D /* LoginBankViewModel.swift in Sources */,
+				B52BF17325E00C560011D56D /* DemoActivityIndicator.swift in Sources */,
 				B5B00DFD25DAC82800D38982 /* UIViewRepresentableDemoApp.swift in Sources */,
+				B52BF17725E00C620011D56D /* ActivityIndicator.swift in Sources */,
 				B5616E3B25DED9A1004F362B /* BackgroundGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
