@@ -81,8 +81,8 @@
 			children = (
 				B52BF16625DEE28B0011D56D /* ViewModel */,
 				B5616E3925DED98B004F362B /* Utilities */,
-				B5BC7F9725DE3F1500E3207C /* Demo 3 */,
-				B5B00E0E25DD54D600D38982 /* Demo 2 */,
+				B5BC7F9725DE3F1500E3207C /* Demo 2 */,
+				B5B00E0E25DD54D600D38982 /* Demo 1 */,
 				B5B00DFC25DAC82800D38982 /* UIViewRepresentableDemoApp.swift */,
 				B5B00DFE25DAC82800D38982 /* LoginBankView.swift */,
 				B5B00E0025DAC82A00D38982 /* Assets.xcassets */,
@@ -101,19 +101,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B5B00E0E25DD54D600D38982 /* Demo 2 */ = {
+		B5B00E0E25DD54D600D38982 /* Demo 1 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Demo 2";
+			path = "Demo 1";
 			sourceTree = "<group>";
 		};
-		B5BC7F9725DE3F1500E3207C /* Demo 3 */ = {
+		B5BC7F9725DE3F1500E3207C /* Demo 2 */ = {
 			isa = PBXGroup;
 			children = (
 				B5BC7F9825DE3F3800E3207C /* PinCodeField.swift */,
 			);
-			path = "Demo 3";
+			path = "Demo 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
