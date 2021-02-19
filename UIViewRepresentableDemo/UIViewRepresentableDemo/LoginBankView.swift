@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LoginBankView: View {
     @State private var text = ""
+
     var body: some View {
         ZStack {
             BackgroundGradientView(color: .blue)
@@ -26,11 +27,14 @@ struct ContentView: View {
 
             }
         }
+        .fullScreenCover(
+            isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/,
+            content: Text("🤑Money!"))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginBankView()
     }
 }
