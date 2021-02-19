@@ -79,8 +79,8 @@
 		B5B00DFB25DAC82800D38982 /* UIViewRepresentableDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B5BC7F9725DE3F1500E3207C /* Demo 2 */,
 				B5B00E0E25DD54D600D38982 /* Demo 1 */,
+				B5BC7F9725DE3F1500E3207C /* Demo 2 */,
 				B5B00DFC25DAC82800D38982 /* UIViewRepresentableDemoApp.swift */,
 				B5B00E0025DAC82A00D38982 /* Assets.xcassets */,
 				B5B00E0525DAC82A00D38982 /* Info.plist */,
