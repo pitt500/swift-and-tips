@@ -5,4 +5,17 @@
 //  Created by Pedro Rojas on 18/02/21.
 //
 
-import Foundation
+import Combine
+
+class LoginBankViewModel: ObservableObject {
+    @Published var text: String = "" {
+        didSet { print("asdasd") }
+    }
+    @Published var shouldMoveToNextScreen = false
+
+    private var validPin = "223344"
+
+    func validate(text: String) {
+        shouldMoveToNextScreen = text == validPin
+    }
+}

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginBankView: View {
-    @State private var text = ""
+    @StateObject private var viewModel = LoginBankViewModel()
 
     var body: some View {
         ZStack {
@@ -21,15 +21,19 @@ struct LoginBankView: View {
                 Text("Please enter your pin code:")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
-                PinCodeField(text: $text)
+                PinCodeField(text: $viewModel.text)
+                    .onChange(
+                        of: viewModel.text,
+                        perform: { viewModel.validate(text: $0) }
+                    )
                     .frame(width: 245, height: 60)
                     .padding(.leading, 30)
 
             }
         }
-        .fullScreenCover(
-            isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/,
-            content: Text("🤑Money!"))
+        .sheet(isPresented: $viewModel.shouldMoveToNextScreen) {
+            MainBankView()
+        }
     }
 }
 

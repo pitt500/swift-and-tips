@@ -25,7 +25,7 @@ struct PinCodeField: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UITextField, context: Context) {
-        uiView.text = text
+        print("SwiftUI View is updating")
     }
 }
 
@@ -47,9 +47,9 @@ extension PinCodeField {
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             guard let text = textField.text else { return true }
             let newLength = text.count + string.count - range.length
-            print("text(current text): \(text.count)")
-            print("string (added): \(string.count)")
-            print("range (deleted): \(range.length)")
+//            print("text(current text): \(text.count)")
+//            print("string (added): \(string.count)")
+//            print("range (deleted): \(range.length)")
 
             if newLength == maxLength  {
                 textField.text = textField.text! + string
@@ -59,6 +59,12 @@ extension PinCodeField {
             return newLength <= maxLength
         }
 
+        // Don't forget to add this method, otherwise, your SwiftUI View
+        // won't update
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            parent.text = textField.text ?? ""
+            print("hello")
+        }
 
 
     }

@@ -11,7 +11,7 @@ import SwiftUI
 struct UIViewRepresentableDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginBankView()
         }
     }
 }
