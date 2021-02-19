@@ -79,16 +79,12 @@
 		B5B00DFB25DAC82800D38982 /* UIViewRepresentableDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF16625DEE28B0011D56D /* ViewModel */,
-				B5616E3925DED98B004F362B /* Utilities */,
 				B5BC7F9725DE3F1500E3207C /* Demo 2 */,
 				B5B00E0E25DD54D600D38982 /* Demo 1 */,
 				B5B00DFC25DAC82800D38982 /* UIViewRepresentableDemoApp.swift */,
-				B5B00DFE25DAC82800D38982 /* LoginBankView.swift */,
 				B5B00E0025DAC82A00D38982 /* Assets.xcassets */,
 				B5B00E0525DAC82A00D38982 /* Info.plist */,
 				B5B00E0225DAC82A00D38982 /* Preview Content */,
-				B52BF16E25E008C80011D56D /* MainBankView.swift */,
 			);
 			path = UIViewRepresentableDemo;
 			sourceTree = "<group>";
@@ -111,7 +107,11 @@
 		B5BC7F9725DE3F1500E3207C /* Demo 2 */ = {
 			isa = PBXGroup;
 			children = (
+				B5616E3925DED98B004F362B /* Utilities */,
+				B52BF16625DEE28B0011D56D /* ViewModel */,
 				B5BC7F9825DE3F3800E3207C /* PinCodeField.swift */,
+				B5B00DFE25DAC82800D38982 /* LoginBankView.swift */,
+				B52BF16E25E008C80011D56D /* MainBankView.swift */,
 			);
 			path = "Demo 2";
 			sourceTree = "<group>";
