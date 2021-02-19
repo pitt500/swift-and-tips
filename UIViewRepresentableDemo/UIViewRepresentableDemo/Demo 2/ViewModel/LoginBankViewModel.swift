@@ -8,9 +8,7 @@
 import Combine
 
 class LoginBankViewModel: ObservableObject {
-    @Published var text: String = "" {
-        didSet { print("asdasd") }
-    }
+    @Published var text: String = ""
     @Published var shouldMoveToNextScreen = false
 
     private var validPin = "223344"

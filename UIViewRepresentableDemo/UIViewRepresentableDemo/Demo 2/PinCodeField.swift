@@ -63,7 +63,6 @@ extension PinCodeField {
         // won't update
         func textFieldDidEndEditing(_ textField: UITextField) {
             parent.text = textField.text ?? ""
-            print("hello")
         }
 
 
