@@ -15,8 +15,6 @@
 		B5B00DFF25DAC82800D38982 /* LoginBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B00DFE25DAC82800D38982 /* LoginBankView.swift */; };
 		B5B00E0125DAC82A00D38982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B00E0025DAC82A00D38982 /* Assets.xcassets */; };
 		B5B00E0425DAC82A00D38982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B00E0325DAC82A00D38982 /* Preview Assets.xcassets */; };
-		B5B00E1525DD571C00D38982 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B00E1425DD571C00D38982 /* HeartView.swift */; };
-		B5B00E1825DD5A3F00D38982 /* HeartButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B00E1725DD5A3F00D38982 /* HeartButtonComponent.swift */; };
 		B5BC7F9925DE3F3800E3207C /* PinCodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC7F9825DE3F3800E3207C /* PinCodeField.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +29,6 @@
 		B5B00E0025DAC82A00D38982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B00E0325DAC82A00D38982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5B00E0525DAC82A00D38982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5B00E1425DD571C00D38982 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
-		B5B00E1725DD5A3F00D38982 /* HeartButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButtonComponent.swift; sourceTree = "<group>"; };
 		B5BC7F9825DE3F3800E3207C /* PinCodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +82,6 @@
 				B52BF16625DEE28B0011D56D /* ViewModel */,
 				B5616E3925DED98B004F362B /* Utilities */,
 				B5BC7F9725DE3F1500E3207C /* Demo 3 */,
-				B5B00E0D25DD54CE00D38982 /* Demo 1 */,
 				B5B00E0E25DD54D600D38982 /* Demo 2 */,
 				B5B00DFC25DAC82800D38982 /* UIViewRepresentableDemoApp.swift */,
 				B5B00DFE25DAC82800D38982 /* LoginBankView.swift */,
@@ -106,28 +101,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B5B00E0D25DD54CE00D38982 /* Demo 1 */ = {
-			isa = PBXGroup;
-			children = (
-				B5B00E0F25DD554900D38982 /* UIKit Views */,
-				B5B00E1725DD5A3F00D38982 /* HeartButtonComponent.swift */,
-			);
-			path = "Demo 1";
-			sourceTree = "<group>";
-		};
 		B5B00E0E25DD54D600D38982 /* Demo 2 */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Demo 2";
-			sourceTree = "<group>";
-		};
-		B5B00E0F25DD554900D38982 /* UIKit Views */ = {
-			isa = PBXGroup;
-			children = (
-				B5B00E1425DD571C00D38982 /* HeartView.swift */,
-			);
-			path = "UIKit Views";
 			sourceTree = "<group>";
 		};
 		B5BC7F9725DE3F1500E3207C /* Demo 3 */ = {
@@ -210,10 +188,8 @@
 				B52BF16325DEDD6B0011D56D /* BankTitle.swift in Sources */,
 				B5BC7F9925DE3F3800E3207C /* PinCodeField.swift in Sources */,
 				B52BF16F25E008C80011D56D /* MainBankView.swift in Sources */,
-				B5B00E1825DD5A3F00D38982 /* HeartButtonComponent.swift in Sources */,
 				B5B00DFF25DAC82800D38982 /* LoginBankView.swift in Sources */,
 				B52BF16825DEE2A20011D56D /* LoginBankViewModel.swift in Sources */,
-				B5B00E1525DD571C00D38982 /* HeartView.swift in Sources */,
 				B5B00DFD25DAC82800D38982 /* UIViewRepresentableDemoApp.swift in Sources */,
 				B5616E3B25DED9A1004F362B /* BackgroundGradientView.swift in Sources */,
 			);
