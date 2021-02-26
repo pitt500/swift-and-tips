@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B573738D25E932AD00BCFCF7 /* NewTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B573738C25E932AD00BCFCF7 /* NewTabBarView.swift */; };
+		B573738D25E932AD00BCFCF7 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B573738C25E932AD00BCFCF7 /* DocumentPicker.swift */; };
 		B587ECF225E92C1E00044292 /* UIViewControllerRepresentableDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587ECF125E92C1E00044292 /* UIViewControllerRepresentableDemoApp.swift */; };
 		B587ECF425E92C1E00044292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587ECF325E92C1E00044292 /* ContentView.swift */; };
 		B587ECF625E92C1F00044292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B587ECF525E92C1F00044292 /* Assets.xcassets */; };
@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B573738C25E932AD00BCFCF7 /* NewTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabBarView.swift; sourceTree = "<group>"; };
+		B573738C25E932AD00BCFCF7 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		B587ECEE25E92C1E00044292 /* UIViewControllerRepresentableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewControllerRepresentableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B587ECF125E92C1E00044292 /* UIViewControllerRepresentableDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableDemoApp.swift; sourceTree = "<group>"; };
 		B587ECF325E92C1E00044292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				B587ECF525E92C1F00044292 /* Assets.xcassets */,
 				B587ECFA25E92C1F00044292 /* Info.plist */,
 				B587ECF725E92C1F00044292 /* Preview Content */,
-				B573738C25E932AD00BCFCF7 /* NewTabBarView.swift */,
+				B573738C25E932AD00BCFCF7 /* DocumentPicker.swift */,
 			);
 			path = UIViewControllerRepresentableDemo;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B587ECF425E92C1E00044292 /* ContentView.swift in Sources */,
-				B573738D25E932AD00BCFCF7 /* NewTabBarView.swift in Sources */,
+				B573738D25E932AD00BCFCF7 /* DocumentPicker.swift in Sources */,
 				B587ECF225E92C1E00044292 /* UIViewControllerRepresentableDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

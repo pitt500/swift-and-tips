@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 2
+    @State private var documentUrl = ""
+    @State private var isPickerPresented = false
 
     var body: some View {
-        TabView(selection: $selection) {
-            Text("First")
-                .tabItem {
-                    Label("Hello", systemImage: "heart")
-                }
-                .tag(1)
-            Text("Second")
-                .tabItem {
-                    Label("Bye", systemImage: "star")
-                }
-                .tag(2)
+        Button(
+            action: { isPickerPresented.toggle() },
+            label: {
+                Text("Button")
+            }
+        )
+        .frame(width: 100, height: 60)
+        .sheet(isPresented: $isPickerPresented) {
+            DocumentPicker()
         }
-        .background(Color.blue)
     }
 }
 
