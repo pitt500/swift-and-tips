@@ -144,10 +144,16 @@ class Logger: Loggable {
 // MARK: - Protocols as Types
 // "There exists a type T such that T conforms to the protocol"
 
+// Error: Protocol type 'Loggable' cannot be instantiated
+//let invalidLoggable = Loggable(filename: "bad!")
+
 // As parameter type or return type in a function
 func printPlayer(player: Player) {
-    print("\(player.nickname) has joined the match!")
+    print("\(player.name) has joined the match!")
 }
+
+let aPlayer = Person(name: "Rafael Nadal", score: 800)
+printPlayer(player: aPlayer)
 
 class ListOfPlayers {
     // As collection
