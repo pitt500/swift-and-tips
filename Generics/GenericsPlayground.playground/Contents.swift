@@ -98,3 +98,15 @@ var stacksOfStrings = Stack<String>()
 stacksOfStrings.push("Articuno")
 stacksOfStrings.push("Zapdos")
 stacksOfStrings.push("Moltres")
+
+
+// MARK: - Extending a generic type
+
+//Generic type is available in the extension
+extension Stack {
+    var lastPushed: Element? {
+        values.last
+    }
+}
+
+print(stacksOfStrings.lastPushed ?? "Empty")
