@@ -36,7 +36,7 @@ func sayHelloAny(to value: Any) {
 }
 
 // But the usage of Any has big tradeoffs: Performance & Casting
-// Compiler can figure out the right amount of memory for the concrete type,
+// Compiler cannot figures out the right amount of memory for the concrete type,
 // Instead, Any wraps the actual value and creating additional memory.
 
 let anyArray: Array<Any> = [1, "Bonjour", 5.9, {}]
