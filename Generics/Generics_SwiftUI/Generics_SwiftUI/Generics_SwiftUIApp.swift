@@ -11,7 +11,7 @@ import SwiftUI
 struct Generics_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardView(content: Text("Hello"))
         }
     }
 }

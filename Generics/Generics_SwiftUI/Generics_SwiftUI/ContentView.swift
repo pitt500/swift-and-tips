@@ -7,15 +7,25 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CardView<Content: View>: View {
+    let content: Content
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            BackgroundGradientView(color: .green)
+            ZStack {
+                Color.white
+                content
+            }
+            .cornerRadius(20)
+            .padding(20)
+            .shadow(radius: 10)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CardView(content: Text("Hello"))
     }
 }
