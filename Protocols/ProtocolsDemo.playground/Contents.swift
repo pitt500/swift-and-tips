@@ -311,7 +311,7 @@ protocol Counter {
 
 extension Counter {
     func printCounter() {
-        print("DefaultMessage")
+        print("Default Message")
     }
 }
 
