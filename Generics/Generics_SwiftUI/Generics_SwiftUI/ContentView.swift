@@ -16,6 +16,7 @@ struct CardView<Content: View>: View {
             ZStack {
                 Color.white
                 content
+                    .font(.system(size: 50))
             }
             .cornerRadius(20)
             .padding(20)
@@ -26,6 +27,6 @@ struct CardView<Content: View>: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(content: Text("Hello"))
+        CardView(content: Text("♦️"))
     }
 }
