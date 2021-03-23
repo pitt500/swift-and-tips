@@ -11,6 +11,7 @@
 		B591B547260A31700064CE50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B546260A31700064CE50 /* ContentView.swift */; };
 		B591B549260A31720064CE50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B591B548260A31720064CE50 /* Assets.xcassets */; };
 		B591B54C260A31720064CE50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B591B54B260A31720064CE50 /* Preview Assets.xcassets */; };
+		B591B555260A31EC0064CE50 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B554260A31EC0064CE50 /* BackgroundGradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B591B548260A31720064CE50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B591B54B260A31720064CE50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B591B54D260A31720064CE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B591B554260A31EC0064CE50 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				B591B544260A31700064CE50 /* Generics_SwiftUIApp.swift */,
+				B591B554260A31EC0064CE50 /* BackgroundGradient.swift */,
 				B591B546260A31700064CE50 /* ContentView.swift */,
 				B591B548260A31720064CE50 /* Assets.xcassets */,
 				B591B54D260A31720064CE50 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				B591B547260A31700064CE50 /* ContentView.swift in Sources */,
 				B591B545260A31700064CE50 /* Generics_SwiftUIApp.swift in Sources */,
+				B591B555260A31EC0064CE50 /* BackgroundGradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
