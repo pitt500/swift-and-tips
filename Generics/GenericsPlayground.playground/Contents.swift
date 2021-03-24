@@ -45,6 +45,12 @@ print(anyArray[0] as! Int)
 //print(anyArray[1] as! Int) // Boom! 💥
 
 
+// MARK: - Optionals are generics too!
+let x: Int? = nil
+let y: Optional<Int>
+print(x is Optional<Int>)
+
+
 // MARK: - Type Constraint
 
 func addInt(a: Int, b: Int) -> Int {
