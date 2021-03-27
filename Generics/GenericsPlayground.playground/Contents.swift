@@ -1,8 +1,14 @@
 import UIKit
 
-// The problem that generics solve:
+// MARK: - What are Generics?
+// Generic code help you to write flexible and reusable code.
+// It's one of the most powerful features of Swift.
+// Note: It's a kind of polymorphism called "parametric polymorphism"
 
-// MARK: - Duplicating code even for simple tasks like "saying hello"...
+
+// MARK: - The problem that generics solve:
+
+// Duplicating code even for simple tasks like "saying hello"...
 func sayHello(toInt value: Int) {
     print("Hello World \(value)!")
 }
