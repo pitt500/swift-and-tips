@@ -107,3 +107,94 @@ func executeOperation<Container: Stack>(container: Container) {
 
 }
 
+
+// MARK: - Where clause
+// Enable you to define requirements on the type parameters for generic functions, types,
+// and associated types.
+
+func insert<Container: Stack>(
+    structure: inout Container
+) where Container.Element == Int {
+    structure.push(1)
+}
+
+func insert<Container: Stack, Value>(
+    structure: inout Container,
+    value: Value
+) where Container.Element == Value {
+    structure.push(value)
+}
+
+insert(structure: &stack2, value: 10)
+print(stack2.pop() ?? "Empty")
+
+
+// MARK: - Extensions with Where Clauses (Contextual Where clauses)
+
+extension MyStack where Element: Equatable {
+    func isOnTop(_ value: Element) -> Bool {
+        guard let last = values.last else {
+            return false
+        }
+
+        // Referencing operator function '==' on 'Equatable'
+        // requires that 'MyStack<Item>.Element' (aka 'Item') conform to 'Equatable'
+        return value == last
+    }
+}
+
+print(stack3.isOnTop("Everybody!"))
+print(stack3.isOnTop("Hello"))
+
+extension MyStack where Element == Int {
+    func average() -> Double {
+        var sum = 0.0
+
+        for value in values {
+            sum += Double(value)
+        }
+
+        return sum/Double(values.count)
+    }
+}
+
+print(stack2.average())
+
+//print(stack3.average) // You can't use average in the incorrect context ❌
+
+
+// MARK: - Challenge: Merge two stacks
+func merge<Container1: Stack, Container2: Stack>(
+    _ c1: inout Container1,
+    _ c2: inout Container2
+) -> some Stack where Container1.Element == Container2.Element {
+    var newContainer = MyStack<Container1.Element>()
+
+    while let value = c1.pop() {
+        newContainer.push(value)
+    }
+
+    while let value = c2.pop() {
+        newContainer.push(value)
+    }
+
+    return newContainer
+}
+
+var stack4 = MyStack<Int>()
+stack4.push(5)
+stack4.push(8)
+stack4.push(13)
+
+var stack5 = MyStack<Int>()
+stack5.push(1)
+stack5.push(2)
+stack5.push(3)
+
+var stack6 = merge(&stack4, &stack5)
+
+print("-----")
+while let value = stack6.pop() {
+    print("\(value)", terminator: " ")
+}
+
