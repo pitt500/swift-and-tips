@@ -9,8 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        makeBody2()
+    }
+
+    // Error: Protocol 'View' can only be used as a generic constraint because it has Self or associated type requirements
+//    func makeBody() -> View {
+//        Text("Hello!")
+//    }
+
+    // SwiftUI without opaque types 💥
+    // Change the position of any view and the return type will be different!
+    func makeBody() -> VStack<TupleView<(Text, List<Never, ForEach<Range<Int>, Int, Text>>)>> {
+        VStack {
+            Text("Title!")
+            List {
+                ForEach(0..<5) { value in
+                    Text("\(value)")
+                }
+            }
+        }
+    }
+
+    //Type-erasing
+    func makeBody2() -> AnyView {
+        AnyView(
+            VStack {
+                Text("Title!")
+                List {
+                    ForEach(0..<5) { value in
+                        Text("\(value)")
+                    }
+                }
+            }
+        )
     }
 }
 
