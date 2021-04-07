@@ -32,8 +32,11 @@ struct ContentView: View {
 
     //Type-erasing
     // Avoid this, this will reduce your performance! 💥
-    // Documentation: Whenever the type of view used with an `AnyView` changes, the old
-    // hierarchy is destroyed and a new hierarchy is created for the new type.
+    /// Documentation: Whenever the type of view used
+    /// with an `AnyView` changes, the old
+    /// hierarchy is destroyed and a new hierarchy is
+    /// created for the new type.
+    /// https://developer.apple.com/documentation/swiftui/anyview
     func makeBody2() -> AnyView {
         AnyView(
             VStack {
