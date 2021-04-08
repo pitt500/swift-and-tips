@@ -8,18 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        makeBody2()
-    }
-
-    // Error: Protocol 'View' can only be used as a generic constraint because it has Self or associated type requirements
-//    func makeBody() -> View {
-//        Text("Hello!")
-//    }
-
     // SwiftUI without opaque types 💥
     // Change the position of any view and the return type will be different!
-    func makeBody() -> VStack<TupleView<(Text, List<Never, ForEach<Range<Int>, Int, Text>>)>> {
+    var body: VStack<TupleView<(Text, List<Never, ForEach<Range<Int>, Int, Text>>)>> {
         VStack {
             Text("Title!")
             List {
@@ -30,24 +21,10 @@ struct ContentView: View {
         }
     }
 
-    //Type-erasing
-    /// Documentation: Whenever the type of view used
-    /// with an `AnyView` changes, the old
-    /// hierarchy is destroyed and a new hierarchy is
-    /// created for the new type.
-    /// https://developer.apple.com/documentation/swiftui/anyview
-    func makeBody2() -> AnyView {
-        AnyView(
-            VStack {
-                Text("Title!")
-                List {
-                    ForEach(0..<5) { value in
-                        Text("\(value)")
-                    }
-                }
-            }
-        )
-    }
+    // Error: Protocol 'View' can only be used as a generic constraint because it has Self or associated type requirements
+//    var body: -> View {
+//        Text("Hello!")
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
