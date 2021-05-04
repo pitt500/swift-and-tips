@@ -8,13 +8,39 @@
 import SwiftUI
 
 struct PokemonList: View {
+    @ObservedObject var pokemonLoader: PokemonLoader
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                List {
+                    ForEach(pokemonLoader.pokemonData, id: \.name) {
+                        PokemonCell(pokemon: $0)
+                            .noSeparators(color: .white)
+                    }
+                }
+                .listStyle(PlainListStyle())
+                .navigationTitle("Pokedex")
+                .navigationBarItems(
+                    trailing: Button(
+                        action: { pokemonLoader.load() },
+                        label: { Text("Reload") }
+                    )
+                )
+
+                if pokemonLoader.isLoading {
+                    ActivityIndicator(style: .large, isLoading: true)
+                }
+            }
+        }
+        .onAppear {
+            pokemonLoader.load()
+        }
     }
 }
 
 struct PokemonList_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonList()
+        PokemonList(pokemonLoader: PokemonLoader())
     }
 }
