@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CombineIntroDemoApp: App {
+    @StateObject private var loader = PokemonLoader()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokemonList(pokemonLoader: loader)
         }
     }
 }

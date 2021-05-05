@@ -14,7 +14,9 @@ struct PokemonList: View {
         NavigationView {
             ZStack {
                 List {
-                    ForEach(pokemonLoader.pokemonData, id: \.name) {
+                    ForEach(pokemonLoader.pokemonData,
+                            id: \.name)
+                    {
                         PokemonCell(pokemon: $0)
                             .noSeparators(color: .white)
                     }
@@ -35,6 +37,9 @@ struct PokemonList: View {
         }
         .onAppear {
             pokemonLoader.load()
+        }
+        .alert(isPresented: $pokemonLoader.error) { 
+            Alert(title: Text("Server error, try again later"))
         }
     }
 }
