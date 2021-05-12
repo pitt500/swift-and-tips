@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ReinventedState var text = ""
+    @StringState(format: .capitalized) var text = ""
 
     var body: some View {
         VStack {
             Text(text)
             TextField("hello", text: $text)
                 .disableAutocorrection(true)
+                .padding()
         }
     }
 }
@@ -26,18 +27,26 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 @propertyWrapper
-struct ReinventedState: DynamicProperty {
+struct StringState: DynamicProperty {
     @State private var value: String
+    private var format: Format
 
-    init(wrappedValue: String) {
+    enum Format {
+        case lowercased
+        case uppercased
+        case capitalized
+        case `default`
+    }
+
+    init(wrappedValue: String, format: Format) {
         self._value = State(wrappedValue: wrappedValue)
+        self.format = format
     }
 
     var wrappedValue: String {
         get { value }
         nonmutating set {
-            value = newValue
-                .uppercased()
+            value = formattedString(newValue)
         }
     }
 
@@ -46,5 +55,18 @@ struct ReinventedState: DynamicProperty {
             get: { wrappedValue },
             set: { wrappedValue = $0 }
         )
+    }
+
+    private func formattedString(_ string: String) -> String {
+        switch format {
+        case .capitalized:
+            return string.capitalized
+        case .lowercased:
+            return string.lowercased()
+        case .uppercased:
+            return string.uppercased()
+        case .default:
+            return string
+        }
     }
 }

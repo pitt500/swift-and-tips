@@ -52,8 +52,6 @@
 		B5380986264AB1960029FE05 /* PropertyWrappersDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B56BB127264B897C005416C2 /* Demo2 */,
-				B56BB128264B8984005416C2 /* Demo3 */,
 				B5380987264AB1960029FE05 /* PropertyWrappersDemoApp.swift */,
 				B5380989264AB1960029FE05 /* ContentView.swift */,
 				B538098B264AB1980029FE05 /* Assets.xcassets */,
@@ -69,20 +67,6 @@
 				B538098E264AB1980029FE05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		B56BB127264B897C005416C2 /* Demo2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Demo2;
-			sourceTree = "<group>";
-		};
-		B56BB128264B8984005416C2 /* Demo3 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Demo3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
