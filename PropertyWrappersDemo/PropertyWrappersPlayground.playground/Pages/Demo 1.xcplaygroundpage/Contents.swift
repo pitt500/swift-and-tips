@@ -2,8 +2,7 @@ import Foundation
 
 struct User {
     var email: String
-    // Equivalent: @Age(0) var age: Int
-    @Age var age: Int = 0
+    @Age var age: Int
     var firstName: String
     var lastName: String
 }
