@@ -17,7 +17,7 @@ struct Age {
 
     var wrappedValue: Int {
         get { age }
-        set { age = max(0, newValue) }
+        set { age = min(120, max(0, newValue)) }
     }
 }
 
@@ -34,6 +34,9 @@ print(user.age) // output: 0
 //Modifying the value
 user.age = -1000
 print(user.age) // output: 0
+
+user.age = 1000
+print(user.age) // output: 120
 
 //Correct age
 user.age = 34
