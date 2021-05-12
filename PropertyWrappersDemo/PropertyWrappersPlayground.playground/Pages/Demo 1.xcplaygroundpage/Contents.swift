@@ -10,10 +10,10 @@ struct User {
 
 @propertyWrapper
 struct Age {
-    private var age: Int
+    private var age: Int = 0
 
-    init(wrappedValue initialValue: Int) {
-        self.age = max(0, initialValue)
+    init(wrappedValue: Int) {
+        self.wrappedValue = wrappedValue
     }
 
     var wrappedValue: Int {
