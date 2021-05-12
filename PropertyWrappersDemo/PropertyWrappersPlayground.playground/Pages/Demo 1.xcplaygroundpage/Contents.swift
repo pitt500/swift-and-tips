@@ -32,11 +32,9 @@ var user = User(
 
 // Initial value
 print(user.age) // output: 0
-
 //Modifying the value
 user.age = -1000
 print(user.age) // output: 0
-
 
 //Correct age
 user.age = 34
