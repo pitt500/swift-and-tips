@@ -1,7 +1,10 @@
 import Foundation
 
 struct Post: Codable {
+    // A simple property wrapper help you
+    // to decode/encode your dates :)!
     @ISO8601Date var date: Date
+    
     var title: String
     var description: String
     var urlImage: URL?
