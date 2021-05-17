@@ -1,14 +1,7 @@
-//
-//  ContentView.swift
-//  PropertyWrappersDemo
-//
-//  Created by Pedro Rojas on 11/05/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    @StringState(format: .capitalized) var text = ""
+    @StringFormat(format: .capitalized) var text = ""
 
     var body: some View {
         VStack {
@@ -20,16 +13,23 @@ struct ContentView: View {
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
+
+
+
+
+
+
 @propertyWrapper
-struct StringState: DynamicProperty {
-    @State private var value: String
-    private var format: Format
+struct StringFormat: DynamicProperty {
+    @State private var value: String = ""
+    private var format: Format = .default
 
     enum Format {
         case lowercased
@@ -39,15 +39,13 @@ struct StringState: DynamicProperty {
     }
 
     init(wrappedValue: String, format: Format) {
-        self._value = State(wrappedValue: wrappedValue)
         self.format = format
+        self.wrappedValue = wrappedValue
     }
 
     var wrappedValue: String {
         get { value }
-        nonmutating set {
-            value = formattedString(newValue)
-        }
+        nonmutating set { value = formattedString(newValue) }
     }
 
     var projectedValue: Binding<String> {
@@ -70,3 +68,15 @@ struct StringState: DynamicProperty {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
