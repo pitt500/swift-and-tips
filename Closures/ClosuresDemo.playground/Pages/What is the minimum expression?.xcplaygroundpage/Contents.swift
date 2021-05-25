@@ -29,3 +29,6 @@ import Foundation
 [1, 2, 3].map({ String($0) })
 
 
+// Plus: You can only send the method/init that will transform your data!
+// No brackets required 🤯!
+[1, 2, 3].map(String.init)
