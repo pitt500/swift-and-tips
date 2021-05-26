@@ -20,8 +20,8 @@ func someProcess(completion: () -> Void) {
     completion()
 }
 
-/// Trailing closure is a special syntax for closures at the end of your function that can be written (for the last one) at
-/// the end of function's parenthesis.
+/// Trailing closure is a special syntax for closures at the end of your function that can be written (for the last one)
+/// after the function's parenthesis.
 
 // MARK: - A ✅
 //(Recommended by https://github.com/raywenderlich/swift-style-guide#closure-expressions)
