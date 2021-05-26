@@ -13,10 +13,10 @@ func sayHello(to name: String) {
 sayHello(to: "Swift and Tips")
 
 
-// MARK: - B
 func calculateAverage(_ array: [Int]) -> Int {
     var result = 0
 
+    // MARK: - B
     func average() -> Int {
         for value in array {
             result += value
