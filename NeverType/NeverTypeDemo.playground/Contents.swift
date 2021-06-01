@@ -63,5 +63,5 @@ struct ContentView: NeverView {
     let text: String
 }
 
-
+// It will crash, you can't create primitive views without a body, only Apple ☹️.
 let view = ContentView(text: "Hello")
