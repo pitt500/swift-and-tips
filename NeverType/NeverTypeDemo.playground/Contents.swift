@@ -54,6 +54,23 @@ doSomething { result in
 }
 
 
+// MARK: - How SwiftUI avoid an infinite loop reviewing all body properties in subviews?
+struct DemoView: View {
+    var body: some View {
+        ZStack {
+            VStack {
+                Image(systemName: "star.fill")
+                Text("This is a demo!")
+                Button("Press me") {
+                    print("Hello my friend!")
+                }
+            }
+            .padding(10)
+        }
+    }
+}
+
+
 
 // MARK: - Never in SwiftUI's views
 protocol NeverView: View where Self.Body == Never {}
