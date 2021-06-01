@@ -3,8 +3,6 @@ import SwiftUI
 // MARK: - All the functions return a type (even Void)
 func functionReturningInt() -> Int {
     return 10
-
-    //returns (10)
 }
 
 func functionReturningVoid() /* -> () */ {
