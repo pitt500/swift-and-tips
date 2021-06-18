@@ -8,11 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text = "hello"
+
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {
+            TextEditor(text: $text)
+                .font(
+                    .custom(
+                        "SF Mono",
+                        size: 20,
+                        relativeTo: .body
+                    )
+                )
+                .background(.blue)
+                .foregroundColor(.white)
+            Text(text)
+                .background(.green)
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: .infinity,
+                    alignment: .topLeading
+                )
+        }
+        .padding()
     }
 }
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
