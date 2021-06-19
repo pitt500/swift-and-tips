@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PokemonList: View {
     @StateObject private var loader = PokemonLoader()
     private let imageWidth = 110.0
     private let cellHeight = 130.0
@@ -50,7 +50,7 @@ struct ContentView: View {
                     .padding()
                 }
             }
-            .navigationTitle("Hello")
+            .navigationTitle("PokeDex")
             .task {
                 loader.load()
             }
@@ -64,7 +64,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PokemonList()
     }
 }
 
