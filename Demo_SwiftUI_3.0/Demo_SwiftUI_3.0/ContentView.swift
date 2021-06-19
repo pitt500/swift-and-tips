@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    let url = URL(string: "https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        AsyncImage(
+            url: url,
+            content: { $0.resizable() },
+            placeholder: { Text("Placeholder") }
+        )
+        .frame(width: 300, height: 300)
     }
 }
 
