@@ -16,7 +16,11 @@ struct PokemonList: View {
         NavigationView {
             List {
                 ForEach(loader.pokemonData) { pokemon in
-                    AsyncImage(url: pokemon.url, scale: 1.0) { phase in
+                    AsyncImage(
+                        url: pokemon.url,
+                        scale: 1.0,
+                        transaction: Transaction(animation: .easeIn(duration: 2.5))
+                    ) { phase in
                         switch phase {
 
                         case .success(let image):
@@ -35,6 +39,7 @@ struct PokemonList: View {
                         case .empty:
                             HStack {
                                 ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .red))
                                 Spacer()
                             }
 
@@ -48,13 +53,18 @@ struct PokemonList: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: cellHeight)
                     .padding()
+                    .listRowSeparatorTint(.red)
+                    //.listRowSeparator(.hidden)
                 }
             }
             .navigationTitle("PokeDex")
             .task {
+                // Task is the same like onAppear, but it cancels the task
+                // when the view disappears.
                 loader.load()
             }
             .refreshable {
+                // Enable Pull to refresh
                 loader.load()
             }
         }
