@@ -26,7 +26,6 @@ class PokemonLoader: ObservableObject {
     private let urlSession = URLSession(configuration: .default)
     private let limit = 3
     private var offset = 0
-    private var delta = 3
 
     func load() {
         isLoading = true
@@ -58,8 +57,7 @@ class PokemonLoader: ObservableObject {
                 guard let self = self else { return }
                 print(response.map(\.name))
                 self.pokemonData = response.reversed() + self.pokemonData
-                //self.pokemonData.append(contentsOf: response)
-                self.offset += self.delta
+                self.offset += self.limit
             })
     }
 }

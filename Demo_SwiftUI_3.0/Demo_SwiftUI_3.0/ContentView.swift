@@ -9,37 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var loader = PokemonLoader()
+    private let imageWidth = 110.0
+    private let cellHeight = 130.0
 
     var body: some View {
         NavigationView {
             List {
-                LazyVStack {
-                    ForEach(loader.pokemonData) { pokemon in
-                        AsyncImage(url: pokemon.url, scale: 1.0) { phase in
-                            if let image = phase.image {
+                ForEach(loader.pokemonData) { pokemon in
+                    AsyncImage(url: pokemon.url, scale: 1.0) { phase in
+                        switch phase {
 
-                                HStack {
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 120)
-                                        .padding(.trailing, 10)
-                                    PokemonDescriptionView(pokemon: pokemon)
-                                    Spacer()
-                                }
-                                .frame(height: 130)
-                            } else if phase.error != nil {
-                                ErrorView(error: phase.error!)
-                            } else {
-                                ProgressView()
+                        case .success(let image):
+                            HStack {
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: imageWidth)
+                                    .padding(.trailing, 10)
+                                PokemonDescriptionView(pokemon: pokemon)
+                                Spacer()
                             }
-                        }
 
-                        .frame(maxWidth: .infinity)
-                        .padding()
+                        case .failure(let error):
+                            ErrorView(error: error)
+                        case .empty:
+                            HStack {
+                                ProgressView()
+                                Spacer()
+                            }
+
+                        @unknown default:
+                            // AsyncImagePhase is not marked as @frozen.
+                            // We need to support new cases in the future.
+                            Image(systemName: "questionmark")
+                        }
                     }
 
-
+                    .frame(maxWidth: .infinity)
+                    .frame(height: cellHeight)
+                    .padding()
                 }
             }
             .navigationTitle("Hello")
@@ -65,6 +73,6 @@ struct ErrorView: View {
 
     var body: some View {
         print(error)
-        return Text("Error")
+        return Text("❌ **Error**").font(.system(size: 60))
     }
 }
