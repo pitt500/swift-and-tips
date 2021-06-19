@@ -27,11 +27,20 @@ struct Pokemon: Decodable, Identifiable {
         case name
     }
 
+    init(id: Int, name: String) {
+        self.id = id
+        self.name = name
+    }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: PokemonKeys.self)
         self.name = try container.decode(String.self, forKey: .name)
         Pokemon.totalFound += 1
         self.id = Pokemon.totalFound
     }
+}
+
+extension Pokemon {
+    static let sample = Self.init(id: 1, name: "bulbasaur")
 }
 

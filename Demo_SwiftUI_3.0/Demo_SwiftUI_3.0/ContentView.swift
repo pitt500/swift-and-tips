@@ -24,25 +24,14 @@ struct ContentView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 120)
                                         .padding(.trailing, 10)
-                                    VStack(alignment: .leading) {
-                                        Text("**\(pokemon.name.capitalized)**")
-                                            .font(.system(size: 24))
-                                        Text("*#\(pokemon.id)*")
-                                            .font(.system(size: 18))
-                                            .foregroundColor(.gray)
-
-                                        // Markdown links only work with string literals.
-                                        Text("See [More](https://pokemondb.net/pokedex/national)")
-                                        // You cannot use string interpolation ...
-//                                        Text("See [More](https://pokemondb.net/pokedex/\(pokemon.name))")
-                                    }
+                                    PokemonDescriptionView(pokemon: pokemon)
                                     Spacer()
                                 }
                                 .frame(height: 130)
                             } else if phase.error != nil {
                                 ErrorView(error: phase.error!)
                             } else {
-                                Text("Loading")
+                                ProgressView()
                             }
                         }
 
