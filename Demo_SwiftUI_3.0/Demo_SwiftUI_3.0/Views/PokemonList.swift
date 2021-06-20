@@ -77,12 +77,3 @@ struct ContentView_Previews: PreviewProvider {
         PokemonList()
     }
 }
-
-struct ErrorView: View {
-    let error: Error
-
-    var body: some View {
-        print(error)
-        return Text("❌ **Error**").font(.system(size: 60))
-    }
-}
