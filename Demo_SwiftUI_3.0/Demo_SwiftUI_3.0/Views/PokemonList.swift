@@ -59,8 +59,8 @@ struct PokemonList: View {
             }
             .navigationTitle("PokeDex")
             .task {
-                // Task is the same like onAppear, but it cancels the task
-                // when the view disappears.
+                // Task is the same like onAppear, but works with async tasks.
+                // also it cancels the task when the view disappears.
                 loader.load()
             }
             .refreshable {
