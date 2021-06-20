@@ -22,7 +22,6 @@ struct PokemonList: View {
                         transaction: Transaction(animation: .easeIn(duration: 2.5))
                     ) { phase in
                         switch phase {
-
                         case .success(let image):
                             HStack {
                                 image
@@ -33,7 +32,6 @@ struct PokemonList: View {
                                 PokemonDescriptionView(pokemon: pokemon)
                                 Spacer()
                             }
-
                         case .failure(let error):
                             ErrorView(error: error)
                         case .empty:
@@ -42,14 +40,12 @@ struct PokemonList: View {
                                     .progressViewStyle(CircularProgressViewStyle(tint: .red))
                                 Spacer()
                             }
-
                         @unknown default:
                             // AsyncImagePhase is not marked as @frozen.
                             // We need to support new cases in the future.
                             Image(systemName: "questionmark")
                         }
                     }
-
                     .frame(maxWidth: .infinity)
                     .frame(height: cellHeight)
                     .padding()
