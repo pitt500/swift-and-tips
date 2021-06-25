@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B5F853F326860F1B00987A0C /* AsyncAwaitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F853F226860F1B00987A0C /* AsyncAwaitDemoApp.swift */; };
-		B5F853F526860F1B00987A0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F853F426860F1B00987A0C /* ContentView.swift */; };
 		B5F853F726860F1D00987A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F853F626860F1C00987A0C /* Assets.xcassets */; };
 		B5F853FA26860F1D00987A0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F853F926860F1D00987A0C /* Preview Assets.xcassets */; };
 		B5F8540A2686125F00987A0C /* PokemonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F854092686125F00987A0C /* PokemonLoader.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		B5F853EF26860F1B00987A0C /* AsyncAwaitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncAwaitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F853F226860F1B00987A0C /* AsyncAwaitDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitDemoApp.swift; sourceTree = "<group>"; };
-		B5F853F426860F1B00987A0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5F853F626860F1C00987A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5F853F926860F1D00987A0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5F854092686125F00987A0C /* PokemonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonLoader.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				B5F8540B2686127600987A0C /* Model */,
 				B5F854082686123800987A0C /* Network */,
 				B5F853F226860F1B00987A0C /* AsyncAwaitDemoApp.swift */,
-				B5F853F426860F1B00987A0C /* ContentView.swift */,
 				B5F853F626860F1C00987A0C /* Assets.xcassets */,
 				B5F853F826860F1D00987A0C /* Preview Content */,
 			);
@@ -177,7 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F854102686134100987A0C /* PokemonDescriptionView.swift in Sources */,
-				B5F853F526860F1B00987A0C /* ContentView.swift in Sources */,
 				B5F853F326860F1B00987A0C /* AsyncAwaitDemoApp.swift in Sources */,
 				B5F8540A2686125F00987A0C /* PokemonLoader.swift in Sources */,
 				B5F854142686135200987A0C /* ErrorView.swift in Sources */,
