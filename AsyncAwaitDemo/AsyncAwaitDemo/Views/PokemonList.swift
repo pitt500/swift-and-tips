@@ -50,13 +50,20 @@ struct PokemonList: View {
             .task {
                 // Task is the same like onAppear, but works with async tasks.
                 // also it cancels the task when the view disappears.
-                loader.load()
+                await loader.load()
             }
             .refreshable {
                 // Enable Pull to refresh
-                loader.load()
+                await loader.load()
+            }
+            .alert(isPresented: $loader.error) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text("Please try again later")
+                )
             }
         }
+
 
     }
 }

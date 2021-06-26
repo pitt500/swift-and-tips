@@ -20,7 +20,7 @@ class PokemonLoader: ObservableObject {
     private let limit = 3
     private var offset = 0
 
-    func load() {
+    func combineLoad() {
         isLoading = true
         let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?limit=\(limit)&offset=\(offset)")!
 
@@ -52,6 +52,30 @@ class PokemonLoader: ObservableObject {
                 self.pokemonData = response.reversed() + self.pokemonData
                 self.offset += self.limit
             })
+    }
+
+    func asyncLoad() async throws {
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemonx/?limit=\(limit)&offset=\(offset)")!
+        let (data, response) = try await URLSession.shared.data(from: url)
+        guard (response as? HTTPURLResponse)?.statusCode == 200
+        else { throw PokemonError.serverError }
+
+        guard let decoded = try? JSONDecoder().decode(PokemonResponse.self, from: data)
+        else { throw PokemonError.noData }
+
+        let list = decoded.results
+        print(list.map(\.name))
+        self.pokemonData = list.reversed() + self.pokemonData
+        self.offset += self.limit
+    }
+
+    func load() async {
+        do {
+            try await asyncLoad()
+        } catch {
+            print(error)
+            self.error = true
+        }
     }
 }
 
