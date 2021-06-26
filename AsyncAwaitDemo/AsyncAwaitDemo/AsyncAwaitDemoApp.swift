@@ -11,7 +11,7 @@ import SwiftUI
 struct AsyncAwaitDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            PokemonList()
+            PokedexView()
         }
     }
 }
