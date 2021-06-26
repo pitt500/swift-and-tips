@@ -52,7 +52,7 @@ class PokemonLoader: ObservableObject {
     }
 
     func asyncLoad() async throws {
-        let url = URL(string: "https://pokeapi.co/api/v2/pokemonx/?limit=\(limit)&offset=\(offset)")!
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?limit=\(limit)&offset=\(offset)")!
         let (data, response) = try await URLSession.shared.data(from: url)
 
         guard (response as? HTTPURLResponse)?.statusCode == 200
