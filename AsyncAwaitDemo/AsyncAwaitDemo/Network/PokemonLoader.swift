@@ -69,8 +69,7 @@ class PokemonLoader: ObservableObject {
 
     func closureLoad(completion: @escaping (Result<[Pokemon], Error>) -> Void) {
         let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?limit=\(limit)&offset=\(offset)")!
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let self = self else { return }
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
 
             if let error = error {
                 //We cannot throw an error in this completion handler!
