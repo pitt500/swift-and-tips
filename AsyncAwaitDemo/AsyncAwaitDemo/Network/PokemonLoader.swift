@@ -58,7 +58,7 @@ class PokemonLoader: ObservableObject {
         guard (response as? HTTPURLResponse)?.statusCode == 200
         else { throw PokemonError.serverError }
 
-        guard let decoded = try? self.decode(from: data, toType: PokemonResponse.self)
+        guard let decoded = try? JSONDecoder().decode(PokemonResponse.self, from: data)
         else { throw PokemonError.noData }
 
         let list = decoded.results
@@ -85,7 +85,7 @@ class PokemonLoader: ObservableObject {
                     return
                 }
 
-                guard let pokemonResponse = try? self.decode(from: data, toType: PokemonResponse.self)
+                guard let pokemonResponse = try? JSONDecoder().decode(PokemonResponse.self, from: data)
                 else {
                     completion(.failure(PokemonError.noData))
                     return
@@ -121,13 +121,6 @@ class PokemonLoader: ObservableObject {
             print(error)
             self.error = true
         }
-    }
-
-    func decode<T: Decodable>(from data: Data, toType type: T.Type) throws -> T {
-        guard let decoded = try? JSONDecoder().decode(type, from: data)
-        else { throw PokemonError.noData }
-
-        return decoded
     }
 }
 
