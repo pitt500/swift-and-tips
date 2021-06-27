@@ -73,8 +73,10 @@ class PokemonLoader: ObservableObject {
             guard let self = self else { return }
 
             if let error = error {
+                //We cannot throw an error in this completion handler!
                 completion(.failure(error))
             } else if (response as? HTTPURLResponse)?.statusCode != 200 {
+                //We cannot throw an error in this completion handler!
                 completion(.failure(PokemonError.serverError))
             } else {
                 guard let data = data
