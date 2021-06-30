@@ -25,9 +25,9 @@ class PokemonLoader: ObservableObject {
         cancellable = urlSession
             .dataTaskPublisher(for: url)
             .tryMap { output in
-                guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
-                    throw PokemonError.serverError
-                }
+                guard (output.response as? HTTPURLResponse)?.statusCode == 200
+                else { throw PokemonError.serverError }
+
                 return output.data
             }
             .decode(type: PokemonResponse.self, decoder: JSONDecoder())
