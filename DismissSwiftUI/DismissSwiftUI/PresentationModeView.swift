@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct DismissPresentationMode: View {
+struct PresentationModeView: View {
     @State private var showModal = false
 
     var body: some View {
@@ -34,7 +34,7 @@ struct ModalView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DismissPresentationMode()
+        PresentationModeView()
     }
 }
 

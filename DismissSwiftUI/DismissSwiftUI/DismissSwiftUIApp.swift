@@ -5,7 +5,7 @@ import SwiftUI
 struct DismissSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            DismissPresentationMode()
+            PresentationModeView()
         }
     }
 }
