@@ -55,12 +55,11 @@
 		B566412C268F4BB800B05072 /* DismissSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B5664140268FDFAC00B05072 /* iOS 15+ */,
+				B566413F268FDF9A00B05072 /* iOS 13 & 14 */,
 				B566412D268F4BB800B05072 /* DismissSwiftUIApp.swift */,
-				B566412F268F4BB800B05072 /* PresentationModeView.swift */,
-				B566413B268FDC0600B05072 /* DismissView.swift */,
 				B5664131268F4BB900B05072 /* Assets.xcassets */,
 				B5664133268F4BB900B05072 /* Preview Content */,
-				B566413D268FDE3C00B05072 /* BindingDismissView.swift */,
 			);
 			path = DismissSwiftUI;
 			sourceTree = "<group>";
@@ -71,6 +70,23 @@
 				B5664134268F4BB900B05072 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B566413F268FDF9A00B05072 /* iOS 13 & 14 */ = {
+			isa = PBXGroup;
+			children = (
+				B566413D268FDE3C00B05072 /* BindingDismissView.swift */,
+				B566412F268F4BB800B05072 /* PresentationModeView.swift */,
+			);
+			path = "iOS 13 & 14";
+			sourceTree = "<group>";
+		};
+		B5664140268FDFAC00B05072 /* iOS 15+ */ = {
+			isa = PBXGroup;
+			children = (
+				B566413B268FDC0600B05072 /* DismissView.swift */,
+			);
+			path = "iOS 15+";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
