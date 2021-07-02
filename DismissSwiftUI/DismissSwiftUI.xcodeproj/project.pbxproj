@@ -12,6 +12,7 @@
 		B5664132268F4BB900B05072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5664131268F4BB900B05072 /* Assets.xcassets */; };
 		B5664135268F4BB900B05072 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5664134268F4BB900B05072 /* Preview Assets.xcassets */; };
 		B566413C268FDC0600B05072 /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566413B268FDC0600B05072 /* DismissView.swift */; };
+		B566413E268FDE3C00B05072 /* BindingDismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566413D268FDE3C00B05072 /* BindingDismissView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B5664131268F4BB900B05072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5664134268F4BB900B05072 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B566413B268FDC0600B05072 /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
+		B566413D268FDE3C00B05072 /* BindingDismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingDismissView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				B566413B268FDC0600B05072 /* DismissView.swift */,
 				B5664131268F4BB900B05072 /* Assets.xcassets */,
 				B5664133268F4BB900B05072 /* Preview Content */,
+				B566413D268FDE3C00B05072 /* BindingDismissView.swift */,
 			);
 			path = DismissSwiftUI;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5664130268F4BB800B05072 /* PresentationModeView.swift in Sources */,
+				B566413E268FDE3C00B05072 /* BindingDismissView.swift in Sources */,
 				B566412E268F4BB800B05072 /* DismissSwiftUIApp.swift in Sources */,
 				B566413C268FDC0600B05072 /* DismissView.swift in Sources */,
 			);
