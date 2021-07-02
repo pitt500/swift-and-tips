@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct DismissView: View {
+    @State private var showModal = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Button("Show Sheet") {
+                    showModal.toggle()
+                }
+            }
+            .sheet(isPresented: $showModal) {
+                print("View Dismissed")
+            } content: {
+                ModalDismissViewView()
+            }
+
+
+        }
+    }
+}
+
+struct ModalDismissViewView: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        Button("Press to dismiss") {
+            dismiss()
+        }
     }
 }
 
