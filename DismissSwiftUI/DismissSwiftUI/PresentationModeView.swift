@@ -14,7 +14,7 @@ struct PresentationModeView: View {
             .sheet(isPresented: $showModal) {
                 print("View Dismissed")
             } content: {
-                ModalView()
+                ModalPresentationView()
             }
 
 
@@ -22,7 +22,7 @@ struct PresentationModeView: View {
     }
 }
 
-struct ModalView: View {
+struct ModalPresentationView: View {
     @Environment(\.presentationMode) private var presentationMode
 
     var body: some View {
