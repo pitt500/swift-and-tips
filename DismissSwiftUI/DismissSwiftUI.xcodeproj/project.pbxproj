@@ -13,6 +13,7 @@
 		B5664135268F4BB900B05072 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5664134268F4BB900B05072 /* Preview Assets.xcassets */; };
 		B566413C268FDC0600B05072 /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566413B268FDC0600B05072 /* DismissView.swift */; };
 		B566413E268FDE3C00B05072 /* BindingDismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566413D268FDE3C00B05072 /* BindingDismissView.swift */; };
+		B5664142268FDFE200B05072 /* DismissDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5664141268FDFE200B05072 /* DismissDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B5664134268F4BB900B05072 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B566413B268FDC0600B05072 /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
 		B566413D268FDE3C00B05072 /* BindingDismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingDismissView.swift; sourceTree = "<group>"; };
+		B5664141268FDFE200B05072 /* DismissDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 		B566412C268F4BB800B05072 /* DismissSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				B5664140268FDFAC00B05072 /* iOS 15+ */,
 				B566413F268FDF9A00B05072 /* iOS 13 & 14 */,
+				B5664140268FDFAC00B05072 /* iOS 15+ */,
 				B566412D268F4BB800B05072 /* DismissSwiftUIApp.swift */,
 				B5664131268F4BB900B05072 /* Assets.xcassets */,
 				B5664133268F4BB900B05072 /* Preview Content */,
+				B5664141268FDFE200B05072 /* DismissDemo.swift */,
 			);
 			path = DismissSwiftUI;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				B5664130268F4BB800B05072 /* PresentationModeView.swift in Sources */,
 				B566413E268FDE3C00B05072 /* BindingDismissView.swift in Sources */,
 				B566412E268F4BB800B05072 /* DismissSwiftUIApp.swift in Sources */,
+				B5664142268FDFE200B05072 /* DismissDemo.swift in Sources */,
 				B566413C268FDC0600B05072 /* DismissView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
