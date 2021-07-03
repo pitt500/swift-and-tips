@@ -15,7 +15,7 @@ struct BindingDismissView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Button("Show Sheet") {
+                Button("Show Modal") {
                     showModal.toggle()
                 }
             }
