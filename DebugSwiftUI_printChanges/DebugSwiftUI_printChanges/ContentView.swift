@@ -17,8 +17,17 @@ struct ContentView: View {
     @State private var notificationEnabled = true
     @State private var frequency = FrequencyNotification.always
     @State private var description = ""
+    @State private var counter = 0
 
     var body: some View {
+
+        /// When called within an invocation of body of a view of this type, prints
+        /// the names of the changed dynamic properties that caused the result
+        /// of body to need to be refreshed. As well as the physical property
+        /// names, “@self” is used to mark that the view value itself has changed,
+        /// and “@identity” to mark that the identity of the view has changed (i.e.
+        /// that the persistent data associated with the view has been recycled for
+        /// a new instance of the same type).
         let _ = Self._printChanges()
 
         /// In this example, frequency is not producing a new render because
@@ -74,6 +83,25 @@ struct ContentView: View {
                 } header: {
                     Text("Notifications")
                 }
+
+                //MARK: - Counter
+                Section {
+                    HStack {
+                        Button {
+                            counter += 1
+                        } label: {
+                            Text("Tap me!")
+                        }
+                        Spacer()
+
+                        /// Uncomment this to force a render in you view
+                        /// each time button is tapped
+                        //Text("\(counter)")
+                    }
+                } header: {
+                    Text("Counter")
+                }
+
 
                 //MARK: - About
                 Section {
