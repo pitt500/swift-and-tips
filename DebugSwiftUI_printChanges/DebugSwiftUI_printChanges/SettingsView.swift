@@ -13,7 +13,7 @@ enum FrequencyNotification: String, CaseIterable {
     case never = "Never"
 }
 
-struct ContentView: View {
+struct SettingsView: View {
     @State private var notificationEnabled = true
     @State private var frequency = FrequencyNotification.always
     @State private var description = ""
@@ -123,6 +123,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SettingsView()
     }
 }

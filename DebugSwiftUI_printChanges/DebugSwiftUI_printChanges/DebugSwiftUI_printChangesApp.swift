@@ -11,7 +11,7 @@ import SwiftUI
 struct DebugSwiftUI_printChangesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SettingsView()
         }
     }
 }
