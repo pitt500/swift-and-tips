@@ -38,7 +38,6 @@ struct ContentView: View {
 
         return NavigationView {
             Form {
-
                 //MARK: - Profile
                 Section {
                     HStack {
@@ -73,7 +72,10 @@ struct ContentView: View {
                         Text("Enable Notifications")
                     }
 
-                    Picker(selection: $frequency, label: Text("Show Previews")) {
+                    Picker(
+                        selection: $frequency,
+                        label: Text("Frequency")
+                    ) {
                         ForEach(FrequencyNotification.allCases, id: \.self) {
                             Text($0.rawValue)
                         }
@@ -101,7 +103,6 @@ struct ContentView: View {
                 } header: {
                     Text("Counter")
                 }
-
 
                 //MARK: - About
                 Section {
