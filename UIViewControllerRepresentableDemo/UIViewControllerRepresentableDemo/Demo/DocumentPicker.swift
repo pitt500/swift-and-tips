@@ -36,7 +36,12 @@ extension DocumentPicker {
         }
 
         func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-            // only one PDF will be selected
+            /*
+             IMPORTANT!
+             This configuration won't work in a real device.
+             I did a fix here and you can learn more watching
+             this video:
+             */
             guard let url = urls.first else { return }
             parent.url = url
         }
