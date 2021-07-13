@@ -3,7 +3,7 @@ import SwiftUI
 import PDFKit
 
 struct DocumentPicker: UIViewControllerRepresentable {
-    @Binding var url: URL?
+    @Binding var document: PDFDocument?
 
     func makeUIViewController(context: Context) -> UIDocumentPickerViewController {
         let viewController = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
@@ -32,8 +32,42 @@ extension DocumentPicker {
             _ controller: UIDocumentPickerViewController,
             didPickDocumentsAt urls: [URL]
         ) {
-            guard let url = urls.first else { return }
-            parent.url = url
+
+            /*
+             The url provided is a security-scoped URL for the
+             directory that permits your app to access content
+             outside its container (this app).
+
+             For that reason, we have to read it securely using:
+             - startAccessingSecurityScopedResource()
+             - stopAccessingSecurityScopedResource()
+
+             You can read more here:
+             - https://developer.apple.com/documentation/uikit/uidocumentpickerviewcontroller
+             - https://developer.apple.com/documentation/uikit/view_controllers/providing_access_to_directories
+
+             Without this implementation, the PDF (or any document) cannot be displayed in a real device.
+             Check the issue here: https://twitter.com/swiftandtips/status/1413967476333944834
+
+             and Thanks to user @Bogdan Cuza on YT that helped me to discover the bug :)
+            */
+
+            guard let url = urls.first
+            else { return }
+
+            var error: NSError? = nil
+            NSFileCoordinator().coordinate(
+                readingItemAt: url,
+                error: &error
+            ) { url in
+                guard url.startAccessingSecurityScopedResource()
+                else { return }
+
+                //Using defer to always execute this line at the end.
+                defer { url.stopAccessingSecurityScopedResource() }
+
+                parent.document = PDFDocument(url: url)
+            }
         }
     }
 }

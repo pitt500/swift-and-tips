@@ -3,7 +3,7 @@ import PDFKit
 
 struct ContentView: View {
     @State private var isPickerPresented = false
-    @State private var documentUrl: URL?
+    @State private var document: PDFDocument?
 
     var body: some View {
         ZStack {
@@ -15,10 +15,10 @@ struct ContentView: View {
             )
             .frame(width: 150, height: 60)
             .sheet(isPresented: $isPickerPresented) {
-                DocumentPicker(url: $documentUrl)
+                DocumentPicker(document: $document)
             }
-            .sheet(item: $documentUrl) { url in
-                PDFComponent(url: url)
+            .sheet(item: $document) { doc in
+                PDFComponent(document: doc)
             }
         }
     }
@@ -30,8 +30,8 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-extension URL: Identifiable {
-    public var id: String {
-        return self.absoluteString
+extension PDFDocument: Identifiable {
+    public var id: UUID {
+        return UUID()
     }
 }
