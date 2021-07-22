@@ -7,15 +7,21 @@
 
 import Foundation
 
-class ChatService {
+actor ChatService {
     private var messageHistory: [Message] = []
 
-    func newMessage(completion: (Message) -> Void) {
-        DispatchQueue.concurrentPerform(iterations: 100) { iteration in
+    func newMessage(completion: (Message) -> Void) async {
+        DispatchQueue.concurrentPerform(iterations: 200) { iteration in
 
             let message = Message(content: "Message #\(iteration)")
-            messageHistory.append(message)
+            Task {
+                await self.saveMessage(message)
+            }
             completion(message)
         }
+    }
+
+    func saveMessage(_ message: Message) {
+        messageHistory.append(message)
     }
 }

@@ -14,8 +14,8 @@ struct ContentView: View {
         List(chatManager.messages) { message in
             Text("\(message.content)")
         }
-            .onAppear {
-                chatManager.generateMessages()
+            .task {
+                await chatManager.generateMessages()
             }
             .padding()
     }

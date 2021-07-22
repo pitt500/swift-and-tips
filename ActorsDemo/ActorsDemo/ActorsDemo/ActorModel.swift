@@ -37,8 +37,8 @@ extension GroupChat {
 }
 
 extension GroupChat {
-    func generateMessages() {
-        service.newMessage { message in
+    func generateMessages() async {
+        await service.newMessage { message in
             DispatchQueue.main.async {
                 self.messages.append(message)
             }
