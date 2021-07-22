@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B5EFC9F126A5C90C008BFF15 /* ActorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC9F026A5C90C008BFF15 /* ActorModel.swift */; };
+		B5EFC9F426A8FBCE008BFF15 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC9F326A8FBCE008BFF15 /* Message.swift */; };
+		B5EFC9F626A91C9C008BFF15 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC9F526A91C9C008BFF15 /* ChatService.swift */; };
 		B5F8341C26A5BE6B00E4215E /* ActorsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F8341B26A5BE6B00E4215E /* ActorsDemoApp.swift */; };
 		B5F8341E26A5BE6B00E4215E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F8341D26A5BE6B00E4215E /* ContentView.swift */; };
 		B5F8342026A5BE6D00E4215E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F8341F26A5BE6D00E4215E /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		B5EFC9F026A5C90C008BFF15 /* ActorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorModel.swift; sourceTree = "<group>"; };
+		B5EFC9F326A8FBCE008BFF15 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B5EFC9F526A91C9C008BFF15 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		B5F8341826A5BE6B00E4215E /* ActorsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActorsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F8341B26A5BE6B00E4215E /* ActorsDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsDemoApp.swift; sourceTree = "<group>"; };
 		B5F8341D26A5BE6B00E4215E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				B5F8341F26A5BE6D00E4215E /* Assets.xcassets */,
 				B5F8342126A5BE6D00E4215E /* Preview Content */,
 				B5EFC9F026A5C90C008BFF15 /* ActorModel.swift */,
+				B5EFC9F326A8FBCE008BFF15 /* Message.swift */,
+				B5EFC9F526A91C9C008BFF15 /* ChatService.swift */,
 			);
 			path = ActorsDemo;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5EFC9F126A5C90C008BFF15 /* ActorModel.swift in Sources */,
+				B5EFC9F426A8FBCE008BFF15 /* Message.swift in Sources */,
 				B5F8341E26A5BE6B00E4215E /* ContentView.swift in Sources */,
+				B5EFC9F626A91C9C008BFF15 /* ChatService.swift in Sources */,
 				B5F8341C26A5BE6B00E4215E /* ActorsDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

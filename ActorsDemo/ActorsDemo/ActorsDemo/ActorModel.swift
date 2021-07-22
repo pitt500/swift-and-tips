@@ -7,23 +7,11 @@
 
 import SwiftUI
 
-struct Message: Identifiable {
-    let id = UUID()
-    let content: String
-    let date = Date()
-}
-
 class GroupChat: ObservableObject {
-    var messages: [Message] = []
+    @Published var messages: [Message] = []
+    let service = ChatService()
 
     func newMessage(_ message: Message) {
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self = self else { return }
-//            //Thread.sleep(forTimeInterval: TimeInterval.random(in: 1...3))
-//            self.messages.append(message)
-//            print(self.messages.map(\.content))
-//        }
-
         self.messages.append(message)
         print(messages.map(\.content))
         //self.messages.append(message)
@@ -50,10 +38,10 @@ extension GroupChat {
 
 extension GroupChat {
     func generateMessages() {
-        DispatchQueue.concurrentPerform(iterations: 5) { iteration in
-            newMessage(
-                Message(content: "Message #\(iteration)")
-            )
+        service.newMessage { message in
+            DispatchQueue.main.async {
+                self.messages.append(message)
+            }
         }
     }
 }
