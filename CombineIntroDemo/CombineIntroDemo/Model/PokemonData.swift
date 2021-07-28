@@ -23,7 +23,13 @@ struct Pokemon: Decodable {
         case name
         case url
     }
+}
 
-    
+extension Pokemon {
+    static let sample: [Self] = [
+        .init(prefix: "1", name: "bulbasaur", url: ""),
+        .init(prefix: "2", name: "ivysaur", url: ""),
+        .init(prefix: "3", name: "venusaur", url: ""),
+    ]
 }
 

@@ -46,6 +46,8 @@ struct PokemonList: View {
 
 struct PokemonList_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonList(pokemonLoader: PokemonLoader())
+        let loader = PokemonLoader()
+        loader.pokemonData = Pokemon.sample
+        return PokemonList(pokemonLoader: loader)
     }
 }
