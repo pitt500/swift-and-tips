@@ -2,15 +2,23 @@ import Foundation
 
 // ONLY FOR DEMO PURPOSES!
 extension Array {
-    func getValue(at index: Int) -> Element {
+    public func getValue(at index: Int) -> Element {
         // ... find the element
         return self[index]
+    }
+
+    public mutating func setValue(_ value: Element, at index: Int) {
+        self[index] = value
     }
 }
 
 extension Dictionary {
-    func getValue(for key: Key) -> Value? {
+    public func getValue(for key: Key) -> Value? {
         // ... find the value
         return self[key]
+    }
+
+    public mutating func setValue(_ value: Value, for key: Key) {
+        self[key] = value
     }
 }
