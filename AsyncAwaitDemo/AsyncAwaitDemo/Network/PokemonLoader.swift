@@ -16,7 +16,7 @@ class PokemonLoader: ObservableObject {
 
     private var cancellable: AnyCancellable?
     private let urlSession = URLSession(configuration: .default)
-    private let limit = 3
+    private let limit = 20
     private var offset = 0
 
     func combineLoad() {
@@ -61,9 +61,12 @@ class PokemonLoader: ObservableObject {
         guard let decoded = try? JSONDecoder().decode(PokemonResponse.self, from: data)
         else { throw PokemonError.noData }
 
-        let list = decoded.results
-        print(list.map(\.name))
-        self.pokemonData = list.reversed() + self.pokemonData
+        await updateList(newData: decoded.results)
+    }
+
+    @MainActor func updateList(newData: [Pokemon]) {
+        print(newData.map(\.name))
+        self.pokemonData = newData.reversed() + self.pokemonData
         self.offset += self.limit
     }
 
