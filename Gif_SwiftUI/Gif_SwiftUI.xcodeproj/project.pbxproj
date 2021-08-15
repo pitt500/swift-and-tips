@@ -11,6 +11,7 @@
 		B5462EF326C9702D005B46D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5462EF226C9702D005B46D0 /* ContentView.swift */; };
 		B5462EF526C97030005B46D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5462EF426C97030005B46D0 /* Assets.xcassets */; };
 		B5462EF826C97030005B46D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5462EF726C97030005B46D0 /* Preview Assets.xcassets */; };
+		B5462EFF26C97110005B46D0 /* pokeball-800x600.gif in Resources */ = {isa = PBXBuildFile; fileRef = B5462EFE26C97110005B46D0 /* pokeball-800x600.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B5462EF226C9702D005B46D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5462EF426C97030005B46D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5462EF726C97030005B46D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5462EFE26C97110005B46D0 /* pokeball-800x600.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pokeball-800x600.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				B5462EF026C9702D005B46D0 /* Gif_SwiftUIApp.swift */,
 				B5462EF226C9702D005B46D0 /* ContentView.swift */,
 				B5462EF426C97030005B46D0 /* Assets.xcassets */,
+				B5462EFE26C97110005B46D0 /* pokeball-800x600.gif */,
 				B5462EF626C97030005B46D0 /* Preview Content */,
 			);
 			path = Gif_SwiftUI;
@@ -127,6 +130,7 @@
 			files = (
 				B5462EF826C97030005B46D0 /* Preview Assets.xcassets in Resources */,
 				B5462EF526C97030005B46D0 /* Assets.xcassets in Resources */,
+				B5462EFF26C97110005B46D0 /* pokeball-800x600.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
