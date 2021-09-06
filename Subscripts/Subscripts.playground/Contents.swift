@@ -37,7 +37,7 @@ dateOfBirth.setValue(1976, for: "Ronaldo")
 
 extension Array {
     subscript(safe index: Int) -> Element? {
-        guard index >= startIndex, index <= endIndex
+        guard index >= startIndex, index < endIndex
         else { return nil }
 
         return self[index]
