@@ -21,7 +21,29 @@ print(names)
 
 // MARK: - The anatomy of a key path
 
-let nameProperty = \Person.name
+let nameProperty: KeyPath<Person, String> = \.name
 
 let names2 = people.map { $0[keyPath: nameProperty] }
 print(names2)
+
+
+
+
+
+
+
+
+
+import SwiftUI
+
+// MARK: - SwiftUI Identifiable
+
+struct ContentView: View {
+    var body: some View {
+        List {
+            ForEach(names, id: \.self) { name in
+                Text("\(name)")
+            }
+        }
+    }
+}
