@@ -8,7 +8,7 @@ import UIKit
 //
 //let cardType = 5
 
-// MARK: - Great approach with enums
+// MARK: - RawValue, CaseIterable and computer properties
 enum CardSuit: String, CaseIterable, CustomStringConvertible {
     case club = "♣️"
     case diamond = "♦️"
@@ -82,6 +82,7 @@ playerHand.append(deck.removeLast())
 playerHand.append(deck.removeLast())
 
 
+// MARK: - Associated values
 enum Result {
     case player(score: Int)
     case cpu(score: Int)
