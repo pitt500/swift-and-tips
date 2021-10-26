@@ -22,17 +22,15 @@ struct BlackJackCard {
 
     enum Number: CaseIterable {
         case ace
-        case one, two, three, four, five, six, seven, eight, nine, ten
+        case two, three, four, five, six, seven, eight, nine, ten
         case jack, queen, king
 
         var value: Int {
             switch self {
             case .ace:
-                return 0
+                return 1
             case .jack, .queen, .king, .ten:
                 return 10
-            case .one:
-                return 1
             case .two:
                 return 2
             case .three:

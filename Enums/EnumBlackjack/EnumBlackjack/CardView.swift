@@ -28,17 +28,21 @@ struct CardView: View {
     }
 
     @ViewBuilder func drawCard(proxy: GeometryProxy) -> some View {
+
+        let fontSize = proxy.size.width*0.3
+
         switch card.number {
-        case .one:
+
+        case .ace:
             Text(card.suit.rawValue)
-                .font(.system(size: 90))
+                .font(.system(size: proxy.size.width*0.8))
         case .two:
             VStack {
                 Text(card.suit.rawValue)
                 Spacer()
                 Text(card.suit.rawValue)
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .three:
             VStack {
                 Text(card.suit.rawValue)
@@ -47,7 +51,7 @@ struct CardView: View {
                 Spacer()
                 Text(card.suit.rawValue)
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .four:
             VStack {
                 HStack {
@@ -62,7 +66,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .five:
             VStack {
                 HStack {
@@ -79,7 +83,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .six:
             VStack {
                 HStack {
@@ -100,7 +104,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .seven:
             VStack {
                 HStack {
@@ -123,7 +127,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .eight:
             VStack {
                 HStack {
@@ -148,7 +152,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .nine:
             HStack {
                 VStack {
@@ -171,7 +175,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .ten:
             HStack {
                 VStack {
@@ -200,7 +204,7 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                 }
             }
-            .font(.system(size: 90))
+            .font(.system(size: fontSize))
         case .jack:
             VStack {
                 Spacer()
@@ -234,29 +238,24 @@ struct CardView: View {
                     .scaleEffect(1.3)
                 Spacer()
             }
-        case .ace:
-            VStack {
-                Spacer()
-                Text(card.suit.rawValue)
-                    .font(.system(size: 250))
-                Spacer()
-            }
         }
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.green
-                .ignoresSafeArea()
-            CardView(
-                card: BlackJackCard(
-                    suit: .heart,
-                    number: .ace
+        ForEach(BlackJackCard.Number.allCases, id: \.self) { number in
+            ZStack {
+                Color.green
+                    .ignoresSafeArea()
+                CardView(
+                    card: BlackJackCard(
+                        suit: .heart,
+                        number: number
+                    )
                 )
-            )
-                .padding()
+                    .padding()
+            }
         }
     }
 }
