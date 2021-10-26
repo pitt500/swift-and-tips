@@ -87,6 +87,8 @@ enum Result {
     case player(score: Int)
     case cpu(score: Int)
     case tie
+    //recursive value
+    indirect case previous(Result)
 }
 
 func getRightAceValue(currentScore: Int, numAces: Int) -> Int {
@@ -145,6 +147,7 @@ func getResult() -> Result {
 
 
 let result = getResult()
+let previousResult = Result.previous(result)
 
 print("----")
 switch result {
@@ -154,8 +157,14 @@ case .cpu(let score):
     print("CPU won!, Score: \(score)")
 case .tie:
     print("This was a Tie :/")
+default:
+    break
 }
 
+//Indirect enum
+if case Result.previous(let result) = previousResult {
+    print("Previous Result: \(result)")
+}
 
 
 
