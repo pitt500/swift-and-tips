@@ -12,6 +12,7 @@
 		B5F91F6F27283DC0000CBF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F91F6E27283DC0000CBF86 /* Assets.xcassets */; };
 		B5F91F7227283DC0000CBF86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F91F7127283DC0000CBF86 /* Preview Assets.xcassets */; };
 		B5F91F7927284011000CBF86 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F7827284011000CBF86 /* CardView.swift */; };
+		B5F91F7C272841A8000CBF86 /* BlackJackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F7B272841A8000CBF86 /* BlackJackCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B5F91F6E27283DC0000CBF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5F91F7127283DC0000CBF86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5F91F7827284011000CBF86 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B5F91F7B272841A8000CBF86 /* BlackJackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		B5F91F6927283DBE000CBF86 /* EnumBlackjack */ = {
 			isa = PBXGroup;
 			children = (
+				B5F91F7A2728418E000CBF86 /* Model */,
 				B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */,
 				B5F91F6C27283DBE000CBF86 /* ContentView.swift */,
 				B5F91F6E27283DC0000CBF86 /* Assets.xcassets */,
@@ -68,6 +71,14 @@
 				B5F91F7127283DC0000CBF86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5F91F7A2728418E000CBF86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5F91F7B272841A8000CBF86 /* BlackJackCard.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			files = (
 				B5F91F6D27283DBE000CBF86 /* ContentView.swift in Sources */,
 				B5F91F7927284011000CBF86 /* CardView.swift in Sources */,
+				B5F91F7C272841A8000CBF86 /* BlackJackCard.swift in Sources */,
 				B5F91F6B27283DBE000CBF86 /* EnumBlackjackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
