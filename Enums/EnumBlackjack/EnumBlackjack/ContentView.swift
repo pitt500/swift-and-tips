@@ -9,7 +9,20 @@ import SwiftUI
 
 struct BlackJackView: View {
     var body: some View {
-        Color.green
+        ZStack {
+            Color.green
+                .ignoresSafeArea()
+            VStack {
+                Text("CPU")
+                Spacer()
+                Divider()
+                Spacer()
+                Text("Player")
+            }
+            .font(.system(size: 24))
+            .foregroundColor(.white)
+        }
+
 
     }
 }
