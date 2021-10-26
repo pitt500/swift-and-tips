@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BlackJackView: View {
+    @StateObject private var viewModel = BlackJackViewModel()
+
     var body: some View {
         ZStack {
             Color.green

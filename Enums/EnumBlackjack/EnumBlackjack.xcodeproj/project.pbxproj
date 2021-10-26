@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD42728992800AF81AD /* BlackJackViewModel.swift */; };
 		B5F91F6B27283DBE000CBF86 /* EnumBlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */; };
 		B5F91F6D27283DBE000CBF86 /* BlackJackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F6C27283DBE000CBF86 /* BlackJackView.swift */; };
 		B5F91F6F27283DC0000CBF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F91F6E27283DC0000CBF86 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5963CD42728992800AF81AD /* BlackJackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewModel.swift; sourceTree = "<group>"; };
 		B5F91F6727283DBE000CBF86 /* EnumBlackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnumBlackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumBlackjackApp.swift; sourceTree = "<group>"; };
 		B5F91F6C27283DBE000CBF86 /* BlackJackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				B5F91F6E27283DC0000CBF86 /* Assets.xcassets */,
 				B5F91F7027283DC0000CBF86 /* Preview Content */,
 				B5F91F7827284011000CBF86 /* CardView.swift */,
+				B5963CD42728992800AF81AD /* BlackJackViewModel.swift */,
 			);
 			path = EnumBlackjack;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */,
 				B5F91F6D27283DBE000CBF86 /* BlackJackView.swift in Sources */,
 				B5F91F7927284011000CBF86 /* CardView.swift in Sources */,
 				B5F91F7C272841A8000CBF86 /* BlackJackCard.swift in Sources */,
