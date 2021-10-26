@@ -19,6 +19,18 @@ struct BlackJackView: View {
                 Spacer()
                 Divider()
                 Spacer()
+                ZStack {
+                    CardView(card: BlackJackCard(suit: .heart, number: .three))
+                    CardView(card: BlackJackCard(suit: .heart, number: .three))
+                        .offset(x: 80)
+
+                    CardView(card: BlackJackCard(suit: .heart, number: .ten))
+                        .offset(x: 160)
+                    CardView(card: BlackJackCard(suit: .heart, number: .three))
+                        .offset(x: 240)
+                }
+                .scaleEffect(0.5)
+                Spacer()
                 Text("Player")
             }
             .font(.system(size: 24))
