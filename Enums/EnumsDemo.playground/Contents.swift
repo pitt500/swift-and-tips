@@ -20,6 +20,8 @@ enum CardSuit: String, CaseIterable, CustomStringConvertible {
     }
 }
 
+let suit = CardSuit(rawValue: "♠️")
+
 enum CardNumber: CaseIterable {
     case ace
     case one, two, three, four, five, six, seven, eight, nine, ten
