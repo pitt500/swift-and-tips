@@ -14,7 +14,7 @@ struct BlackJackView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BlackJackView_Previews: PreviewProvider {
     static var previews: some View {
         BlackJackView()
     }
