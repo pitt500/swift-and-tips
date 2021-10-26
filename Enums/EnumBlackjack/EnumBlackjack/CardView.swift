@@ -9,6 +9,15 @@ import SwiftUI
 
 struct CardView: View {
     let card: BlackJackCard
+    let color: Color
+
+    init(card: BlackJackCard) {
+        self.card = card
+
+        let isRed = [BlackJackCard.Suit.diamond, .heart]
+            .contains(card.suit)
+        self.color = isRed ? .red : .black
+    }
 
     var body: some View {
         ZStack {
@@ -16,6 +25,29 @@ struct CardView: View {
                 .fill(.white)
                 .cornerRadius(10)
                 .shadow(radius: 10)
+            VStack{
+                HStack {
+                    VStack {
+                        Text(card.number.symbol)
+                        Text(card.suit.rawValue)
+                            .font(.system(size: 20))
+                    }
+                    Spacer()
+                }
+                Spacer()
+                HStack{
+                    Spacer()
+                    VStack {
+                        Text(card.number.symbol)
+                        Text(card.suit.rawValue)
+                            .font(.system(size: 20))
+                    }
+                    .rotationEffect(.degrees(180))
+                }
+            }
+            .font(.custom("Courier", size: 60))
+            .foregroundColor(color)
+            .padding()
             GeometryReader {
                 drawCard(proxy: $0)
                     .frame(
@@ -23,7 +55,7 @@ struct CardView: View {
                         height: $0.size.height
                     )
             }
-            .padding(20)
+            .padding(60)
         }
     }
 
@@ -32,7 +64,6 @@ struct CardView: View {
         let fontSize = proxy.size.width*0.3
 
         switch card.number {
-
         case .ace:
             Text(card.suit.rawValue)
                 .font(.system(size: proxy.size.width*0.8))
@@ -41,6 +72,7 @@ struct CardView: View {
                 Text(card.suit.rawValue)
                 Spacer()
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .three:
@@ -48,8 +80,10 @@ struct CardView: View {
                 Text(card.suit.rawValue)
                 Spacer()
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
                 Spacer()
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .four:
@@ -65,6 +99,7 @@ struct CardView: View {
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .five:
@@ -76,12 +111,14 @@ struct CardView: View {
                 }
                 Spacer()
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
                 Spacer()
                 HStack {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .six:
@@ -97,12 +134,14 @@ struct CardView: View {
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
                 Spacer()
                 HStack {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .seven:
@@ -114,18 +153,21 @@ struct CardView: View {
                 }
                 Spacer()
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
                 Spacer()
                 HStack {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
                 Spacer()
                 HStack {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .eight:
@@ -143,14 +185,17 @@ struct CardView: View {
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
                 Spacer()
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
                 Spacer()
                 HStack {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
                 }
+                .rotationEffect(.degrees(180))
             }
             .font(.system(size: fontSize))
         case .nine:
@@ -161,18 +206,23 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                 }
                 Text(card.suit.rawValue)
+                    .rotationEffect(.degrees(180))
                 VStack {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                 }
             }
             .font(.system(size: fontSize))
@@ -184,14 +234,17 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                 }
                 VStack {
                     Spacer()
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                     Spacer()
                 }
                 VStack {
@@ -200,42 +253,23 @@ struct CardView: View {
                     Text(card.suit.rawValue)
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                     Spacer()
                     Text(card.suit.rawValue)
+                        .rotationEffect(.degrees(180))
                 }
             }
-            .font(.system(size: fontSize))
-        case .jack:
+            .font(.system(size: fontSize*0.85))
+            
+        case .jack, .queen, .king:
             VStack {
                 Spacer()
-                Image("jack_club")
+                Image("\(card.number.symbol)_\(card.suit.name)")
                     .resizable()
                     .frame(
                         width: proxy.size.width,
-                        height: proxy.size.height*0.8)
-                    .scaleEffect(1.3)
-                Spacer()
-            }
-        case .queen:
-            VStack {
-                Spacer()
-                Image("queen_club")
-                    .resizable()
-                    .frame(
-                        width: proxy.size.width,
-                        height: proxy.size.height*0.8)
-                    .scaleEffect(1.3)
-                Spacer()
-            }
-        case .king:
-            VStack {
-                Spacer()
-                Image("king_club")
-                    .resizable()
-                    .frame(
-                        width: proxy.size.width,
-                        height: proxy.size.height*0.8)
-                    .scaleEffect(1.3)
+                        height: proxy.size.height*0.6)
+                    .scaleEffect(1.7)
                 Spacer()
             }
         }
@@ -250,7 +284,7 @@ struct CardView_Previews: PreviewProvider {
                     .ignoresSafeArea()
                 CardView(
                     card: BlackJackCard(
-                        suit: .heart,
+                        suit: .spade,
                         number: number
                     )
                 )

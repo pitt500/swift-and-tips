@@ -18,6 +18,19 @@ struct BlackJackCard {
         var description: String {
             return self.rawValue
         }
+
+        var name: String {
+            switch self {
+            case .club:
+                return "club"
+            case .diamond:
+                return "diamond"
+            case .heart:
+                return "heart"
+            case .spade:
+                return "spade"
+            }
+        }
     }
 
     enum Number: CaseIterable {
@@ -47,6 +60,21 @@ struct BlackJackCard {
                 return 8
             case .nine:
                 return 9
+            }
+        }
+
+        var symbol: String {
+            switch self {
+            case .ace:
+                return "A"
+            case .jack:
+                return "J"
+            case .queen:
+                return "Q"
+            case .king:
+                return "K"
+            default:
+                return "\(value)"
             }
         }
     }
