@@ -12,8 +12,17 @@ class BlackJackViewModel: ObservableObject {
     @Published var cpuHand: [BlackJackCard] = []
     var deck: [BlackJackCard] = []
 
+    init() {
+        startGame()
+    }
+
     func startGame() {
         deck = makeDeck()
+
+        cpuHand.append(deck.removeLast())
+        cpuHand.append(deck.removeLast())
+        playerHand.append(deck.removeLast())
+        playerHand.append(deck.removeLast())
     }
 
     private func makeDeck() -> [BlackJackCard] {

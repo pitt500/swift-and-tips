@@ -19,10 +19,10 @@ struct BlackJackView: View {
                 Text("CPU")
                     .font(.system(size: 24))
                     .foregroundColor(.white)
-                PlayerHandView(hand: BlackJackCard.sample)
+                PlayerHandView(hand: viewModel.cpuHand)
                 Divider()
                 VStack {
-                    PlayerHandView(hand: BlackJackCard.sample)
+                    PlayerHandView(hand: viewModel.playerHand)
 
                     Text("You")
                         .font(.system(size: 24))
