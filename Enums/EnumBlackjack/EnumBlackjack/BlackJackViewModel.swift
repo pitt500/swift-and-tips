@@ -12,11 +12,17 @@ class BlackJackViewModel: ObservableObject {
     @Published var cpuHand: [BlackJackCard] = []
     var deck: [BlackJackCard] = []
 
+    enum Action {
+        case didPressHit
+        case didPressPlay
+        case didPressPast
+    }
+
     init() {
         startGame()
     }
 
-    func startGame() {
+    private func startGame() {
         deck = makeDeck()
 
         cpuHand.append(deck.removeLast())
@@ -35,5 +41,16 @@ class BlackJackViewModel: ObservableObject {
         }
 
         return deck
+    }
+
+    func send(action: Action) {
+        switch action {
+        case .didPressHit:
+            playerHand.append(deck.removeLast())
+        case .didPressPlay:
+            break
+        case .didPressPast:
+            break
+        }
     }
 }

@@ -31,7 +31,9 @@ struct BlackJackView: View {
 
                 HStack {
                     Button(
-                        action: {},
+                        action: {
+                            viewModel.send(action: .didPressHit)
+                        },
                         label: {
                             Text("Hit")
                                 .font(.largeTitle)
@@ -59,7 +61,9 @@ struct BlackJackView: View {
                         .padding(10)
 
                     Button(
-                        action: {},
+                        action: {
+                            viewModel.send(action: .didPressPlay)
+                        },
                         label: {
                             Text("Play")
                                 .font(.largeTitle)
@@ -84,7 +88,9 @@ struct BlackJackView: View {
                         .cornerRadius(cornerRadius)
                         .padding(10)
                     Button(
-                        action: {},
+                        action: {
+                            viewModel.send(action: .didPressPast)
+                        },
                         label: {
                             Text("Past")
                                 .font(.largeTitle)
