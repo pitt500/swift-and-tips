@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BlackJackView: View {
     @StateObject private var viewModel = BlackJackViewModel()
+    private let cornerRadius: CGFloat = 10
 
     var body: some View {
         ZStack {
@@ -16,28 +17,103 @@ struct BlackJackView: View {
                 .ignoresSafeArea()
             VStack {
                 Text("CPU")
-                Spacer()
+                    .font(.system(size: 24))
+                    .foregroundColor(.white)
+                PlayerHandView(hand: BlackJackCard.sample)
                 Divider()
-                Spacer()
-                ZStack {
-                    CardView(card: BlackJackCard(suit: .heart, number: .three))
-                    CardView(card: BlackJackCard(suit: .heart, number: .three))
-                        .offset(x: 80)
+                VStack {
+                    PlayerHandView(hand: BlackJackCard.sample)
 
-                    CardView(card: BlackJackCard(suit: .heart, number: .ten))
-                        .offset(x: 160)
-                    CardView(card: BlackJackCard(suit: .heart, number: .three))
-                        .offset(x: 240)
+                    Text("You")
+                        .font(.system(size: 24))
+                        .foregroundColor(.white)
                 }
-                .scaleEffect(0.5)
-                Spacer()
-                Text("Player")
+
+                HStack {
+                    Button(
+                        action: {},
+                        label: {
+                            Text("Hit")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .padding()
+
+                        }
+                    )
+                    
+                        .frame(maxWidth: .infinity)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: cornerRadius)
+                                .stroke(
+                                    style: StrokeStyle(
+                                        lineWidth: 8,
+                                        dash: [10.0]
+                                    )
+                                )
+                                .fill(.white)
+
+                        )
+                        .background(.black)
+                        .clipped()
+                        .cornerRadius(cornerRadius)
+                        .padding(10)
+
+                    Button(
+                        action: {},
+                        label: {
+                            Text("Play")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .padding()
+                        }
+                    )
+                        .frame(maxWidth: .infinity)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: cornerRadius)
+                                .stroke(
+                                    style: StrokeStyle(
+                                        lineWidth: 8,
+                                        dash: [10.0]
+                                    )
+                                )
+                                .fill(.white)
+
+                        )
+                        .background(.red)
+                        .clipped()
+                        .cornerRadius(cornerRadius)
+                        .padding(10)
+                    Button(
+                        action: {},
+                        label: {
+                            Text("Past")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .padding()
+
+                        }
+                    )
+                        .frame(maxWidth: .infinity)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: cornerRadius)
+                                .stroke(
+                                    style: StrokeStyle(
+                                        lineWidth: 8,
+                                        dash: [10.0]
+                                    )
+                                )
+                                .fill(.white)
+
+                        )
+                        .background(.black)
+                        .clipped()
+                        .cornerRadius(cornerRadius)
+                        .padding(10)
+                }
+                .frame(maxHeight: 60)
             }
-            .font(.system(size: 24))
-            .foregroundColor(.white)
+
         }
-
-
     }
 }
 

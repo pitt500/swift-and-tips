@@ -20,42 +20,49 @@ struct CardView: View {
     }
 
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.white)
-                .cornerRadius(10)
-                .shadow(radius: 10)
-            VStack{
-                HStack {
-                    VStack {
-                        Text(card.number.symbol)
-                        Text(card.suit.rawValue)
-                            .font(.system(size: 20))
+        GeometryReader { parentProxy in
+            ZStack {
+                Rectangle()
+                    .fill(.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+                VStack{
+                    HStack {
+                        VStack {
+                            Text(card.number.symbol)
+                            Text(card.suit.rawValue)
+                                .font(.system(size: parentProxy.size.width*0.05))
+                        }
+                        Spacer()
                     }
                     Spacer()
-                }
-                Spacer()
-                HStack{
-                    Spacer()
-                    VStack {
-                        Text(card.number.symbol)
-                        Text(card.suit.rawValue)
-                            .font(.system(size: 20))
+                    HStack{
+                        Spacer()
+                        VStack {
+                            Text(card.number.symbol)
+                            Text(card.suit.rawValue)
+                                .font(.system(size: parentProxy.size.width*0.05))
+                        }
+                        .rotationEffect(.degrees(180))
                     }
-                    .rotationEffect(.degrees(180))
                 }
+                .font(.custom("Courier", size: parentProxy.size.width*0.1))
+                .foregroundColor(color)
+                .padding()
+                GeometryReader {
+                    drawCard(proxy: $0)
+                        .frame(
+                            width: $0.size.width,
+                            height: $0.size.height
+                        )
+                }
+                .padding(parentProxy.size.width*0.2)
             }
-            .font(.custom("Courier", size: 60))
-            .foregroundColor(color)
-            .padding()
-            GeometryReader {
-                drawCard(proxy: $0)
-                    .frame(
-                        width: $0.size.width,
-                        height: $0.size.height
-                    )
-            }
-            .padding(60)
+            .frame(
+                width: parentProxy.size.width,
+                height: parentProxy.size.height
+            )
+
         }
     }
 

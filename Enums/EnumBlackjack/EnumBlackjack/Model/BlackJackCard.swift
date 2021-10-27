@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct BlackJackCard {
+struct BlackJackCard: Identifiable {
     enum Suit: String, CaseIterable, CustomStringConvertible {
         case club = "♣️"
         case diamond = "♦️"
@@ -81,4 +81,14 @@ struct BlackJackCard {
 
     let suit: Suit
     let number: Number
+    let id = UUID()
+}
+
+extension BlackJackCard {
+    static let sample = [
+        BlackJackCard(suit: .heart, number: .ace),
+        BlackJackCard(suit: .diamond, number: .six),
+        BlackJackCard(suit: .spade, number: .three),
+        BlackJackCard(suit: .club, number: .ten),
+    ]
 }
