@@ -17,7 +17,7 @@ struct BlackJackView: View {
                 .ignoresSafeArea()
             VStack {
                 Text("CPU")
-                    .font(.system(size: 24))
+                    .font(.system(size: 30))
                     .foregroundColor(.white)
                 PlayerHandView(hand: viewModel.cpuHand)
                 Divider()
@@ -25,7 +25,7 @@ struct BlackJackView: View {
                     PlayerHandView(hand: viewModel.playerHand)
 
                     Text("You")
-                        .font(.system(size: 24))
+                        .font(.system(size: 30))
                         .foregroundColor(.white)
                 }
 
@@ -55,10 +55,12 @@ struct BlackJackView: View {
                                 .fill(.white)
 
                         )
-                        .background(.black)
+                        .background(viewModel.hitColor)
                         .clipped()
                         .cornerRadius(cornerRadius)
                         .padding(10)
+                        .disabled(viewModel.disableHit)
+                        .opacity(viewModel.hitOpacity)
 
                     Button(
                         action: {
