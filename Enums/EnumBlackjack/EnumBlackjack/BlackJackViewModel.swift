@@ -12,16 +12,28 @@ class BlackJackViewModel: ObservableObject {
     @Published private(set) var playerHand: [BlackJackCard] = []
     @Published private(set) var cpuHand: [BlackJackCard] = []
     @Published private(set) var disableHit = false
+    @Published var showResult = false
+    @Published var showPast = false
+
     private(set) var hitColor = Color.black
     private(set) var hitOpacity = 1.0
+    private(set) var deck: [BlackJackCard] = []
+    private(set) var resultMessage = ""
+    private var previousResult: Result?
+
     var remainingHits = 2 {
         didSet {
             updateHitButton()
         }
     }
-    private(set) var deck: [BlackJackCard] = []
-    private(set) var resultMessage = ""
-    @Published var showAlert = false
+
+    var previousMessage: String {
+        if case .previous(let result) = previousResult {
+            return "\(result)"
+        }
+
+        return "No results yet"
+    }
 
     enum Action {
         case didPressHit
@@ -67,7 +79,7 @@ class BlackJackViewModel: ObservableObject {
 
     private func play() {
         let result = getResult()
-        //let previousResult = Result.previous(result)
+        previousResult = .previous(result)
 
         switch result {
         case .player(let score):
@@ -80,7 +92,7 @@ class BlackJackViewModel: ObservableObject {
             break
         }
 
-        showAlert = true
+        showResult = true
     }
 
     func send(action: Action) {
@@ -91,7 +103,7 @@ class BlackJackViewModel: ObservableObject {
         case .didPressPlay:
             play()
         case .didPressPast:
-            break
+            showPast = true
         case .restartGame:
             startGame()
         }

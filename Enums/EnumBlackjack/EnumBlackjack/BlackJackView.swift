@@ -55,6 +55,16 @@ struct BlackJackView: View {
                             viewModel.send(action: .didPressPlay)
                         }
                     )
+                    .alert(isPresented: $viewModel.showResult) {
+                        Alert(
+                            title: Text("Game Over"),
+                            message: Text(viewModel.resultMessage),
+                            dismissButton: .default(
+                                Text("Ok"),
+                                action: { viewModel.send(action: .restartGame) }
+                            )
+                        )
+                    }
 
                     ChipView(
                         title: "Past",
@@ -63,20 +73,20 @@ struct BlackJackView: View {
                             viewModel.send(action: .didPressPast)
                         }
                     )
+                    .alert(isPresented: $viewModel.showPast) {
+                        Alert(
+                            title: Text("Previous game"),
+                            message: Text(viewModel.previousMessage),
+                            dismissButton: .default(
+                                Text("Ok"),
+                                action: { viewModel.send(action: .didPressPast) }
+                            )
+                        )
+                    }
                 }
                 .padding(.bottom, 30)
             }
 
-        }
-        .alert(isPresented: $viewModel.showAlert) {
-            Alert(
-                title: Text("Game Over"),
-                message: Text(viewModel.resultMessage),
-                dismissButton: .default(
-                    Text("Ok"),
-                    action: { viewModel.send(action: .restartGame) }
-                )
-            )
         }
     }
 }
