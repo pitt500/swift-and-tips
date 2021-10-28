@@ -16,11 +16,7 @@ class BlackJackViewModel: ObservableObject {
     private(set) var hitOpacity = 1.0
     var remainingHits = 2 {
         didSet {
-            if remainingHits == 0 {
-                disableHit = true
-                hitColor = .gray
-                hitOpacity = 0.7
-            }
+            updateHitButton()
         }
     }
     private(set) var deck: [BlackJackCard] = []
@@ -43,11 +39,18 @@ class BlackJackViewModel: ObservableObject {
         deck.shuffle()
         playerHand.removeAll()
         cpuHand.removeAll()
+        remainingHits = 2
 
         cpuHand.append(deck.removeLast())
         cpuHand.append(deck.removeLast())
         playerHand.append(deck.removeLast())
         playerHand.append(deck.removeLast())
+    }
+
+    func updateHitButton() {
+        disableHit = remainingHits == 0
+        hitColor = remainingHits == 0 ? .gray : .black
+        hitOpacity = remainingHits == 0 ? 0.7 : 1.0
     }
 
     private func makeDeck() -> [BlackJackCard] {
