@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B506F657272A2143008A8500 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506F656272A2143008A8500 /* ChipView.swift */; };
+		B506F659272A2B43008A8500 /* HiddenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506F658272A2B43008A8500 /* HiddenCardView.swift */; };
 		B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD42728992800AF81AD /* BlackJackViewModel.swift */; };
 		B5963CD72728E2EC00AF81AD /* PlayerHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */; };
 		B5F91F6B27283DBE000CBF86 /* EnumBlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		B506F656272A2143008A8500 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
+		B506F658272A2B43008A8500 /* HiddenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardView.swift; sourceTree = "<group>"; };
 		B5963CD42728992800AF81AD /* BlackJackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewModel.swift; sourceTree = "<group>"; };
 		B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHandView.swift; sourceTree = "<group>"; };
 		B5F91F6727283DBE000CBF86 /* EnumBlackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnumBlackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 				B5963CD42728992800AF81AD /* BlackJackViewModel.swift */,
 				B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */,
 				B506F656272A2143008A8500 /* ChipView.swift */,
+				B506F658272A2B43008A8500 /* HiddenCardView.swift */,
 			);
 			path = EnumBlackjack;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B506F659272A2B43008A8500 /* HiddenCardView.swift in Sources */,
 				B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */,
 				B5F91F6D27283DBE000CBF86 /* BlackJackView.swift in Sources */,
 				B5963CD72728E2EC00AF81AD /* PlayerHandView.swift in Sources */,

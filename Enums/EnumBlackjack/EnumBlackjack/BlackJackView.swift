@@ -20,11 +20,17 @@ struct BlackJackView: View {
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .padding(.top, 10)
-                PlayerHandView(hand: viewModel.cpuHand)
+                PlayerHandView(
+                    hand: viewModel.cpuHand,
+                    isHidden: true
+                )
                     .padding(-20)
                 Divider()
                 VStack {
-                    PlayerHandView(hand: viewModel.playerHand)
+                    PlayerHandView(
+                        hand: viewModel.playerHand,
+                        isHidden: false
+                    )
                         .padding(-20)
 
                     Text("You")
