@@ -19,108 +19,60 @@ struct BlackJackView: View {
                 Text("CPU")
                     .font(.system(size: 30))
                     .foregroundColor(.white)
+                    .padding(.top, 10)
                 PlayerHandView(hand: viewModel.cpuHand)
+                    .padding(-20)
                 Divider()
                 VStack {
                     PlayerHandView(hand: viewModel.playerHand)
+                        .padding(-20)
 
                     Text("You")
                         .font(.system(size: 30))
                         .foregroundColor(.white)
+
                 }
 
                 HStack {
-                    Button(
+                    ChipView(
+                        title: "Hit",
+                        color: viewModel.hitColor,
                         action: {
                             viewModel.send(action: .didPressHit)
-                        },
-                        label: {
-                            Text("Hit")
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                                .padding()
-
                         }
                     )
-                    
-                        .frame(maxWidth: .infinity)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: cornerRadius)
-                                .stroke(
-                                    style: StrokeStyle(
-                                        lineWidth: 8,
-                                        dash: [10.0]
-                                    )
-                                )
-                                .fill(.white)
+                    .disabled(viewModel.disableHit)
+                    .opacity(viewModel.hitOpacity)
 
-                        )
-                        .background(viewModel.hitColor)
-                        .clipped()
-                        .cornerRadius(cornerRadius)
-                        .padding(10)
-                        .disabled(viewModel.disableHit)
-                        .opacity(viewModel.hitOpacity)
-
-                    Button(
+                    ChipView(
+                        title: "Play",
+                        color: .red,
                         action: {
                             viewModel.send(action: .didPressPlay)
-                        },
-                        label: {
-                            Text("Play")
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                                .padding()
                         }
                     )
-                        .frame(maxWidth: .infinity)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: cornerRadius)
-                                .stroke(
-                                    style: StrokeStyle(
-                                        lineWidth: 8,
-                                        dash: [10.0]
-                                    )
-                                )
-                                .fill(.white)
 
-                        )
-                        .background(.red)
-                        .clipped()
-                        .cornerRadius(cornerRadius)
-                        .padding(10)
-                    Button(
+                    ChipView(
+                        title: "Past",
+                        color: .black,
                         action: {
                             viewModel.send(action: .didPressPast)
-                        },
-                        label: {
-                            Text("Past")
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                                .padding()
-
                         }
                     )
-                        .frame(maxWidth: .infinity)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: cornerRadius)
-                                .stroke(
-                                    style: StrokeStyle(
-                                        lineWidth: 8,
-                                        dash: [10.0]
-                                    )
-                                )
-                                .fill(.white)
-
-                        )
-                        .background(.black)
-                        .clipped()
-                        .cornerRadius(cornerRadius)
-                        .padding(10)
                 }
-                .frame(maxHeight: 60)
+                .padding(.bottom, 30)
             }
 
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Game Over"),
+                message: Text(viewModel.resultMessage),
+                dismissButton: .default(
+                    Text("Ok"),
+                    action: { viewModel.send(action: .restartGame) }
+                )
+            )
         }
     }
 }

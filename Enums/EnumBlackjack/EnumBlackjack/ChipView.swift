@@ -18,7 +18,7 @@ struct ChipView: View {
             action: action,
             label: {
                 Text(title)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 70, height: 70)
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .padding()
