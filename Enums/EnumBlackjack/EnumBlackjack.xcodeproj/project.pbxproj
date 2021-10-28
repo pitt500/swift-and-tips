@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B506F657272A2143008A8500 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506F656272A2143008A8500 /* ChipView.swift */; };
 		B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD42728992800AF81AD /* BlackJackViewModel.swift */; };
 		B5963CD72728E2EC00AF81AD /* PlayerHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */; };
 		B5F91F6B27283DBE000CBF86 /* EnumBlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B506F656272A2143008A8500 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		B5963CD42728992800AF81AD /* BlackJackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewModel.swift; sourceTree = "<group>"; };
 		B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHandView.swift; sourceTree = "<group>"; };
 		B5F91F6727283DBE000CBF86 /* EnumBlackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnumBlackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				B5F91F7827284011000CBF86 /* CardView.swift */,
 				B5963CD42728992800AF81AD /* BlackJackViewModel.swift */,
 				B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */,
+				B506F656272A2143008A8500 /* ChipView.swift */,
 			);
 			path = EnumBlackjack;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				B5F91F6D27283DBE000CBF86 /* BlackJackView.swift in Sources */,
 				B5963CD72728E2EC00AF81AD /* PlayerHandView.swift in Sources */,
 				B5F91F7927284011000CBF86 /* CardView.swift in Sources */,
+				B506F657272A2143008A8500 /* ChipView.swift in Sources */,
 				B5F91F7C272841A8000CBF86 /* BlackJackCard.swift in Sources */,
 				B5F91F6B27283DBE000CBF86 /* EnumBlackjackApp.swift in Sources */,
 			);
