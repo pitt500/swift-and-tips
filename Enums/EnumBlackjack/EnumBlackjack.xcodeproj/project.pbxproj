@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B506F657272A2143008A8500 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506F656272A2143008A8500 /* ChipView.swift */; };
 		B506F659272A2B43008A8500 /* HiddenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506F658272A2B43008A8500 /* HiddenCardView.swift */; };
+		B5690DDD272AE82900B0D570 /* BlackJackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5690DDC272AE82900B0D570 /* BlackJackEngine.swift */; };
 		B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD42728992800AF81AD /* BlackJackViewModel.swift */; };
 		B5963CD72728E2EC00AF81AD /* PlayerHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */; };
 		B5F91F6B27283DBE000CBF86 /* EnumBlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		B506F656272A2143008A8500 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		B506F658272A2B43008A8500 /* HiddenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardView.swift; sourceTree = "<group>"; };
+		B5690DDC272AE82900B0D570 /* BlackJackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackEngine.swift; sourceTree = "<group>"; };
 		B5963CD42728992800AF81AD /* BlackJackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewModel.swift; sourceTree = "<group>"; };
 		B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHandView.swift; sourceTree = "<group>"; };
 		B5F91F6727283DBE000CBF86 /* EnumBlackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnumBlackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5690DDE272AE87D00B0D570 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5F91F7827284011000CBF86 /* CardView.swift */,
+				B506F658272A2B43008A8500 /* HiddenCardView.swift */,
+				B506F656272A2143008A8500 /* ChipView.swift */,
+				B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5690DDF272AE89600B0D570 /* BlackJack */ = {
+			isa = PBXGroup;
+			children = (
+				B5690DDC272AE82900B0D570 /* BlackJackEngine.swift */,
+				B5963CD42728992800AF81AD /* BlackJackViewModel.swift */,
+				B5F91F6C27283DBE000CBF86 /* BlackJackView.swift */,
+			);
+			path = BlackJack;
+			sourceTree = "<group>";
+		};
 		B5F91F5E27283DBE000CBF86 = {
 			isa = PBXGroup;
 			children = (
@@ -63,16 +86,12 @@
 		B5F91F6927283DBE000CBF86 /* EnumBlackjack */ = {
 			isa = PBXGroup;
 			children = (
+				B5690DDF272AE89600B0D570 /* BlackJack */,
+				B5690DDE272AE87D00B0D570 /* Views */,
 				B5F91F7A2728418E000CBF86 /* Model */,
 				B5F91F6A27283DBE000CBF86 /* EnumBlackjackApp.swift */,
-				B5F91F6C27283DBE000CBF86 /* BlackJackView.swift */,
 				B5F91F6E27283DC0000CBF86 /* Assets.xcassets */,
 				B5F91F7027283DC0000CBF86 /* Preview Content */,
-				B5F91F7827284011000CBF86 /* CardView.swift */,
-				B5963CD42728992800AF81AD /* BlackJackViewModel.swift */,
-				B5963CD62728E2EB00AF81AD /* PlayerHandView.swift */,
-				B506F656272A2143008A8500 /* ChipView.swift */,
-				B506F658272A2B43008A8500 /* HiddenCardView.swift */,
 			);
 			path = EnumBlackjack;
 			sourceTree = "<group>";
@@ -166,6 +185,7 @@
 				B506F659272A2B43008A8500 /* HiddenCardView.swift in Sources */,
 				B5963CD52728992800AF81AD /* BlackJackViewModel.swift in Sources */,
 				B5F91F6D27283DBE000CBF86 /* BlackJackView.swift in Sources */,
+				B5690DDD272AE82900B0D570 /* BlackJackEngine.swift in Sources */,
 				B5963CD72728E2EC00AF81AD /* PlayerHandView.swift in Sources */,
 				B5F91F7927284011000CBF86 /* CardView.swift in Sources */,
 				B506F657272A2143008A8500 /* ChipView.swift in Sources */,

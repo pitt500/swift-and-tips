@@ -19,7 +19,8 @@ class BlackJackViewModel: ObservableObject {
     private(set) var hitOpacity = 1.0
     private(set) var deck: [BlackJackCard] = []
     private(set) var resultMessage = ""
-    private var previousResult: Result?
+    private let engine = BlackJackEngine()
+    private var previousResult: BlackJackEngine.Result?
 
     var remainingHits = 2 {
         didSet {
@@ -78,7 +79,7 @@ class BlackJackViewModel: ObservableObject {
     }
 
     private func play() {
-        let result = getResult()
+        let result = engine.getResult(playerHand, cpuHand)
         previousResult = .previous(result)
 
         switch result {
@@ -106,69 +107,5 @@ class BlackJackViewModel: ObservableObject {
         case .restartGame:
             startGame()
         }
-    }
-}
-
-extension BlackJackViewModel {
-    enum Result {
-        case player(score: Int)
-        case cpu(score: Int)
-        case tie
-        //recursive value
-        indirect case previous(Result)
-    }
-
-    func getRightAceValue(currentScore: Int, numAces: Int) -> Int {
-        let delta = 21 - currentScore
-
-        let elevenAce =  11 + (numAces - 1)
-        if elevenAce <= delta {
-            return elevenAce
-        }
-
-        return numAces
-    }
-
-    func getScore(hand: [BlackJackCard]) -> Int {
-        var score = 0
-        var numAces = 0
-
-        for card in hand {
-            if card.number == .ace {
-                numAces += 1
-            } else {
-                score += card.number.value
-            }
-        }
-
-        if numAces > 0 {
-            score += getRightAceValue(
-                currentScore: score,
-                numAces: numAces
-            )
-        }
-
-        hand.forEach {
-            print($0.suit, $0.number)
-        }
-
-        return score
-    }
-
-    func getResult() -> Result {
-        let playerScore = getScore(hand: playerHand)
-        print("Player: ", playerScore)
-
-        print("----")
-        let cpuScore = getScore(hand: cpuHand)
-        print("CPU: ", cpuScore)
-
-        if playerScore == cpuScore {
-            return .tie
-        }else if playerScore > cpuScore && playerScore <= 21 {
-            return .player(score: playerScore)
-        }
-
-        return .cpu(score: cpuScore)
     }
 }
