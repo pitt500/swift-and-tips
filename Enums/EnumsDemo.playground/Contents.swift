@@ -24,17 +24,15 @@ let suit = CardSuit(rawValue: "♠️")
 
 enum CardNumber: CaseIterable {
     case ace
-    case one, two, three, four, five, six, seven, eight, nine, ten
+    case two, three, four, five, six, seven, eight, nine, ten
     case jack, queen, king
 
     var value: Int {
         switch self {
         case .ace:
-            return 0
+            return 1
         case .jack, .queen, .king, .ten:
             return 10
-        case .one:
-            return 1
         case .two:
             return 2
         case .three:
@@ -138,13 +136,13 @@ func getResult() -> Result {
     let cpuScore = getScore(hand: cpuHand)
     print("CPU: ", cpuScore)
 
-    if playerScore > cpuScore && playerScore <= 21 {
+    if playerScore == cpuScore {
+        return .tie
+    }else if playerScore > cpuScore && playerScore <= 21 {
         return .player(score: playerScore)
-    } else if cpuScore > playerScore {
-        return .cpu(score: cpuScore)
     }
 
-    return .tie
+    return .cpu(score: cpuScore)
 }
 
 
