@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BlackJackView: View {
     @StateObject private var viewModel = BlackJackViewModel()
-    private let cornerRadius: CGFloat = 10
 
     var body: some View {
         ZStack {
