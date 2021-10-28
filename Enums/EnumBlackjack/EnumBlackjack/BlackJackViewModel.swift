@@ -91,8 +91,6 @@ class BlackJackViewModel: ObservableObject {
         default:
             break
         }
-
-        showResult = true
     }
 
     func send(action: Action) {
@@ -102,6 +100,7 @@ class BlackJackViewModel: ObservableObject {
             remainingHits -= 1
         case .didPressPlay:
             play()
+            showResult = true
         case .didPressPast:
             showPast = true
         case .restartGame:

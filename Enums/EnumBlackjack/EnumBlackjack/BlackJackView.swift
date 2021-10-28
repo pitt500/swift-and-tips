@@ -78,8 +78,7 @@ struct BlackJackView: View {
                             title: Text("Previous game"),
                             message: Text(viewModel.previousMessage),
                             dismissButton: .default(
-                                Text("Ok"),
-                                action: { viewModel.send(action: .didPressPast) }
+                                Text("Ok")
                             )
                         )
                     }

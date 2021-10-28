@@ -36,6 +36,7 @@ struct ChipView: View {
                     .fill(.white)
             )
             .clipShape(Circle())
+            .shadow(radius: 10)
     }
 }
 
