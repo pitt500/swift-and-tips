@@ -25,7 +25,6 @@ struct BlackJackView: View {
                     isHidden: true
                 )
                     .padding(-20)
-                Divider()
                 VStack {
                     PlayerHandView(
                         hand: viewModel.playerHand,
