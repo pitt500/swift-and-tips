@@ -92,9 +92,12 @@ enum Result {
 }
 
 func getRightAceValue(currentScore: Int, numAces: Int) -> Int {
-    let delta = 21 - currentScore
+    let maxBlackJackPoints = 21
+    let delta = maxBlackJackPoints - currentScore
 
-    let elevenAce =  11 + (numAces - 1)
+    let maxAceValue = 11
+    let elevenAce =  maxAceValue + (numAces - 1)
+
     if elevenAce <= delta {
         return elevenAce
     }
@@ -157,7 +160,7 @@ case .cpu(let score):
     print("CPU won!, Score: \(score)")
 case .tie:
     print("This was a Tie :/")
-default:
+case .previous:
     break
 }
 
