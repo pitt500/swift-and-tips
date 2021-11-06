@@ -27,7 +27,6 @@ print(type(of: y))
 // Nil is NOT a null pointer, it's just the representation
 // of "abscence of value"
 
-
 // Both are equivalent
 x = 500
 x = Optional.some(500)
@@ -35,27 +34,55 @@ x = Optional.some(500)
 // These two too:
 x = nil
 x = Optional.none
+print(x)
 
 
 // MARK: - Unwrapping
 x = 500
 y = 500
 
+// Simple version
+if x != nil {
+    print("X is \(x)")
+    //let xTenTimes = x * 10
+}
+
 // 1. Optional Binding:
 
 if let x = x {
     print("X is \(x) and was unwrapped")
+    let xTenTimes = x * 10
 } else {
     print("X is nil")
 }
 
+// Pyramid of doom! - Use Guard let instead!
+var anotherValue: Int? = 10
+if let x = x {
+    if let y = y {
+        if let value = anotherValue {
+            print(x, y, value)
+        }
+    }
+}
+
 // 2. Guard Let:
-func getValue(x: Int?) {
+func printValues() {
     guard let x = x else {
         print("X is nil")
         return
     }
-    print("X is \(x) and was unwrapped")
+
+    guard let y = y  else {
+        print("Y is nil")
+        return
+    }
+
+    guard let value = anotherValue else {
+        print("value is nil")
+        return
+    }
+    print(x, y, value)
 }
 
 // 3. Switch:
@@ -93,6 +120,8 @@ print(result)
 
 // MARK: - Nil-Coalescing Operator
 print(y ?? "No value")
+let a: Int? = 10
+let b = a ?? 0
 
 
 // MARK: Force Unwrapping!
@@ -115,10 +144,11 @@ var z: Int!
 
 z = 10
 print(z)
+let isMultiple = z.isMultiple(of: 2)
 
 z = nil
 // this is fine!
 print(z)
 
 // This is bad!
-//print(z!)
+let isMultiple2 = z.isMultiple(of: 2)
