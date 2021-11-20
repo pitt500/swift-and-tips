@@ -11,6 +11,8 @@
 		B555EFD12747ED090004322B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555EFD02747ED090004322B /* ContentView.swift */; };
 		B555EFD32747ED0B0004322B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B555EFD22747ED0B0004322B /* Assets.xcassets */; };
 		B555EFD62747ED0B0004322B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B555EFD52747ED0B0004322B /* Preview Assets.xcassets */; };
+		B555EFDD274817E70004322B /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555EFDC274817E70004322B /* BottomSheetView.swift */; };
+		B555EFDF274877DA0004322B /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555EFDE274877DA0004322B /* BottomSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B555EFD02747ED090004322B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B555EFD22747ED0B0004322B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B555EFD52747ED0B0004322B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B555EFDC274817E70004322B /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		B555EFDE274877DA0004322B /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				B555EFD02747ED090004322B /* ContentView.swift */,
 				B555EFD22747ED0B0004322B /* Assets.xcassets */,
 				B555EFD42747ED0B0004322B /* Preview Content */,
+				B555EFDC274817E70004322B /* BottomSheetView.swift */,
+				B555EFDE274877DA0004322B /* BottomSheetViewController.swift */,
 			);
 			path = UISheetPresentationControllerDemo;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				B555EFD12747ED090004322B /* ContentView.swift in Sources */,
 				B555EFCF2747ED090004322B /* UISheetPresentationControllerDemoApp.swift in Sources */,
+				B555EFDD274817E70004322B /* BottomSheetView.swift in Sources */,
+				B555EFDF274877DA0004322B /* BottomSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
