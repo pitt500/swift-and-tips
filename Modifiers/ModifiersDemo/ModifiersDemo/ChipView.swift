@@ -8,13 +8,48 @@
 import SwiftUI
 
 struct ChipView: View {
+
+    let title: String
+    let color: Color
+    let action: () -> Void
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(
+            action: action,
+            label: {
+                Text(title)
+                    .frame(width: 70, height: 70)
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding()
+            }
+        )
+            .background(color)
+            .overlay(
+                Circle()
+                    .stroke(
+                        style: StrokeStyle(
+                            lineWidth: 15,
+                            dash: [10.0]
+                        )
+                    )
+                    .fill(.white)
+            )
+            .clipShape(Circle())
+            .shadow(radius: 10)
     }
 }
 
 struct ChipView_Previews: PreviewProvider {
     static var previews: some View {
-        ChipView()
+        ZStack {
+            Color.green
+                .ignoresSafeArea()
+            ChipView(
+                title: "hello",
+                color: .red,
+                action: {}
+            )
+        }
     }
 }
