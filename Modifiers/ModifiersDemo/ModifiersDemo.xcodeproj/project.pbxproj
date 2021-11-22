@@ -13,6 +13,7 @@
 		B5D9F8BD274A940C006F641D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D9F8BC274A940C006F641D /* Preview Assets.xcassets */; };
 		B5D9F8C4274AA451006F641D /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8C3274AA451006F641D /* ChipView.swift */; };
 		B5D9F8C6274BDBD0006F641D /* BlueTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8C5274BDBD0006F641D /* BlueTitle.swift */; };
+		B5D9F8C8274BEA03006F641D /* ExpirationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8C7274BEA03006F641D /* ExpirationModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B5D9F8BC274A940C006F641D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5D9F8C3274AA451006F641D /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		B5D9F8C5274BDBD0006F641D /* BlueTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTitle.swift; sourceTree = "<group>"; };
+		B5D9F8C7274BEA03006F641D /* ExpirationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B5D9F8BB274A940C006F641D /* Preview Content */,
 				B5D9F8C3274AA451006F641D /* ChipView.swift */,
 				B5D9F8C5274BDBD0006F641D /* BlueTitle.swift */,
+				B5D9F8C7274BEA03006F641D /* ExpirationModifier.swift */,
 			);
 			path = ModifiersDemo;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D9F8C8274BEA03006F641D /* ExpirationModifier.swift in Sources */,
 				B5D9F8B8274A940C006F641D /* ContentView.swift in Sources */,
 				B5D9F8C6274BDBD0006F641D /* BlueTitle.swift in Sources */,
 				B5D9F8B6274A940C006F641D /* ModifiersDemoApp.swift in Sources */,
