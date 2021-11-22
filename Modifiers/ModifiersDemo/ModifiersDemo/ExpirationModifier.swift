@@ -18,3 +18,9 @@ struct ExpirationModifier: ViewModifier {
         }
     }
 }
+
+extension View {
+    func expired(date: Date) -> some View {
+        modifier(ExpirationModifier(date: date))
+    }
+}
