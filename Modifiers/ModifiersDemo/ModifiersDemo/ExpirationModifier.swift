@@ -15,11 +15,13 @@ struct ExpirationModifier: ViewModifier {
     }
 
     func body(content: Content) -> some View {
-        if expired {
-            content.opacity(0.3)
-        } else {
-            content
-        }
+//        if expired {
+//            content.opacity(0.3)
+//        } else {
+//            content
+//        }
+
+        content.opacity(expired ? 0.3 : 1.0)
     }
 }
 
