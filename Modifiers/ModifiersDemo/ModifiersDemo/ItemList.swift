@@ -7,29 +7,61 @@
 
 import SwiftUI
 
-struct ItemList: View{
-    static let aDay: TimeInterval = 86_400 //secods
-    let food = [
-        ("Eggs 🥚", Date(timeIntervalSinceNow: aDay)),
-        ("Milk 🐮", Date(timeIntervalSinceNow: 0)),
-        ("Bacon 🥓", Date(timeIntervalSinceNow: aDay)),
-        ("Pancakes 🥞", Date(timeIntervalSinceNow: aDay))
-    ]
+struct TodoList: View{
+    @StateObject var viewModel = TodoListViewModel()
 
     var body: some View {
         NavigationView {
-            List(food, id: \.self.0) { item in
-                Text(item.0)
-                    .blueTitle()
-                    .expired(date: item.1)
+            List {
+                ForEach(viewModel.todoItems) { item in
+                    Text(item.name)
+                        .blueTitle()
+                        .expired(item.done)
+                        .onTapGesture {
+                            viewModel.updateItem(item)
+                        }
+                }
+                .listRowSeparator(.hidden)
             }
-            .navigationTitle("Food")
+            .navigationTitle("Todo")
         }
     }
 }
 
-struct ItemList_Previews: PreviewProvider {
+struct TodoList_Previews: PreviewProvider {
     static var previews: some View {
-        ItemList()
+        TodoList()
     }
+}
+
+
+struct TodoItem: Identifiable {
+    let id = UUID()
+    let name: String
+    var done: Bool = false
+
+    private static let aDayLater: TimeInterval = 86_400
+    static let sample: [TodoItem] = [
+        .init(
+            name: "Clean room 🧹"
+        ),
+        .init(
+            name: "Edit video 🎥"
+        ),
+        .init(
+            name: "Prepare workshop 🧠"
+        ),
+        .init(
+            name: "Publish Video 🎉"
+        ),
+        .init(
+            name: "Write script 📝"
+        ),
+        .init(
+            name: "Go to dentist 🦷"
+        ),
+        .init(
+            name: "Go to groceries store 🥑"
+        )
+    ]
 }

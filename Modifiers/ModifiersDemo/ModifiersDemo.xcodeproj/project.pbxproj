@@ -15,6 +15,7 @@
 		B5D9F8C6274BDBD0006F641D /* BlueTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8C5274BDBD0006F641D /* BlueTitle.swift */; };
 		B5D9F8C8274BEA03006F641D /* ExpirationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8C7274BEA03006F641D /* ExpirationModifier.swift */; };
 		B5D9F8CA274BF471006F641D /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8C9274BF471006F641D /* ItemList.swift */; };
+		B5D9F8CC274D3A99006F641D /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9F8CB274D3A99006F641D /* TodoListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B5D9F8C5274BDBD0006F641D /* BlueTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTitle.swift; sourceTree = "<group>"; };
 		B5D9F8C7274BEA03006F641D /* ExpirationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationModifier.swift; sourceTree = "<group>"; };
 		B5D9F8C9274BF471006F641D /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		B5D9F8CB274D3A99006F641D /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B5D9F8C5274BDBD0006F641D /* BlueTitle.swift */,
 				B5D9F8C7274BEA03006F641D /* ExpirationModifier.swift */,
 				B5D9F8C9274BF471006F641D /* ItemList.swift */,
+				B5D9F8CB274D3A99006F641D /* TodoListViewModel.swift */,
 			);
 			path = ModifiersDemo;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				B5D9F8C8274BEA03006F641D /* ExpirationModifier.swift in Sources */,
 				B5D9F8B8274A940C006F641D /* ContentView.swift in Sources */,
+				B5D9F8CC274D3A99006F641D /* TodoListViewModel.swift in Sources */,
 				B5D9F8C6274BDBD0006F641D /* BlueTitle.swift in Sources */,
 				B5D9F8B6274A940C006F641D /* ModifiersDemoApp.swift in Sources */,
 				B5D9F8CA274BF471006F641D /* ItemList.swift in Sources */,
