@@ -8,27 +8,59 @@
 import SwiftUI
 
 struct GestureView: View {
-    @State var viewState = CGSize.zero
+    private let initialPosition = CGPoint(x: 60, y: 50)
+    private let greenViewPosition = CGPoint(x: 0, y: UIScreen.main.bounds.midY)
+    @State private var currentPosition = CGPoint(x: 60, y: 50)
+    @State private var isColliding = false
 
     var drag: some Gesture {
         DragGesture()
             .onChanged { value in
-                viewState = value.translation
+                currentPosition = value.location
+                checkCollision()
             }
             .onEnded { value in
-                withAnimation {
-                    viewState = .zero
+                if isColliding == false {
+                    withAnimation {
+                        currentPosition = initialPosition
+                        checkCollision()
+                    }
                 }
             }
+
     }
 
     var body: some View {
-        Circle()
-            .fill(.red)
-            .frame(width: 100, height: 100)
-            .offset(x: viewState.width, y: viewState.height)
-            .gesture(drag)
 
+        ZStack {
+            VStack {
+                Color.white
+                GeometryReader { proxy in
+                    ZStack {
+                        Color.green
+
+                        if isColliding {
+                            Color.red.opacity(0.5)
+                                .frame(
+                                    width: proxy.size.width,
+                                    height: proxy.size.height
+                                )
+                        }
+                    }
+
+
+                }.ignoresSafeArea()
+            }
+            Circle()
+                .fill(.red)
+                .frame(width: 100, height: 100)
+                .position(currentPosition)
+                .gesture(drag)
+        }
+    }
+
+    func checkCollision() {
+        isColliding = currentPosition.y >= greenViewPosition.y
     }
 }
 

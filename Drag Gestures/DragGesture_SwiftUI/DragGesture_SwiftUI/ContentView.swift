@@ -35,16 +35,17 @@ struct ContentView: View {
                     ZStack {
                         Color.green
 
-                        if isInside(
-                            frame: proxy.frame(in: .global),
-                            position: location
-                        ) {
-                            Color.red.opacity(0.5)
-                                .frame(
-                                    width: proxy.size.width,
-                                    height: proxy.size.height
-                                )
-                        }
+                        // This is modifying the view during view update 🔥
+//                        if isInside(
+//                            frame: proxy.frame(in: .global),
+//                            position: location
+//                        ) {
+//                            Color.red.opacity(0.5)
+//                                .frame(
+//                                    width: proxy.size.width,
+//                                    height: proxy.size.height
+//                                )
+//                        }
 
 
                     }
