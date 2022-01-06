@@ -15,11 +15,7 @@ struct ContentView: View {
     var drag: some Gesture {
         DragGesture()
             .onChanged { value in
-                var newLocation = startLocation ?? location
-                newLocation.x += value.translation.width
-                newLocation.y += value.translation.height
-
-                self.location = newLocation
+                self.location = value.location
             }
             .onEnded { value in
                 if isInside == false {
