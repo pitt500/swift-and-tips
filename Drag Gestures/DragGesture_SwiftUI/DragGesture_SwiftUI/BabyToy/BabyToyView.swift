@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct BabyToyView: View {
-    private let initialPosition = CGPoint(x: 60, y: 50)
+    private let initialPosition = CGPoint(
+        x: UIScreen.main.bounds.midX,
+        y: UIScreen.main.bounds.midY * 1.5
+    )
     private let greenViewPosition = CGPoint(x: 0, y: UIScreen.main.bounds.midY)
-    @State private var currentPosition = CGPoint(x: 60, y: 50)
+    @State private var currentPosition = CGPoint(
+        x: UIScreen.main.bounds.midX,
+        y: UIScreen.main.bounds.midY * 1.5
+    )
     @State private var isColliding = false
 
     private let redPosition: CGPoint = CGPoint(
@@ -22,7 +28,7 @@ struct BabyToyView: View {
 
     private let greenPosition: CGPoint = CGPoint(
         x: (UIScreen.main.bounds.midX/3),
-        y: 0
+        y: 60
     )
 
     private let bluePosition: CGPoint = CGPoint(
@@ -50,51 +56,29 @@ struct BabyToyView: View {
     var body: some View {
 
         ZStack {
-            VStack {
-                Color.white
-
-                GeometryReader { proxy in
-                    HStack {
-                        ToyView(
-                            color: .red, 
-                            position: redPosition,
-                            isColliding: isRedColliding
-                        )
-                        Circle()
-                            .fill(.green)
-                            .frame(width: 100, height: 100)
-                            .position(greenPosition)
-
-                        Circle()
-                            .fill(.blue)
-                            .frame(width: 100, height: 100)
-                            .position(bluePosition)
-                    }
-                }
-                .ignoresSafeArea()
-
-
-//                GeometryReader { proxy in
-//                    ZStack {
-//                        Color.green
-//
-//                        if isColliding {
-//                            Color.red.opacity(0.5)
-//                                .frame(
-//                                    width: proxy.size.width,
-//                                    height: proxy.size.height
-//                                )
-//                        }
-//                    }
-//
-//
-//                }.ignoresSafeArea()
-            }
+            Color.white.ignoresSafeArea()
             Circle()
                 .fill(.red)
                 .frame(width: 100, height: 100)
                 .position(currentPosition)
                 .gesture(drag)
+                .zIndex(4)
+            HStack {
+                ToyView(
+                    color: .red,
+                    position: redPosition,
+                    isColliding: isRedColliding
+                )
+                Circle()
+                    .fill(.green)
+                    .frame(width: 100, height: 100)
+                    .position(greenPosition)
+
+                Circle()
+                    .fill(.blue)
+                    .frame(width: 100, height: 100)
+                    .position(bluePosition)
+            }
         }
     }
 
@@ -104,7 +88,9 @@ struct BabyToyView: View {
         print("Red: \(redPosition)")
         print("-------")
 
-        isRedColliding = abs(currentPosition.y - redPosition.y) < 100 && abs(currentPosition.x - redPosition.x) < 100
+        let delta: CGFloat = 70
+
+        isRedColliding = abs(currentPosition.y - redPosition.y) < delta && abs(currentPosition.x - redPosition.x) < delta
 
     }
 }
