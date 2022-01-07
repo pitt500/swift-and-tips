@@ -18,6 +18,8 @@ struct BabyToyView: View {
         y: UIScreen.main.bounds.midY/2
     )
 
+    @State private var isRedColliding = false
+
     private let greenPosition: CGPoint = CGPoint(
         x: (UIScreen.main.bounds.midX/3),
         y: 0
@@ -53,10 +55,11 @@ struct BabyToyView: View {
 
                 GeometryReader { proxy in
                     HStack {
-                        Circle()
-                            .fill(.red)
-                            .frame(width: 100, height: 100)
-                            .position(redPosition)
+                        ToyView(
+                            color: .red, 
+                            position: redPosition,
+                            isColliding: isRedColliding
+                        )
                         Circle()
                             .fill(.green)
                             .frame(width: 100, height: 100)
@@ -97,10 +100,12 @@ struct BabyToyView: View {
 
     func checkCollision() {
 
+        print("Current: \(currentPosition)")
+        print("Red: \(redPosition)")
+        print("-------")
 
+        isRedColliding = abs(currentPosition.y - redPosition.y) < 100 && abs(currentPosition.x - redPosition.x) < 100
 
-
-        isColliding = currentPosition.y >= greenViewPosition.y
     }
 }
 
