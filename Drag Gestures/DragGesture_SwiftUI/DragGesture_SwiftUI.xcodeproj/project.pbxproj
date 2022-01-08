@@ -16,6 +16,7 @@
 		B57158422770CA0B00944F51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57158412770CA0B00944F51 /* Preview Assets.xcassets */; };
 		B59A368A278A297400AE041C /* DraggableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A3688278A297400AE041C /* DraggableObject.swift */; };
 		B59A368B278A297400AE041C /* ToyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A3689278A297400AE041C /* ToyViewModel.swift */; };
+		B59A368D278A396E00AE041C /* Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A368C278A396E00AE041C /* Toy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B57158412770CA0B00944F51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59A3688278A297400AE041C /* DraggableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableObject.swift; sourceTree = "<group>"; };
 		B59A3689278A297400AE041C /* ToyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewModel.swift; sourceTree = "<group>"; };
+		B59A368C278A396E00AE041C /* Toy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 				B59A3689278A297400AE041C /* ToyViewModel.swift */,
 				B527D35D2787C83F008E6D13 /* BabyToyView.swift */,
 				B527D36027888CF7008E6D13 /* ToyView.swift */,
+				B59A368C278A396E00AE041C /* Toy.swift */,
 			);
 			path = BabyToy;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59A368D278A396E00AE041C /* Toy.swift in Sources */,
 				B571583D2770CA0A00944F51 /* ContentView.swift in Sources */,
 				B527D35E2787C83F008E6D13 /* BabyToyView.swift in Sources */,
 				B59A368A278A297400AE041C /* DraggableObject.swift in Sources */,
