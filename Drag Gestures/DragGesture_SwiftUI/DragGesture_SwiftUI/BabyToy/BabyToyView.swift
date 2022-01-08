@@ -12,7 +12,7 @@ struct BabyToyView: View {
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
     )
-    private let greenViewPosition = CGPoint(x: 0, y: UIScreen.main.bounds.midY)
+
     @State private var currentPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
@@ -63,7 +63,6 @@ struct BabyToyView: View {
                     currentPosition: currentPosition
                 )
             }
-            //.padding(50)
 
             Circle()
                 .fill(.red)
@@ -75,25 +74,6 @@ struct BabyToyView: View {
 
         }
         .ignoresSafeArea()
-    }
-
-    func checkCollision() {
-
-//        print("Current: \(currentPosition)")
-//        print("Red: \(redPosition)")
-//        print("-------")
-//
-//        let delta: CGFloat = 70
-//
-//        isRedColliding = abs(currentPosition.y - redPosition.y) < delta && abs(currentPosition.x - redPosition.x) < delta
-//
-//        isBlueColliding = abs(currentPosition.y - bluePosition.y) < delta && abs(currentPosition.x - bluePosition.x) < delta
-//        print("Current: \(currentPosition)")
-//        print("Blue: \(bluePosition)")
-//        print("-------")
-//
-//        isGreenColliding = abs(currentPosition.y - greenPosition.y) < delta && abs(currentPosition.x - greenPosition.x) < delta
-
     }
 }
 
