@@ -73,11 +73,10 @@ struct BabyToyView: View {
                 )
             }
 
-            Circle()
-                .fill(.red)
-                .frame(width: 100, height: 100)
-                .position(currentPosition)
-                .gesture(drag)
+            DraggableObject(
+                position: currentPosition,
+                gesture: drag
+            )
         }
         .ignoresSafeArea()
     }
