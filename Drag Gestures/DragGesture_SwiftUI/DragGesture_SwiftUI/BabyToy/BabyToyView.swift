@@ -9,27 +9,19 @@ import SwiftUI
 
 struct BabyToyView: View {
     @StateObject private var viewModel = ToyViewModel()
-
-    private let initialPosition = CGPoint(
-        x: UIScreen.main.bounds.midX,
-        y: UIScreen.main.bounds.midY * 1.5
-    )
-
-    @State private var currentPosition = CGPoint(
-        x: UIScreen.main.bounds.midX,
-        y: UIScreen.main.bounds.midY * 1.5
-    )
     @State private var currentId: Int = 0
 
     var drag: some Gesture {
         DragGesture()
             .onChanged { value in
-                currentPosition = value.location
+                viewModel.update(dragLocation: value.location)
+                viewModel.update(isDragged: true)
             }
             .onEnded { value in
                 print("currentId: \(currentId)")
                 withAnimation {
-                    currentPosition = initialPosition
+                    viewModel.update(dragLocation: value.location)
+                    viewModel.update(isDragged: false)
 
                 }
             }
@@ -50,31 +42,29 @@ struct BabyToyView: View {
 
             HStack {
                 ToyView(
-                    id: 1,
-                    color: .red,
-                    currentPosition: currentPosition,
-                    currentId: $currentId
+                    toy: Toy(id: 1, color: .red),
+                    viewModel: viewModel,
+                    highlightedId: $viewModel.highlighedId
+                )
+
+                Spacer()
+                    .frame(maxWidth: 80)
+                ToyView(
+                    toy: Toy(id: 2, color: .green),
+                    viewModel: viewModel,
+                    highlightedId: $viewModel.highlighedId
                 )
                 Spacer()
                     .frame(maxWidth: 80)
                 ToyView(
-                    id: 2,
-                    color: .green,
-                    currentPosition: currentPosition,
-                    currentId: $currentId
-                )
-                Spacer()
-                    .frame(maxWidth: 80)
-                ToyView(
-                    id: 3,
-                    color: .blue,
-                    currentPosition: currentPosition,
-                    currentId: $currentId
+                    toy: Toy(id: 3, color: .blue),
+                    viewModel: viewModel,
+                    highlightedId: $viewModel.highlighedId
                 )
             }
 
             DraggableObject(
-                position: currentPosition,
+                position: viewModel.currentPosition,
                 gesture: drag
             )
         }
