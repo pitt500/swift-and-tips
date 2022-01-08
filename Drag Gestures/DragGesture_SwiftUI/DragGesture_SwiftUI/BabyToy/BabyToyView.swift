@@ -17,10 +17,6 @@ struct BabyToyView: View {
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
     )
-    @State private var isColliding = false
-    @State private var isRedColliding = false
-    @State private var isGreenColliding = false
-    @State private var isBlueColliding = false
 
     var drag: some Gesture {
         DragGesture()
@@ -41,6 +37,13 @@ struct BabyToyView: View {
 
         ZStack {
             Color.white
+            GeometryReader { proxy in
+                VStack(alignment: .center) {
+                    Text("Drag and drop the shape in the correct place")
+                        .font(.largeTitle)
+                        .position(x: proxy.size.width*0.5, y: proxy.size.height*0.1)
+                }.frame(width: proxy.size.width*0.5)
+            }
 
             HStack {
                 ToyView(
