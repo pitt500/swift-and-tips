@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BabyToyView: View {
     @StateObject private var viewModel = ToyViewModel()
-    @State private var currentId: Int = 0
 
     var drag: some Gesture {
         DragGesture()
@@ -18,7 +17,7 @@ struct BabyToyView: View {
                 viewModel.update(isDragged: true)
             }
             .onEnded { value in
-                print("currentId: \(currentId)")
+                print("currentId: \(viewModel.highlighedId)")
                 withAnimation {
                     viewModel.update(dragLocation: value.location)
                     viewModel.update(isDragged: false)
@@ -43,23 +42,20 @@ struct BabyToyView: View {
             HStack {
                 ToyView(
                     toy: Toy(id: 1, color: .red),
-                    viewModel: viewModel,
-                    highlightedId: $viewModel.highlighedId
+                    viewModel: viewModel
                 )
 
                 Spacer()
                     .frame(maxWidth: 80)
                 ToyView(
                     toy: Toy(id: 2, color: .green),
-                    viewModel: viewModel,
-                    highlightedId: $viewModel.highlighedId
+                    viewModel: viewModel
                 )
                 Spacer()
                     .frame(maxWidth: 80)
                 ToyView(
                     toy: Toy(id: 3, color: .blue),
-                    viewModel: viewModel,
-                    highlightedId: $viewModel.highlighedId
+                    viewModel: viewModel
                 )
             }
 

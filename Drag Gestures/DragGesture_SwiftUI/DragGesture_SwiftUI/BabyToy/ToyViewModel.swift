@@ -31,7 +31,6 @@ class ToyViewModel: ObservableObject {
         currentPosition = dragLocation
         for (id, frame) in frames where frame.contains(dragLocation) {
             highlighedId = id
-            print(currentPosition)
             return
         }
 
@@ -51,8 +50,9 @@ class ToyViewModel: ObservableObject {
         }
     }
 
-    func isViewHighlighted(id: Int?) -> Bool {
-        highlighedId == id
+    func isHighlighted(id: Int) -> Bool {
+        print(highlighedId)
+        return highlighedId == id
     }
 
 }
