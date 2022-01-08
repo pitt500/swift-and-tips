@@ -41,17 +41,16 @@ class ToyViewModel: ObservableObject {
         self.isDragged = isDragged
 
         if isDragged == false{
-            if let highlighedId = self.highlighedId {
+            if let highlighedId = self.highlighedId, highlighedId == 1 {
                 selectedId = highlighedId
-                self.highlighedId = nil
             } else {
                 currentPosition = initialPosition
             }
+            self.highlighedId = nil
         }
     }
 
     func isHighlighted(id: Int) -> Bool {
-        print(highlighedId)
         return highlighedId == id
     }
 
