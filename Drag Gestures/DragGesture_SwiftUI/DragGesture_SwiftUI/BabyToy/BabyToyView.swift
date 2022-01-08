@@ -18,23 +18,9 @@ struct BabyToyView: View {
         y: UIScreen.main.bounds.midY * 1.5
     )
     @State private var isColliding = false
-
-    private let redPosition: CGPoint = CGPoint(
-        x: UIScreen.main.bounds.midX/3,
-        y: UIScreen.main.bounds.midY/2
-    )
-
     @State private var isRedColliding = false
-
-    private let greenPosition: CGPoint = CGPoint(
-        x: (UIScreen.main.bounds.midX/3),
-        y: 60
-    )
-
-    private let bluePosition: CGPoint = CGPoint(
-        x: (UIScreen.main.bounds.midX/3),
-        y: UIScreen.main.bounds.midY/2
-    )
+    @State private var isGreenColliding = false
+    @State private var isBlueColliding = false
 
     var drag: some Gesture {
         DragGesture()
@@ -43,11 +29,9 @@ struct BabyToyView: View {
                 checkCollision()
             }
             .onEnded { value in
-                if isColliding == false {
-                    withAnimation {
-                        currentPosition = initialPosition
-                        checkCollision()
-                    }
+                withAnimation {
+                    currentPosition = initialPosition
+                    checkCollision()
                 }
             }
 
@@ -56,41 +40,56 @@ struct BabyToyView: View {
     var body: some View {
 
         ZStack {
-            Color.white.ignoresSafeArea()
+            Color.white
+
+            HStack {
+                ToyView(
+                    color: .red,
+                    currentPosition: currentPosition
+                )
+                Spacer()
+                    .frame(maxWidth: 80)
+                ToyView(
+                    color: .green,
+                    currentPosition: currentPosition
+                )
+                Spacer()
+                    .frame(maxWidth: 80)
+                ToyView(
+                    color: .blue,
+                    currentPosition: currentPosition
+                )
+            }
+            //.padding(50)
+
             Circle()
                 .fill(.red)
                 .frame(width: 100, height: 100)
                 .position(currentPosition)
                 .gesture(drag)
                 .zIndex(4)
-            HStack {
-                ToyView(
-                    color: .red,
-                    position: redPosition,
-                    isColliding: isRedColliding
-                )
-                Circle()
-                    .fill(.green)
-                    .frame(width: 100, height: 100)
-                    .position(greenPosition)
 
-                Circle()
-                    .fill(.blue)
-                    .frame(width: 100, height: 100)
-                    .position(bluePosition)
-            }
+
         }
+        .ignoresSafeArea()
     }
 
     func checkCollision() {
 
-        print("Current: \(currentPosition)")
-        print("Red: \(redPosition)")
-        print("-------")
-
-        let delta: CGFloat = 70
-
-        isRedColliding = abs(currentPosition.y - redPosition.y) < delta && abs(currentPosition.x - redPosition.x) < delta
+//        print("Current: \(currentPosition)")
+//        print("Red: \(redPosition)")
+//        print("-------")
+//
+//        let delta: CGFloat = 70
+//
+//        isRedColliding = abs(currentPosition.y - redPosition.y) < delta && abs(currentPosition.x - redPosition.x) < delta
+//
+//        isBlueColliding = abs(currentPosition.y - bluePosition.y) < delta && abs(currentPosition.x - bluePosition.x) < delta
+//        print("Current: \(currentPosition)")
+//        print("Blue: \(bluePosition)")
+//        print("-------")
+//
+//        isGreenColliding = abs(currentPosition.y - greenPosition.y) < delta && abs(currentPosition.x - greenPosition.x) < delta
 
     }
 }

@@ -9,23 +9,33 @@ import SwiftUI
 
 struct ToyView: View {
     let color: Color
-    let position: CGPoint
-    let isColliding: Bool
+    let currentPosition: CGPoint
 
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(color)
-                .frame(width: 100, height: 100)
-                .position(position)
-            if isColliding {
+        GeometryReader { proxy in
+            ZStack(alignment: .center) {
                 Circle()
                     .fill(color)
-                    .opacity(0.5)
-                    .frame(width: 120, height: 120)
-                    .position(position)
+                    .frame(width: 100, height: 100)
+                if isColliding(frame: proxy.frame(in: .global)) {
+                    Circle()
+                        .fill(color)
+                        .opacity(0.5)
+                        .frame(width: 120, height: 120)
+                }
             }
+            .position(
+                x: proxy.frame(in: .local).midX,
+                y: proxy.frame(in: .local).midY
+            )
         }
+        .frame(width: 120, height: 120)
+    }
+
+    func isColliding(frame: CGRect) -> Bool {
+        let delta: CGFloat = 70
+        return  abs(frame.midY - currentPosition.y) < delta &&
+                abs(frame.midX - currentPosition.x) < delta
     }
 }
 
@@ -33,11 +43,7 @@ struct ToyView_Previews: PreviewProvider {
     static var previews: some View {
         ToyView(
             color: .red,
-            position: CGPoint(
-                x: 100,
-                y: 50
-            ),
-            isColliding: true
+            currentPosition: .zero
         )
     }
 }
