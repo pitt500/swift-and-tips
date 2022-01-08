@@ -65,6 +65,17 @@ struct BabyToyView: View {
             )
         }
         .ignoresSafeArea()
+        .alert(
+            Text("Congratulations, you won! 🎉"),
+            isPresented: $viewModel.showAlert,
+            actions: {
+                Button("OK") {
+                    withAnimation {
+                        viewModel.restart()
+                    }
+                }
+            }
+        )
     }
 }
 

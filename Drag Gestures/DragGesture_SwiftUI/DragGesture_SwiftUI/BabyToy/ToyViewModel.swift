@@ -11,6 +11,7 @@ class ToyViewModel: ObservableObject {
     @Published var isDragged = false
     @Published var highlighedId: Int?
     @Published var selectedId: Int?
+    @Published var showAlert = false
     private let initialPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
@@ -43,6 +44,7 @@ class ToyViewModel: ObservableObject {
         if isDragged == false{
             if let highlighedId = self.highlighedId, highlighedId == 1 {
                 selectedId = highlighedId
+                showAlert = true
             } else {
                 currentPosition = initialPosition
             }
@@ -52,6 +54,11 @@ class ToyViewModel: ObservableObject {
 
     func isHighlighted(id: Int) -> Bool {
         return highlighedId == id
+    }
+
+    func restart() {
+        currentPosition = initialPosition
+        selectedId = nil
     }
 
 }
