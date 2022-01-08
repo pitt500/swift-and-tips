@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ToyView: View {
+    let id: Int
     let color: Color
     let currentPosition: CGPoint
+    @Binding var currentId: Int
 
     var body: some View {
         GeometryReader { proxy in
@@ -34,16 +36,23 @@ struct ToyView: View {
 
     func isColliding(frame: CGRect) -> Bool {
         let delta: CGFloat = 70
-        return  abs(frame.midY - currentPosition.y) < delta &&
-                abs(frame.midX - currentPosition.x) < delta
+        let isColliding = frame.contains(currentPosition)
+        // This is illegal 🚨
+//        if isColliding {
+//            currentId = id
+//        }
+
+        return isColliding
     }
 }
 
 struct ToyView_Previews: PreviewProvider {
     static var previews: some View {
         ToyView(
+            id: 1,
             color: .red,
-            currentPosition: .zero
+            currentPosition: .zero,
+            currentId: .constant(1)
         )
     }
 }

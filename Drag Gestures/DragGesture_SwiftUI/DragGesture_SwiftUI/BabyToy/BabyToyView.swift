@@ -17,6 +17,7 @@ struct BabyToyView: View {
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
     )
+    @State private var currentId: Int = 0
 
     var drag: some Gesture {
         DragGesture()
@@ -24,8 +25,10 @@ struct BabyToyView: View {
                 currentPosition = value.location
             }
             .onEnded { value in
+                print("currentId: \(currentId)")
                 withAnimation {
                     currentPosition = initialPosition
+
                 }
             }
 
@@ -45,20 +48,26 @@ struct BabyToyView: View {
 
             HStack {
                 ToyView(
+                    id: 1,
                     color: .red,
-                    currentPosition: currentPosition
+                    currentPosition: currentPosition,
+                    currentId: $currentId
                 )
                 Spacer()
                     .frame(maxWidth: 80)
                 ToyView(
+                    id: 2,
                     color: .green,
-                    currentPosition: currentPosition
+                    currentPosition: currentPosition,
+                    currentId: $currentId
                 )
                 Spacer()
                     .frame(maxWidth: 80)
                 ToyView(
+                    id: 3,
                     color: .blue,
-                    currentPosition: currentPosition
+                    currentPosition: currentPosition,
+                    currentId: $currentId
                 )
             }
 
@@ -67,9 +76,6 @@ struct BabyToyView: View {
                 .frame(width: 100, height: 100)
                 .position(currentPosition)
                 .gesture(drag)
-                .zIndex(4)
-
-
         }
         .ignoresSafeArea()
     }
