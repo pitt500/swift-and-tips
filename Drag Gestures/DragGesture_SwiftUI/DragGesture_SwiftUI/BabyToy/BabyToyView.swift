@@ -22,12 +22,10 @@ struct BabyToyView: View {
         DragGesture()
             .onChanged { value in
                 currentPosition = value.location
-                checkCollision()
             }
             .onEnded { value in
                 withAnimation {
                     currentPosition = initialPosition
-                    checkCollision()
                 }
             }
 
