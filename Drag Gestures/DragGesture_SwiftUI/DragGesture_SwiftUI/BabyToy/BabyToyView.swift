@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BabyToyView: View {
+    @StateObject private var viewModel = ToyViewModel()
+
     private let initialPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5

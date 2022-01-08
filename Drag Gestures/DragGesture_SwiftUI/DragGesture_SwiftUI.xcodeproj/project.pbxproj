@@ -14,6 +14,8 @@
 		B571583D2770CA0A00944F51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571583C2770CA0A00944F51 /* ContentView.swift */; };
 		B571583F2770CA0B00944F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B571583E2770CA0B00944F51 /* Assets.xcassets */; };
 		B57158422770CA0B00944F51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57158412770CA0B00944F51 /* Preview Assets.xcassets */; };
+		B59A368A278A297400AE041C /* DraggableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A3688278A297400AE041C /* DraggableObject.swift */; };
+		B59A368B278A297400AE041C /* ToyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A3689278A297400AE041C /* ToyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B571583C2770CA0A00944F51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B571583E2770CA0B00944F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B57158412770CA0B00944F51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B59A3688278A297400AE041C /* DraggableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableObject.swift; sourceTree = "<group>"; };
+		B59A3689278A297400AE041C /* ToyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 		B527D35F27888C95008E6D13 /* BabyToy */ = {
 			isa = PBXGroup;
 			children = (
+				B59A3688278A297400AE041C /* DraggableObject.swift */,
+				B59A3689278A297400AE041C /* ToyViewModel.swift */,
 				B527D35D2787C83F008E6D13 /* BabyToyView.swift */,
 				B527D36027888CF7008E6D13 /* ToyView.swift */,
 			);
@@ -156,9 +162,11 @@
 			files = (
 				B571583D2770CA0A00944F51 /* ContentView.swift in Sources */,
 				B527D35E2787C83F008E6D13 /* BabyToyView.swift in Sources */,
+				B59A368A278A297400AE041C /* DraggableObject.swift in Sources */,
 				B527D36127888CF7008E6D13 /* ToyView.swift in Sources */,
 				B571583B2770CA0A00944F51 /* DragGesture_SwiftUIApp.swift in Sources */,
 				B527D35C27873464008E6D13 /* GestureView.swift in Sources */,
+				B59A368B278A297400AE041C /* ToyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

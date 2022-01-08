@@ -31,7 +31,7 @@ class ToyViewModel: ObservableObject {
         self.isDragged = isDragged
 
         if isDragged == false, let highlighedId = self.highlighedId {
-            selectedId = id
+            selectedId = highlighedId
             self.highlighedId = nil
         }
     }
