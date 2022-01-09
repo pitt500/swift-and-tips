@@ -56,16 +56,16 @@ class ToyViewModel: ObservableObject {
             return
         }
 
-        if highlighedId == 1 {
-            withAnimation {
+        withAnimation {
+            if highlighedId == 1 {
                 selectedId = highlighedId
                 guard let frame = frames[highlighedId] else { return }
                 currentPosition = CGPoint(x: frame.midX, y: frame.midY)
                 draggableObjectScale = 0
                 showAlert = true
+            } else {
+                currentPosition = ToyViewModel.initialPosition
             }
-        } else {
-            currentPosition = ToyViewModel.initialPosition
         }
 
         attempts += 1
