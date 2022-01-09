@@ -9,6 +9,11 @@ import SwiftUI
 
 struct BabyToyView: View {
     @StateObject private var viewModel = ToyViewModel()
+    let gridItems = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
 
     var drag: some Gesture {
         DragGesture()
@@ -33,28 +38,15 @@ struct BabyToyView: View {
                 VStack(alignment: .center) {
                     Text("Drag and drop the shape in the correct place")
                         .font(.largeTitle)
-                        .position(x: proxy.size.width*0.5, y: proxy.size.height*0.1)
-                }.frame(width: proxy.size.width*0.5)
+                        .minimumScaleFactor(0.9)
+                        .position(x: proxy.size.width*0.5, y: proxy.size.height*0.15)
+                }.frame(width: proxy.size.width*0.8)
             }
 
-            HStack {
-                ToyView(
-                    toy: Toy(id: 1, color: .red),
-                    viewModel: viewModel
-                )
-
-                Spacer()
-                    .frame(maxWidth: 80)
-                ToyView(
-                    toy: Toy(id: 2, color: .green),
-                    viewModel: viewModel
-                )
-                Spacer()
-                    .frame(maxWidth: 80)
-                ToyView(
-                    toy: Toy(id: 3, color: .blue),
-                    viewModel: viewModel
-                )
+            LazyVGrid(columns: gridItems, spacing: spacing) {
+                ForEach(viewModel.containerToys, id: \.id) { toy in
+                    ToyView(toy: toy, viewModel: viewModel)
+                }
             }
 
             DraggableObject(
@@ -77,6 +69,14 @@ struct BabyToyView: View {
                 Text("Number of attemps: \(viewModel.attempts)")
             }
         )
+    }
+
+    var spacing: CGFloat {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return 100
+        }
+
+        return 40
     }
 }
 

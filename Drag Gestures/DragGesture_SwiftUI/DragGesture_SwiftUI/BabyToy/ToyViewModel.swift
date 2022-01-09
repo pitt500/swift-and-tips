@@ -12,14 +12,20 @@ class ToyViewModel: ObservableObject {
     @Published var highlighedId: Int?
     @Published var selectedId: Int?
     @Published var showAlert = false
-    @Published var currentPosition = CGPoint(
-        x: UIScreen.main.bounds.midX,
-        y: UIScreen.main.bounds.midY * 1.5
-    )
+    @Published var currentPosition = initialPosition
 
-    private let initialPosition = CGPoint(
+    @Published var containerToys = [
+        Toy(id: 1, color: .red),
+        Toy(id: 2, color: .blue),
+        Toy(id: 3, color: .green),
+        Toy(id: 4, color: .black),
+        Toy(id: 5, color: .orange),
+        Toy(id: 6, color: .purple),
+    ]
+
+    private static let initialPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
-        y: UIScreen.main.bounds.midY * 1.5
+        y: UIScreen.main.bounds.maxY - 100
     )
 
     private var frames: [Int: CGRect] = [:]
@@ -45,7 +51,7 @@ class ToyViewModel: ObservableObject {
         defer { self.highlighedId = nil }
 
         guard let highlighedId = self.highlighedId else {
-            currentPosition = initialPosition
+            currentPosition = ToyViewModel.initialPosition
             return
         }
 
@@ -53,7 +59,7 @@ class ToyViewModel: ObservableObject {
             selectedId = highlighedId
             showAlert = true
         } else {
-            currentPosition = initialPosition
+            currentPosition = ToyViewModel.initialPosition
         }
 
         attempts += 1
@@ -64,7 +70,8 @@ class ToyViewModel: ObservableObject {
     }
 
     func restart() {
-        currentPosition = initialPosition
+        containerToys.shuffle()
+        currentPosition = ToyViewModel.initialPosition
         selectedId = nil
     }
 
