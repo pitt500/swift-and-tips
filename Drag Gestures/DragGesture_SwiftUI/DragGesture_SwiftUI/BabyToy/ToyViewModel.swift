@@ -13,6 +13,7 @@ class ToyViewModel: ObservableObject {
     @Published var selectedId: Int?
     @Published var showAlert = false
     @Published var currentPosition = initialPosition
+    @Published var draggableObjectScale: CGFloat = 1.0
 
     @Published var containerToys = [
         Toy(id: 1, color: .red),
@@ -57,6 +58,10 @@ class ToyViewModel: ObservableObject {
 
         if highlighedId == 1 {
             selectedId = highlighedId
+            withAnimation {
+                guard let frame = frames[highlighedId] else { return }
+                currentPosition = CGPoint(x: frame.midX, y: frame.midY)
+            }
             showAlert = true
         } else {
             currentPosition = ToyViewModel.initialPosition

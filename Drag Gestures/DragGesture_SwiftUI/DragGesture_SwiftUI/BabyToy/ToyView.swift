@@ -10,17 +10,19 @@ import SwiftUI
 struct ToyView: View {
     let toy: Toy
     @ObservedObject var viewModel: ToyViewModel
+    private let sizeHighlighted: CGFloat = 120
+    private let regularSize: CGFloat = 100
 
     var body: some View {
         ZStack(alignment: .center) {
             Circle()
                 .fill(toy.color)
-                .frame(width: 100, height: 100)
+                .frame(width: regularSize, height: regularSize)
             if viewModel.isHighlighted(id: toy.id) {
                 Circle()
                     .fill(toy.color)
                     .opacity(0.5)
-                    .frame(width: 120, height: 120)
+                    .frame(width: sizeHighlighted, height: sizeHighlighted)
             }
         }
         .overlay {
@@ -33,7 +35,7 @@ struct ToyView: View {
                 return Color.clear
             }
         }
-        .frame(width: 120, height: 120)
+        .frame(width: sizeHighlighted, height: sizeHighlighted)
     }
 }
 

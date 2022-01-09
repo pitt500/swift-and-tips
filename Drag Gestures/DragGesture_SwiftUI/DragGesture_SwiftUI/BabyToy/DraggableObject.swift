@@ -10,11 +10,12 @@ import SwiftUI
 struct DraggableObject<Draggable: Gesture>: View {
     let position: CGPoint
     let gesture: Draggable
+    private let size: CGFloat = 100
 
     var body: some View {
         Circle()
             .fill(.red)
-            .frame(width: 100, height: 100)
+            .frame(width: size, height: size)
             .position(position)
             .gesture(gesture)
     }
