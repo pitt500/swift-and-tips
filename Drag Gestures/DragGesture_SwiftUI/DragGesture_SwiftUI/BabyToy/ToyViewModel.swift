@@ -29,10 +29,6 @@ class ToyViewModel: ObservableObject {
 
     func setupGame() {
         currentToy = toys.popLast()
-
-        if currentToy == nil {
-            gameOver()
-        }
     }
 
     func gameOver() {
@@ -66,12 +62,12 @@ class ToyViewModel: ObservableObject {
         }
 
         withAnimation {
-            if highlighedId == 1 {
+            if highlighedId == currentToy?.id {
                 selectedId = highlighedId
                 guard let frame = frames[highlighedId] else { return }
                 currentPosition = CGPoint(x: frame.midX, y: frame.midY)
                 draggableObjectScale = 0
-                showAlert = true
+                nextGame()
             } else {
                 currentPosition = ToyViewModel.initialPosition
             }
@@ -98,6 +94,22 @@ class ToyViewModel: ObservableObject {
         }
 
         selectedId = nil
+    }
+
+    func nextGame() {
+        currentToy = toys.popLast()
+
+        if currentToy == nil {
+            gameOver()
+        } else {
+            restart()
+        }
+    }
+
+    func generateNewGame() {
+        toys = Array(Toy.all.shuffled().prefix(upTo: 3))
+        attempts = 0
+        nextGame()
     }
 
 }

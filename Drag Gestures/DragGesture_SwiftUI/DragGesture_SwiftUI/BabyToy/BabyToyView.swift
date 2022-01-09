@@ -65,7 +65,7 @@ struct BabyToyView: View {
             isPresented: $viewModel.showAlert,
             actions: {
                 Button("OK") {
-                    viewModel.restart()
+                    viewModel.generateNewGame()
                 }
             },
             message: {
