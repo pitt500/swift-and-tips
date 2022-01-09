@@ -10,7 +10,7 @@ import SwiftUI
 struct ToyView: View {
     let toy: Toy
     @ObservedObject var viewModel: ToyViewModel
-    private let sizeHighlighted: CGFloat = 120
+    private let sizeHighlighted: CGFloat = 130
     private let regularSize: CGFloat = 100
 
     var body: some View {
