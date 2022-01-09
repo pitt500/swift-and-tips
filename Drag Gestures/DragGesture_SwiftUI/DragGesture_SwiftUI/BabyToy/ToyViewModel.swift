@@ -13,16 +13,11 @@ class ToyViewModel: ObservableObject {
     @Published var selectedId: Int?
     @Published var showAlert = false
     @Published var currentPosition = initialPosition
+    @Published var currentToy: Toy?
     @Published var draggableObjectScale: CGFloat = 1.0
 
-    @Published var containerToys = [
-        Toy(id: 1, color: .red),
-        Toy(id: 2, color: .blue),
-        Toy(id: 3, color: .green),
-        Toy(id: 4, color: .black),
-        Toy(id: 5, color: .orange),
-        Toy(id: 6, color: .purple),
-    ]
+    private var toys = Array(Toy.all.shuffled().prefix(upTo: 3))
+    @Published var containerToys = Toy.all.shuffled()
 
     private static let initialPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
@@ -31,6 +26,18 @@ class ToyViewModel: ObservableObject {
 
     private var frames: [Int: CGRect] = [:]
     private(set) var attempts = 0
+
+    func setupGame() {
+        currentToy = toys.popLast()
+
+        if currentToy == nil {
+            gameOver()
+        }
+    }
+
+    func gameOver() {
+        showAlert = true
+    }
 
     func update(frame: CGRect, for id: Int) {
         frames[id] = frame
