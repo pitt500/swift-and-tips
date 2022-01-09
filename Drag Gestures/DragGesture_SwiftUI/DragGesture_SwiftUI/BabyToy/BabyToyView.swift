@@ -47,11 +47,17 @@ struct BabyToyView: View {
                 }
             }
 
-            DraggableToy(
-                position: viewModel.currentPosition,
-                gesture: drag
-            )
-            .opacity(viewModel.draggableObjectScale)
+            if let currentToy = viewModel.currentToy {
+                DraggableToy(
+                    toy: currentToy,
+                    position: viewModel.currentPosition,
+                    gesture: drag
+                )
+                .opacity(viewModel.draggableObjectScale)
+            }
+        }
+        .onAppear {
+            viewModel.setupGame()
         }
         .ignoresSafeArea()
         .alert(

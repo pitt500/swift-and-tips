@@ -59,7 +59,9 @@ class ToyViewModel: ObservableObject {
         defer { self.highlighedId = nil }
 
         guard let highlighedId = self.highlighedId else {
-            currentPosition = ToyViewModel.initialPosition
+            withAnimation {
+                currentPosition = ToyViewModel.initialPosition
+            }
             return
         }
 

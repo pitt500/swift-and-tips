@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct DraggableToy<Draggable: Gesture>: View {
+    let toy: Toy
     let position: CGPoint
     let gesture: Draggable
     private let size: CGFloat = 100
 
     var body: some View {
         Circle()
-            .fill(.red)
+            .fill(toy.color)
             .frame(width: size, height: size)
             .position(position)
             .gesture(gesture)
@@ -24,6 +25,7 @@ struct DraggableToy<Draggable: Gesture>: View {
 struct DraggableObject_Previews: PreviewProvider {
     static var previews: some View {
         DraggableToy(
+            toy: Toy.all.first!,
             position: .zero,
             gesture: DragGesture()
         )
