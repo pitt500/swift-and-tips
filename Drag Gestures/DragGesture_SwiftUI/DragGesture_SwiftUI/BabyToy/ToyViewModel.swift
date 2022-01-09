@@ -57,12 +57,13 @@ class ToyViewModel: ObservableObject {
         }
 
         if highlighedId == 1 {
-            selectedId = highlighedId
             withAnimation {
+                selectedId = highlighedId
                 guard let frame = frames[highlighedId] else { return }
                 currentPosition = CGPoint(x: frame.midX, y: frame.midY)
+                draggableObjectScale = 0
+                showAlert = true
             }
-            showAlert = true
         } else {
             currentPosition = ToyViewModel.initialPosition
         }
@@ -75,8 +76,18 @@ class ToyViewModel: ObservableObject {
     }
 
     func restart() {
-        containerToys.shuffle()
-        currentPosition = ToyViewModel.initialPosition
+        withAnimation {
+            containerToys.shuffle()
+        }
+
+        withAnimation(.none) {
+            currentPosition = ToyViewModel.initialPosition
+
+            withAnimation {
+                draggableObjectScale = 1
+            }
+        }
+
         selectedId = nil
     }
 

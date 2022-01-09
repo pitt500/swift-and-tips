@@ -22,10 +22,8 @@ struct BabyToyView: View {
                 viewModel.update(isDragged: true)
             }
             .onEnded { value in
-                withAnimation {
-                    viewModel.update(dragLocation: value.location)
-                    viewModel.update(isDragged: false)
-                }
+                viewModel.update(dragLocation: value.location)
+                viewModel.update(isDragged: false)
             }
 
     }
@@ -53,6 +51,7 @@ struct BabyToyView: View {
                 position: viewModel.currentPosition,
                 gesture: drag
             )
+            .opacity(viewModel.draggableObjectScale)
         }
         .ignoresSafeArea()
         .alert(
@@ -60,9 +59,7 @@ struct BabyToyView: View {
             isPresented: $viewModel.showAlert,
             actions: {
                 Button("OK") {
-                    withAnimation {
-                        viewModel.restart()
-                    }
+                    viewModel.restart()
                 }
             },
             message: {
