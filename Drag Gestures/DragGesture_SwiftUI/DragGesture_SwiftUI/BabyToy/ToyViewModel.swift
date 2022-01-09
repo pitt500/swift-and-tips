@@ -12,12 +12,12 @@ class ToyViewModel: ObservableObject {
     @Published var highlighedId: Int?
     @Published var selectedId: Int?
     @Published var showAlert = false
-    private let initialPosition = CGPoint(
+    @Published var currentPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
     )
 
-    @Published var currentPosition = CGPoint(
+    private let initialPosition = CGPoint(
         x: UIScreen.main.bounds.midX,
         y: UIScreen.main.bounds.midY * 1.5
     )
