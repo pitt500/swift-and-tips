@@ -47,7 +47,7 @@ struct BabyToyView: View {
                 }
             }
 
-            DraggableObject(
+            DraggableToy(
                 position: viewModel.currentPosition,
                 gesture: drag
             )

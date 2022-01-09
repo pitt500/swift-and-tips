@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DraggableObject<Draggable: Gesture>: View {
+struct DraggableToy<Draggable: Gesture>: View {
     let position: CGPoint
     let gesture: Draggable
     private let size: CGFloat = 100
@@ -23,7 +23,7 @@ struct DraggableObject<Draggable: Gesture>: View {
 
 struct DraggableObject_Previews: PreviewProvider {
     static var previews: some View {
-        DraggableObject(
+        DraggableToy(
             position: .zero,
             gesture: DragGesture()
         )
