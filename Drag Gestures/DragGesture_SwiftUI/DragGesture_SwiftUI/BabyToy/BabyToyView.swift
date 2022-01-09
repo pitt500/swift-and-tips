@@ -17,11 +17,9 @@ struct BabyToyView: View {
                 viewModel.update(isDragged: true)
             }
             .onEnded { value in
-                print("currentId: \(viewModel.highlighedId)")
                 withAnimation {
                     viewModel.update(dragLocation: value.location)
                     viewModel.update(isDragged: false)
-
                 }
             }
 
@@ -74,6 +72,9 @@ struct BabyToyView: View {
                         viewModel.restart()
                     }
                 }
+            },
+            message: {
+                Text("Number of attemps: \(viewModel.attempts)")
             }
         )
     }

@@ -23,6 +23,7 @@ class ToyViewModel: ObservableObject {
     )
 
     private var frames: [Int: CGRect] = [:]
+    private(set) var attempts = 0
 
     func update(frame: CGRect, for id: Int) {
         frames[id] = frame
@@ -40,16 +41,22 @@ class ToyViewModel: ObservableObject {
 
     func update(isDragged: Bool){
         self.isDragged = isDragged
+        guard isDragged == false else { return }
+        defer { self.highlighedId = nil }
 
-        if isDragged == false{
-            if let highlighedId = self.highlighedId, highlighedId == 1 {
-                selectedId = highlighedId
-                showAlert = true
-            } else {
-                currentPosition = initialPosition
-            }
-            self.highlighedId = nil
+        guard let highlighedId = self.highlighedId else {
+            currentPosition = initialPosition
+            return
         }
+
+        if highlighedId == 1 {
+            selectedId = highlighedId
+            showAlert = true
+        } else {
+            currentPosition = initialPosition
+        }
+
+        attempts += 1
     }
 
     func isHighlighted(id: Int) -> Bool {
