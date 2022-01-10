@@ -24,6 +24,7 @@ struct HeaderView: View {
             .minimumScaleFactor(0.9)
             .position(x: proxy.size.width*0.5, y: proxy.size.height*0.15)
             .frame(width: proxy.size.width*0.8)
+            .foregroundColor(.blue)
         }
     }
 }
