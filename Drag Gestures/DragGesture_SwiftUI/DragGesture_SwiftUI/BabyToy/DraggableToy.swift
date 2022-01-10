@@ -17,6 +17,7 @@ struct DraggableToy<Draggable: Gesture>: View {
         Circle()
             .fill(toy.color)
             .frame(width: size, height: size)
+            .shadow(radius: 10)
             .position(position)
             .gesture(gesture)
     }
