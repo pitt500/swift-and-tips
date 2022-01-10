@@ -32,19 +32,10 @@ struct BabyToyView: View {
 
         ZStack {
             Color.white
-            GeometryReader { proxy in
-                VStack(alignment: .center) {
-                    Text("Drag and drop the shape in the correct place")
-                    if let record = viewModel.record {
-                        Text(String(format: "Record: %.1f seconds", record))
-                    }
-                    Text(String(format: "%.1f seconds", viewModel.secondsElapsed))
-                }
-                .font(.largeTitle)
-                .minimumScaleFactor(0.9)
-                .position(x: proxy.size.width*0.5, y: proxy.size.height*0.15)
-                .frame(width: proxy.size.width*0.8)
-            }
+            HeaderView(
+                record: viewModel.record,
+                secondsElapsed: viewModel.secondsElapsed
+            )
 
             LazyVGrid(columns: gridItems, spacing: spacing) {
                 ForEach(viewModel.containerToys, id: \.id) { toy in
@@ -58,7 +49,7 @@ struct BabyToyView: View {
                     position: viewModel.currentPosition,
                     gesture: drag
                 )
-                .opacity(viewModel.draggableObjectScale)
+                .opacity(viewModel.draggableObjectOpacity)
             }
         }
         .onAppear {
