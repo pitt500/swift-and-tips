@@ -16,6 +16,11 @@ class ToyViewModel: ObservableObject {
     @Published var currentToy: Toy?
     @Published var draggableObjectScale: CGFloat = 1.0
 
+
+    @Published var secondsElapsed = 0.0
+    var timer = Timer()
+    var record: Double?
+
     private var toys = Array(Toy.all.shuffled().prefix(upTo: 3))
     @Published var containerToys = Toy.all.shuffled()
 
@@ -29,10 +34,29 @@ class ToyViewModel: ObservableObject {
 
     func setupGame() {
         currentToy = toys.popLast()
+        startTimer()
+    }
+
+    func startTimer() {
+        secondsElapsed = 0
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            self.secondsElapsed += 0.1
+        }
     }
 
     func gameOver() {
+        timer.invalidate()
+        saveRecord()
         showAlert = true
+    }
+
+    func saveRecord() {
+        guard let record = record else {
+            self.record = secondsElapsed
+            return
+        }
+
+        self.record = min(secondsElapsed, record)
     }
 
     func update(frame: CGRect, for id: Int) {
@@ -54,14 +78,12 @@ class ToyViewModel: ObservableObject {
         guard isDragged == false else { return }
         defer { self.highlighedId = nil }
 
-        guard let highlighedId = self.highlighedId else {
-            withAnimation {
-                currentPosition = ToyViewModel.initialPosition
-            }
-            return
-        }
-
         withAnimation {
+            guard let highlighedId = self.highlighedId else {
+                currentPosition = ToyViewModel.initialPosition
+                return
+            }
+
             if highlighedId == currentToy?.id {
                 selectedId = highlighedId
                 guard let frame = frames[highlighedId] else { return }
@@ -71,9 +93,9 @@ class ToyViewModel: ObservableObject {
             } else {
                 currentPosition = ToyViewModel.initialPosition
             }
-        }
 
-        attempts += 1
+            attempts += 1
+        }
     }
 
     func isHighlighted(id: Int) -> Bool {
@@ -109,7 +131,7 @@ class ToyViewModel: ObservableObject {
     func generateNewGame() {
         toys = Array(Toy.all.shuffled().prefix(upTo: 3))
         attempts = 0
+        startTimer()
         nextGame()
     }
-
 }
