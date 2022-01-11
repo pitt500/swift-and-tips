@@ -18,6 +18,7 @@
 		B59A368B278A297400AE041C /* ToyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A3689278A297400AE041C /* ToyViewModel.swift */; };
 		B59A368D278A396E00AE041C /* Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A368C278A396E00AE041C /* Toy.swift */; };
 		B59A368F278BB0D700AE041C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A368E278BB0D600AE041C /* HeaderView.swift */; };
+		B59A3692278CA0F700AE041C /* GesturesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A3691278CA0F700AE041C /* GesturesDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B59A3689278A297400AE041C /* ToyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewModel.swift; sourceTree = "<group>"; };
 		B59A368C278A396E00AE041C /* Toy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy.swift; sourceTree = "<group>"; };
 		B59A368E278BB0D600AE041C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		B59A3691278CA0F700AE041C /* GesturesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		B57158392770CA0A00944F51 /* DragGesture_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B59A3690278CA0DC00AE041C /* GestureBasics */,
 				B527D35F27888C95008E6D13 /* BabyToy */,
 				B571583A2770CA0A00944F51 /* DragGesture_SwiftUIApp.swift */,
 				B571583C2770CA0A00944F51 /* ContentView.swift */,
@@ -94,6 +97,14 @@
 				B57158412770CA0B00944F51 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B59A3690278CA0DC00AE041C /* GestureBasics */ = {
+			isa = PBXGroup;
+			children = (
+				B59A3691278CA0F700AE041C /* GesturesDemo.swift */,
+			);
+			path = GestureBasics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				B527D35E2787C83F008E6D13 /* BabyToyView.swift in Sources */,
 				B59A368A278A297400AE041C /* DraggableToy.swift in Sources */,
 				B527D36127888CF7008E6D13 /* ToyView.swift in Sources */,
+				B59A3692278CA0F700AE041C /* GesturesDemo.swift in Sources */,
 				B571583B2770CA0A00944F51 /* DragGesture_SwiftUIApp.swift in Sources */,
 				B527D35C27873464008E6D13 /* GestureView.swift in Sources */,
 				B59A368B278A297400AE041C /* ToyViewModel.swift in Sources */,
