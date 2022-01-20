@@ -9,9 +9,8 @@ import SwiftUI
 
 class ToyViewModel: ObservableObject {
     // MARK: - Gesture Properties
-    @Published var isDragged = false
     @Published var highlighedId: Int?
-    @Published var selectedId: Int?
+    //@Published var selectedId: Int?
     @Published var showAlert = false
     @Published var currentPosition = initialPosition
     @Published var currentToy: Toy?
@@ -53,7 +52,7 @@ class ToyViewModel: ObservableObject {
             }
         }
 
-        selectedId = nil
+        //selectedId = nil
     }
 
     func nextGame() {
@@ -96,8 +95,6 @@ class ToyViewModel: ObservableObject {
     }
 
     func update(isDragged: Bool){
-        self.isDragged = isDragged
-        guard isDragged == false else { return }
         defer { self.highlighedId = nil }
 
         withAnimation {
@@ -107,7 +104,7 @@ class ToyViewModel: ObservableObject {
             }
 
             if highlighedId == currentToy?.id {
-                selectedId = highlighedId
+                //selectedId = highlighedId
                 guard let frame = frames[highlighedId] else { return }
                 currentPosition = CGPoint(x: frame.midX, y: frame.midY)
                 draggableObjectOpacity = 0

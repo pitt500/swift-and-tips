@@ -11,7 +11,7 @@ import SwiftUI
 struct DragGesture_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            GesturesDemo()
+            BabyToyView()
         }
     }
 }

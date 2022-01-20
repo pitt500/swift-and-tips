@@ -19,7 +19,6 @@ struct BabyToyView: View {
         DragGesture()
             .onChanged { value in
                 viewModel.update(dragLocation: value.location)
-                viewModel.update(isDragged: true)
             }
             .onEnded { value in
                 viewModel.update(dragLocation: value.location)
