@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @GestureState var anotherState = false
+    @State var isTapped = false
+    
+    var tap: some Gesture {
+        TapGesture(count: 4)
+            .onEnded { state in
+                // State is an empty tuple (void)
+                isTapped.toggle()
+            }
+            .updating(
+                self.$anotherState
+            ) { currentState, pastState, transaction in
+                // useless, it just report an empty tuple
+            }
+    }
+        
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Circle()
+            .fill(isTapped ? .red : .blue)
+            .frame(width: 200, height: 200)
+//            .onTapGesture(count: 4) {
+//                isTapped.toggle()
+//            }
+            .gesture(tap)
+            
     }
 }
 
