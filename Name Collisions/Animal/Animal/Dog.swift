@@ -7,16 +7,14 @@
 
 import Foundation
 
-class Dog {
-    func move() {
-        print("🐾🐾🐾🐾")
-    }
-    
-    func run() {
-        print("🦴🦮")
-    }
-    
-    func sleep() {
-        print("😴")
-    }
+public func move() {
+    print("🐾🐾🐾🐾")
+}
+
+public func run() {
+    print("🦴🦮")
+}
+
+public func sleep() {
+    print("😴")
 }

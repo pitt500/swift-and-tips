@@ -11,7 +11,24 @@
 		B589C64C27A8BAA000BEFF17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589C64B27A8BAA000BEFF17 /* ContentView.swift */; };
 		B589C64E27A8BAA100BEFF17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B589C64D27A8BAA100BEFF17 /* Assets.xcassets */; };
 		B589C65127A8BAA100BEFF17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B589C65027A8BAA100BEFF17 /* Preview Assets.xcassets */; };
+		B589C68527A968E600BEFF17 /* WalkInThePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589C68427A968E600BEFF17 /* WalkInThePark.swift */; };
+		B5E2038527A96CB0006E54E3 /* Animal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2038427A96CB0006E54E3 /* Animal.framework */; };
+		B5E2038627A96CB0006E54E3 /* Animal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2038427A96CB0006E54E3 /* Animal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5E2038727A96CB0006E54E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5E2038627A96CB0006E54E3 /* Animal.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B589C64627A8BAA000BEFF17 /* NameCollisionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameCollisionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +36,8 @@
 		B589C64B27A8BAA000BEFF17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B589C64D27A8BAA100BEFF17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B589C65027A8BAA100BEFF17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B589C68427A968E600BEFF17 /* WalkInThePark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkInThePark.swift; sourceTree = "<group>"; };
+		B5E2038427A96CB0006E54E3 /* Animal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Animal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E2038527A96CB0006E54E3 /* Animal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +57,7 @@
 			children = (
 				B589C64827A8BAA000BEFF17 /* NameCollisionDemo */,
 				B589C64727A8BAA000BEFF17 /* Products */,
+				B5E2038327A96CB0006E54E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +76,7 @@
 				B589C64B27A8BAA000BEFF17 /* ContentView.swift */,
 				B589C64D27A8BAA100BEFF17 /* Assets.xcassets */,
 				B589C64F27A8BAA100BEFF17 /* Preview Content */,
+				B589C68427A968E600BEFF17 /* WalkInThePark.swift */,
 			);
 			path = NameCollisionDemo;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B5E2038327A96CB0006E54E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2038427A96CB0006E54E3 /* Animal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +107,7 @@
 				B589C64227A8BAA000BEFF17 /* Sources */,
 				B589C64327A8BAA000BEFF17 /* Frameworks */,
 				B589C64427A8BAA000BEFF17 /* Resources */,
+				B5E2038727A96CB0006E54E3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +174,7 @@
 			files = (
 				B589C64C27A8BAA000BEFF17 /* ContentView.swift in Sources */,
 				B589C64A27A8BAA000BEFF17 /* NameCollisionDemoApp.swift in Sources */,
+				B589C68527A968E600BEFF17 /* WalkInThePark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
