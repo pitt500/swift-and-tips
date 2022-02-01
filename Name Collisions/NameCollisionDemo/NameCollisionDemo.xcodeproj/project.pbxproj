@@ -14,6 +14,8 @@
 		B589C68527A968E600BEFF17 /* WalkInThePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589C68427A968E600BEFF17 /* WalkInThePark.swift */; };
 		B5E2038527A96CB0006E54E3 /* Animal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2038427A96CB0006E54E3 /* Animal.framework */; };
 		B5E2038627A96CB0006E54E3 /* Animal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2038427A96CB0006E54E3 /* Animal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5E2039F27A96F2A006E54E3 /* Human.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2039E27A96F2A006E54E3 /* Human.framework */; };
+		B5E203A027A96F2A006E54E3 /* Human.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2039E27A96F2A006E54E3 /* Human.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B5E203A027A96F2A006E54E3 /* Human.framework in Embed Frameworks */,
 				B5E2038627A96CB0006E54E3 /* Animal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -38,6 +41,7 @@
 		B589C65027A8BAA100BEFF17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B589C68427A968E600BEFF17 /* WalkInThePark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkInThePark.swift; sourceTree = "<group>"; };
 		B5E2038427A96CB0006E54E3 /* Animal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Animal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E2039E27A96F2A006E54E3 /* Human.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Human.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E2039F27A96F2A006E54E3 /* Human.framework in Frameworks */,
 				B5E2038527A96CB0006E54E3 /* Animal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +97,7 @@
 		B5E2038327A96CB0006E54E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5E2039E27A96F2A006E54E3 /* Human.framework */,
 				B5E2038427A96CB0006E54E3 /* Animal.framework */,
 			);
 			name = Frameworks;
