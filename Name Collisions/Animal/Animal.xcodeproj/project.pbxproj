@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B589C66A27A9652600BEFF17 /* Animal.h in Headers */ = {isa = PBXBuildFile; fileRef = B589C66927A9652600BEFF17 /* Animal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B589C67127A965BC00BEFF17 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589C67027A965BC00BEFF17 /* Dog.swift */; };
+		B589C67127A965BC00BEFF17 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589C67027A965BC00BEFF17 /* Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B589C66627A9652600BEFF17 /* Animal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Animal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B589C66927A9652600BEFF17 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
-		B589C67027A965BC00BEFF17 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		B589C67027A965BC00BEFF17 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				B589C66927A9652600BEFF17 /* Animal.h */,
-				B589C67027A965BC00BEFF17 /* Dog.swift */,
+				B589C67027A965BC00BEFF17 /* Actions.swift */,
 			);
 			path = Animal;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B589C67127A965BC00BEFF17 /* Dog.swift in Sources */,
+				B589C67127A965BC00BEFF17 /* Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

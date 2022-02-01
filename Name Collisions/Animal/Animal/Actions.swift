@@ -1,5 +1,5 @@
 //
-//  Action.swift
+//  Actions.swift
 //  Animal
 //
 //  Created by Pedro Rojas on 01/02/22.
