@@ -7,14 +7,20 @@
 
 import Foundation
 
-public func move() {
-    print("🐾🐾🐾🐾")
-}
+public class Action {
+    public init() {
+        
+    }
+    
+    public func move() {
+        print("🐾🐾🐾🐾")
+    }
 
-public func run() {
-    print("🦴🦮")
-}
+    public func run() {
+        print("🦴🦮")
+    }
 
-public func sleep() {
-    print("😴")
+    public func sleep() {
+        print("😴")
+    }
 }

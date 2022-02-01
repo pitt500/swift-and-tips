@@ -8,6 +8,10 @@
 import Foundation
 
 public class Action {
+    public init() {
+        
+    }
+    
     public func move() {
         print("🚶🏻‍♂️🚶🏻‍♂️🚶🏻‍♂️")
     }
