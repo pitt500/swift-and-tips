@@ -6,13 +6,17 @@
 //
 
 import Animal
+import Human
 
 class WalkInThePark {
     func enjoyTheDay() {
-        move()
-        run()
-        run()
-        run()
-        sleep()
+        let dog = Dog.Action()
+        let person = Person.Action()
+        
+        person.move()
+        dog.run()
+        dog.run()
+        person.run()
+        dog.sleep()
     }
 }
