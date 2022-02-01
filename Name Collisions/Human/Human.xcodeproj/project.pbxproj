@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B5E2039627A96E6C006E54E3 /* Human.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E2039527A96E6C006E54E3 /* Human.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5E2039D27A96EAF006E54E3 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2039C27A96EAF006E54E3 /* Action.swift */; };
+		B5E2039D27A96EAF006E54E3 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2039C27A96EAF006E54E3 /* Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B5E2039227A96E6C006E54E3 /* Human.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Human.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E2039527A96E6C006E54E3 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
-		B5E2039C27A96EAF006E54E3 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		B5E2039C27A96EAF006E54E3 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E2039527A96E6C006E54E3 /* Human.h */,
-				B5E2039C27A96EAF006E54E3 /* Action.swift */,
+				B5E2039C27A96EAF006E54E3 /* Actions.swift */,
 			);
 			path = Human;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E2039D27A96EAF006E54E3 /* Action.swift in Sources */,
+				B5E2039D27A96EAF006E54E3 /* Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

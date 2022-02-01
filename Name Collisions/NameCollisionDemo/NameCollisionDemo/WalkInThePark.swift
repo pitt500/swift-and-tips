@@ -9,11 +9,10 @@ import Animal
 
 class WalkInThePark {
     func enjoyTheDay() {
-        let dog = Action()
-        dog.move()
-        dog.run()
-        dog.run()
-        dog.run()
-        dog.sleep()
+        move()
+        run()
+        run()
+        run()
+        sleep()
     }
 }
