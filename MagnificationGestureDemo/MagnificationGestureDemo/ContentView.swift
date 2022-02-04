@@ -20,11 +20,15 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridItems) {
-                    ForEach(1...28, id: \.self) {
-                        Image("\($0)")
-                            .resizable()
-                            .aspectRatio( contentMode: .fit)
-                            .border(.white, width: 5)
+                    ForEach(1...28, id: \.self) { index in
+                        NavigationLink {
+                            Text("asd")
+                        } label: {
+                            Image("\(index)")
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .border(.white, width: 5)
+                        }
                     }
                 }
             }
