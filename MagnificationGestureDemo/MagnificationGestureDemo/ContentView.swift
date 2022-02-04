@@ -17,15 +17,18 @@ struct ContentView: View {
     
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: gridItems) {
-                ForEach(1...20, id: \.self) {
-                    Image("\($0)")
-                        .resizable()
-                        .aspectRatio( contentMode: .fit)
-                        .border(.white, width: 5)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: gridItems) {
+                    ForEach(1...20, id: \.self) {
+                        Image("\($0)")
+                            .resizable()
+                            .aspectRatio( contentMode: .fit)
+                            .border(.white, width: 5)
+                    }
                 }
             }
+            .navigationTitle("Soccer")
         }
     }
 }
