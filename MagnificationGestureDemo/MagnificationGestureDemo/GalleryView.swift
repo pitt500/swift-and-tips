@@ -32,7 +32,7 @@ struct GalleryView: View {
                     }
                 }
             }
-            .navigationTitle("Soccer")
+            .navigationTitle("Gallery")
         }
     }
 }
