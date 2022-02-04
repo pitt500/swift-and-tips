@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    let gridItems = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
+    
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView {
+            LazyVGrid(columns: gridItems) {
+                ForEach(1...20, id: \.self) {
+                    Image("\($0)")
+                        .resizable()
+                        .aspectRatio( contentMode: .fit)
+                        .border(.white, width: 5)
+                }
+            }
+        }
     }
 }
 
