@@ -22,7 +22,7 @@ struct GalleryView: View {
                 LazyVGrid(columns: gridItems) {
                     ForEach(1...numberOfImages, id: \.self) { index in
                         NavigationLink {
-                            Text("asd")
+                            ImageDetailView(image: Image("\(index)"))
                         } label: {
                             Image("\(index)")
                                 .resizable()
