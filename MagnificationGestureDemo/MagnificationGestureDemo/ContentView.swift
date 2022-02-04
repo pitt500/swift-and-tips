@@ -14,13 +14,13 @@ struct ContentView: View {
         GridItem(.flexible()),
     ]
     
-    
+    let numberOfImages = 28
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridItems) {
-                    ForEach(1...28, id: \.self) { index in
+                    ForEach(1...numberOfImages, id: \.self) { index in
                         NavigationLink {
                             Text("asd")
                         } label: {
