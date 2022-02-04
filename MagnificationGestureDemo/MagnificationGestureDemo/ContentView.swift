@@ -20,7 +20,7 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridItems) {
-                    ForEach(1...20, id: \.self) {
+                    ForEach(1...28, id: \.self) {
                         Image("\($0)")
                             .resizable()
                             .aspectRatio( contentMode: .fit)
