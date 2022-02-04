@@ -17,10 +17,7 @@ struct ImageDetailView: View {
     var magnification: some Gesture {
         MagnificationGesture()
             .onChanged { state in
-                let delta = state / lastScale
-                lastScale = state
-                scale *= delta
-                print("delta: \(delta)")
+                adjustScale(from: state)
             }
             .onEnded { state in
                 print("onEnded: \(scale)")
@@ -37,6 +34,13 @@ struct ImageDetailView: View {
             .aspectRatio(contentMode: .fit)
             .scaleEffect(scale)
             .gesture(magnification)
+    }
+    
+    func adjustScale(from state: MagnificationGesture.Value) {
+        let delta = state / lastScale
+        lastScale = state
+        scale *= delta
+        print("delta: \(delta)")
     }
     
     func getMinimumScaleAllowed() -> Double {
