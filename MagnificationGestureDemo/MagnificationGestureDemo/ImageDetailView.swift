@@ -26,13 +26,40 @@ struct ImageDetailView: View {
                 }
                 lastScale = 1.0
             }
+            .simultaneously(
+                with: DragGesture()
+                    .onChanged { state in
+                        currentOffset = CGSize(
+                            width: state.translation.width + newOffset.width,
+                            height: state.translation.height + newOffset.height
+                        )
+                    }
+                    .onEnded { state in
+                        withAnimation {
+                            if scale <= 1.0 {
+                                currentOffset = .zero
+                                newOffset = .zero
+                            } else {
+                                currentOffset = CGSize(
+                                    width: state.translation.width + newOffset.width,
+                                    height: state.translation.height + newOffset.height
+                                )
+                                newOffset = currentOffset
+                            }
+                        }
+                    }
+            )
     }
+    
+    @State private var currentOffset = CGSize.zero
+    @State private var newOffset = CGSize.zero
     
     var body: some View {
         image
             .resizable()
             .aspectRatio(contentMode: .fit)
             .scaleEffect(scale)
+            .offset(x: currentOffset.width, y: currentOffset.height)
             .gesture(magnification)
     }
     
