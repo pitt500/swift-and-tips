@@ -11,7 +11,7 @@ import SwiftUI
 struct MagnificationGestureDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GalleryView()
                 .preferredColorScheme(.dark)
         }
     }

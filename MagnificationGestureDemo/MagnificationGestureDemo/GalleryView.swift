@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  GalleryView.swift
 //  MagnificationGestureDemo
 //
 //  Created by Pedro Rojas on 04/02/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GalleryView: View {
     let gridItems = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -39,7 +39,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GalleryView()
             .preferredColorScheme(.dark)
     }
 }
