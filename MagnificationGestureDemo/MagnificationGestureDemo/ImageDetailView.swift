@@ -10,18 +10,24 @@ import SwiftUI
 struct ImageDetailView: View {
     let image: Image
     @State private var scale = 1.0
+    @State private var lastScale = 1.0
+    private let minScale = 1.0
+    private let maxScale = 5.0
     
     var magnification: some Gesture {
         MagnificationGesture()
-            .onChanged { delta in
+            .onChanged { state in
+                let delta = state / lastScale
+                lastScale = state
                 scale *= delta
-                print("onChanged: \(scale)")
+                print("delta: \(delta)")
             }
             .onEnded { state in
                 print("onEnded: \(scale)")
                 withAnimation {
-                    scale = max(scale, 1.0)
+                    validateScaleLimits()
                 }
+                lastScale = 1.0
             }
     }
     
@@ -31,6 +37,19 @@ struct ImageDetailView: View {
             .aspectRatio(contentMode: .fit)
             .scaleEffect(scale)
             .gesture(magnification)
+    }
+    
+    func getMinimumScaleAllowed() -> Double {
+        return max(scale, minScale)
+    }
+    
+    func getMaximumScaleAllowed() -> Double {
+        return min(scale, maxScale)
+    }
+    
+    func validateScaleLimits() {
+        scale = getMinimumScaleAllowed()
+        scale = getMaximumScaleAllowed()
     }
 }
 
