@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Triforce: Shape {
+struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -22,15 +22,21 @@ struct Triforce: Shape {
     }
 }
 
-struct TriforceView: View {
-    @State var angle = Angle(degrees: 0.0)
+struct TriforcePiece: View {
+    private let size: CGFloat = 150
     
-    var rotation: some Gesture {
-        RotationGesture()
-            .onChanged { state in
-                angle = state
-            }
+    var body: some View {
+        Triangle()
+            .fill(
+                LinearGradient(
+                    colors: [.yellow, .yellow.opacity(0.7)],
+                    startPoint: .center,
+                    endPoint: .bottom))
+            .frame(width: size, height: size)
     }
+}
+
+struct TriforceView: View {
     
     var body: some View {
         ZStack {
@@ -38,30 +44,10 @@ struct TriforceView: View {
             .ignoresSafeArea()
             
             VStack {
-                ZStack {
-                    Triforce()
-                        .fill(
-                            LinearGradient(
-                                colors: [.yellow.opacity(0.7), .yellow],
-                                startPoint: .top,
-                                endPoint: .center))
-                        .rotationEffect(angle)
-                        .gesture(rotation)
-                }
-                .frame(width: 200, height: 200)
-                
+                TriforcePiece()
                 HStack {
-                    ForEach(1...2, id: \.self) { _ in
-                        Triforce()
-                            .fill(
-                                LinearGradient(
-                                    colors: [.yellow, .yellow.opacity(0.7)],
-                                    startPoint: .center,
-                                    endPoint: .bottom))
-                            .rotationEffect(angle)
-                            .gesture(rotation)
-                            .frame(width: 200, height: 200)
-                    }
+                    TriforcePiece()
+                    TriforcePiece()
                 }
             }
         }
