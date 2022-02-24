@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B537D22F27C71BBF0027D69D /* ShapesDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D22E27C71BBF0027D69D /* ShapesDemoApp.swift */; };
-		B537D23127C71BBF0027D69D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D23027C71BBF0027D69D /* ContentView.swift */; };
+		B537D23127C71BBF0027D69D /* TriforceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D23027C71BBF0027D69D /* TriforceView.swift */; };
 		B537D23327C71BC00027D69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B537D23227C71BC00027D69D /* Assets.xcassets */; };
 		B537D23627C71BC00027D69D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B537D23527C71BC00027D69D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		B537D22B27C71BBF0027D69D /* ShapesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B537D22E27C71BBF0027D69D /* ShapesDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesDemoApp.swift; sourceTree = "<group>"; };
-		B537D23027C71BBF0027D69D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B537D23027C71BBF0027D69D /* TriforceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriforceView.swift; sourceTree = "<group>"; };
 		B537D23227C71BC00027D69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B537D23527C71BC00027D69D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B537D22E27C71BBF0027D69D /* ShapesDemoApp.swift */,
-				B537D23027C71BBF0027D69D /* ContentView.swift */,
+				B537D23027C71BBF0027D69D /* TriforceView.swift */,
 				B537D23227C71BC00027D69D /* Assets.xcassets */,
 				B537D23427C71BC00027D69D /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B537D23127C71BBF0027D69D /* ContentView.swift in Sources */,
+				B537D23127C71BBF0027D69D /* TriforceView.swift in Sources */,
 				B537D22F27C71BBF0027D69D /* ShapesDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
