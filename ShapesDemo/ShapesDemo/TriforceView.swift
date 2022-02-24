@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Triangle: Shape {
+struct TriangleShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -26,7 +26,7 @@ struct TriforcePiece: View {
     private let size: CGFloat = 150
     
     var body: some View {
-        Triangle()
+        TriangleShape()
             .fill(
                 LinearGradient(
                     colors: [.yellow, .yellow.opacity(0.7)],
