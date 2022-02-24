@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TangramView: View {
     
-    private let size: CGFloat = 100
+    private let size: CGFloat = 200
     
     var body: some View {
         VStack(spacing: 0) {
@@ -40,7 +40,8 @@ struct TangramView: View {
                     .rotationEffect(Angle(degrees: 90))
                     .frame(width: size, height: size)
                 
-                Rhomboid(size: size)
+                Rhomboid()
+                    .frame(width: size*2, height: size)
                     .offset(x: -(size/2))
                     .frame(width: size)
                     .foregroundColor(.green)

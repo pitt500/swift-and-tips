@@ -7,24 +7,23 @@
 
 import SwiftUI
 
-struct Rhomboid: View {
-    let size: CGFloat
-    
-    var body: some View {
-        HStack(spacing: 0) {
-            Triangle()
-                .rotationEffect(Angle(degrees: 270))
-                .frame(width: size, height: size)
-                
-            Triangle()
-                .rotationEffect(Angle(degrees: 90))
-                .frame(width: size, height: size)
-        }
+struct Rhomboid: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        
+        path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        
+        return path
     }
 }
 
 struct Rhomboid_Previews: PreviewProvider {
     static var previews: some View {
-        Rhomboid(size: 100)
+        Rhomboid()
     }
 }
