@@ -14,19 +14,19 @@ struct TangramView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
-                TriangleSide()
+                Triangle90Degrees()
                     .fill(.blue)
                     .rotationEffect(Angle(degrees: 270))
                     .frame(width: size*2, height: size*2)
                     
-                TriangleSide()
+                Triangle90Degrees()
                     .fill(.orange)
                     .frame(width: size*2, height: size*2)
             }
             
             HStack(spacing: 0) {
 
-                TriangleSide()
+                Triangle90Degrees()
                     .fill(.pink)
                     .rotationEffect(Angle(degrees: 180))
                     .frame(width: size, height: size)
@@ -35,7 +35,7 @@ struct TangramView: View {
                     .fill(.yellow)
                     .frame(width: size, height: size)
                 
-                TriangleSide()
+                Triangle90Degrees()
                     .fill(.purple)
                     .rotationEffect(Angle(degrees: 90))
                     .frame(width: size, height: size)
@@ -48,7 +48,7 @@ struct TangramView: View {
             }
             
             HStack(spacing: 0) {
-                TriangleCenter()
+                TriangleIsosceles()
                     .fill(.red)
                     .rotationEffect(Angle(degrees: 180))
                     .frame(width: size*2, height: size)

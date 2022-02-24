@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TriangleCenter: Shape {
+struct TriangleIsosceles: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -24,6 +24,6 @@ struct TriangleCenter: Shape {
 
 struct Triangle2_Previews: PreviewProvider {
     static var previews: some View {
-        TriangleCenter()
+        TriangleIsosceles()
     }
 }

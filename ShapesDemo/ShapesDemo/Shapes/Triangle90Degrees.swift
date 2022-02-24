@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TriangleSide: Shape {
+struct Triangle90Degrees: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -24,6 +24,6 @@ struct TriangleSide: Shape {
 
 struct Triangle_Previews: PreviewProvider {
     static var previews: some View {
-        TriangleSide()
+        Triangle90Degrees()
     }
 }
