@@ -11,6 +11,9 @@
 		B537D23127C71BBF0027D69D /* TriforceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D23027C71BBF0027D69D /* TriforceView.swift */; };
 		B537D23327C71BC00027D69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B537D23227C71BC00027D69D /* Assets.xcassets */; };
 		B537D23627C71BC00027D69D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B537D23527C71BC00027D69D /* Preview Assets.xcassets */; };
+		B537D23E27C7331B0027D69D /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D23D27C7331B0027D69D /* Triangle.swift */; };
+		B537D24127C733AE0027D69D /* TangramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D24027C733AE0027D69D /* TangramView.swift */; };
+		B537D24327C738310027D69D /* Rhomboid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D24227C738310027D69D /* Rhomboid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		B537D23027C71BBF0027D69D /* TriforceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriforceView.swift; sourceTree = "<group>"; };
 		B537D23227C71BC00027D69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B537D23527C71BC00027D69D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B537D23D27C7331B0027D69D /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		B537D24027C733AE0027D69D /* TangramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramView.swift; sourceTree = "<group>"; };
+		B537D24227C738310027D69D /* Rhomboid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rhomboid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		B537D22D27C71BBF0027D69D /* ShapesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B537D23F27C733A60027D69D /* Tangram */,
+				B537D23C27C7330D0027D69D /* Shapes */,
 				B537D22E27C71BBF0027D69D /* ShapesDemoApp.swift */,
 				B537D23027C71BBF0027D69D /* TriforceView.swift */,
 				B537D23227C71BC00027D69D /* Assets.xcassets */,
@@ -65,6 +73,23 @@
 				B537D23527C71BC00027D69D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B537D23C27C7330D0027D69D /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				B537D23D27C7331B0027D69D /* Triangle.swift */,
+				B537D24227C738310027D69D /* Rhomboid.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		B537D23F27C733A60027D69D /* Tangram */ = {
+			isa = PBXGroup;
+			children = (
+				B537D24027C733AE0027D69D /* TangramView.swift */,
+			);
+			path = Tangram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B537D24327C738310027D69D /* Rhomboid.swift in Sources */,
+				B537D23E27C7331B0027D69D /* Triangle.swift in Sources */,
+				B537D24127C733AE0027D69D /* TangramView.swift in Sources */,
 				B537D23127C71BBF0027D69D /* TriforceView.swift in Sources */,
 				B537D22F27C71BBF0027D69D /* ShapesDemoApp.swift in Sources */,
 			);
