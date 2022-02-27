@@ -16,49 +16,49 @@ struct SwiftLogo: Shape {
         path.move(to: startPoint)
         path.addCurve(
             to: CGPoint(x: rect.width * 0.98, y: rect.height * 0.98),
-            control1: CGPoint(x: rect.width * 0.2, y: rect.height * 1.1),
-            control2: CGPoint(x: rect.width * 0.9, y: rect.height*0.7)
+            control1: CGPoint(x: rect.width * 0.5, y: rect.height * 1.35),
+            control2: CGPoint(x: rect.width * 0.85, y: rect.height*0.67)
         )
         
         path.addQuadCurve(
             to: CGPoint(x: rect.width * 0.9, y: rect.height * 0.7),
-            control: CGPoint(x: rect.width * 1.1, y: rect.height * 0.85)
+            control: CGPoint(x: rect.width * 1.0, y: rect.height * 0.85)
         )
         
         path.addQuadCurve(
-            to: CGPoint(x: rect.width * 0.65, y: rect.minY),
-            control: CGPoint(x: rect.width * 1.1, y: rect.height * 0.3)
+            to: CGPoint(x: rect.width * 0.61, y: rect.minY),
+            control: CGPoint(x: rect.width * 1.0, y: rect.height * 0.3)
         )
         
         path.addQuadCurve(
-            to: CGPoint(x: rect.width * 0.7, y: rect.height * 0.6),
-            control: CGPoint(x: rect.width * 0.9, y: rect.height * 0.3)
+            to: CGPoint(x: rect.width * 0.7, y: rect.height * 0.53),
+            control: CGPoint(x: rect.width * 0.78, y: rect.height * 0.3)
         )
         
         
         path.addQuadCurve(
-            to: CGPoint(x: rect.width * 0.2, y: rect.height * 0.1),
+            to: CGPoint(x: rect.width * 0.215, y: rect.height * 0.09),
+            control: CGPoint(x: rect.width * 0.35, y: rect.height * 0.25)
+        )
+        
+        path.addQuadCurve(
+            to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.48),
             control: CGPoint(x: rect.width * 0.3, y: rect.height * 0.25)
         )
         
         path.addQuadCurve(
-            to: CGPoint(x: rect.width * 0.47, y: rect.height * 0.55),
-            control: CGPoint(x: rect.width * 0.25, y: rect.height * 0.25)
-        )
-        
-        path.addQuadCurve(
             to: CGPoint(x: rect.width * 0.1, y: rect.height * 0.15),
-            control: CGPoint(x: rect.width * 0.3, y: rect.height * 0.4)
+            control: CGPoint(x: rect.width * 0.35, y: rect.height * 0.4)
         )
         
         path.addQuadCurve(
-            to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.7),
-            control: CGPoint(x: rect.width * 0.30, y: rect.height * 0.51)
+            to: CGPoint(x: rect.width * 0.56, y: rect.height * 0.71),
+            control: CGPoint(x: rect.width * 0.33, y: rect.height * 0.51)
         )
         
         path.addQuadCurve(
             to: startPoint,
-            control: CGPoint(x: rect.width * 0.4, y: rect.height * 0.8)
+            control: CGPoint(x: rect.width * 0.3, y: rect.height * 0.85)
         )
         
         
@@ -69,12 +69,23 @@ struct SwiftLogo: Shape {
 struct SwiftLogo_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
+            RoundedRectangle(cornerRadius: 100)
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color(red: 253.0/255, green: 38.0/255, blue: 33.0/255),
+                            Color(red: 248.0/255, green: 137.0/255, blue: 54.0/255)
+                        ],
+                        startPoint: .bottomTrailing,
+                        endPoint: .topLeading
+                    )
+                )
             SwiftLogo()
-                .aspectRatio(1, contentMode: .fit)
-            Image("swiftlogo")
-                .resizable()
-                .aspectRatio(1, contentMode: .fit)
-                .opacity(0.4)
+                .fill(.white)
+                .padding(100)
         }
+        .padding(30)
+        .aspectRatio(1, contentMode: .fit)
     }
+    
 }
