@@ -11,12 +11,9 @@ struct SwiftLogo: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
-        path.move(
-            to: CGPoint(
-                x: rect.minX,
-                y: rect.height * 0.63
-            )
-        )
+        let startPoint = CGPoint(x: rect.minX, y: rect.height * 0.63)
+        
+        path.move(to: startPoint)
         path.addCurve(
             to: CGPoint(x: rect.width * 0.98, y: rect.height * 0.98),
             control1: CGPoint(x: rect.width * 0.2, y: rect.height * 1.1),
@@ -60,7 +57,7 @@ struct SwiftLogo: Shape {
         )
         
         path.addQuadCurve(
-            to: CGPoint(x: rect.minX, y: rect.height * 0.7),
+            to: startPoint,
             control: CGPoint(x: rect.width * 0.4, y: rect.height * 0.8)
         )
         
