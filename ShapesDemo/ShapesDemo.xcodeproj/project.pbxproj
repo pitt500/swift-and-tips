@@ -15,6 +15,8 @@
 		B537D24127C733AE0027D69D /* TangramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D24027C733AE0027D69D /* TangramView.swift */; };
 		B537D24327C738310027D69D /* Rhomboid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D24227C738310027D69D /* Rhomboid.swift */; };
 		B537D24527C805180027D69D /* TriangleIsosceles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D24427C805180027D69D /* TriangleIsosceles.swift */; };
+		B537D26B27C929870027D69D /* Moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D26A27C929870027D69D /* Moon.swift */; };
+		B537D27227CB3EDA0027D69D /* SwiftLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D27127CB3EDA0027D69D /* SwiftLogo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		B537D24027C733AE0027D69D /* TangramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramView.swift; sourceTree = "<group>"; };
 		B537D24227C738310027D69D /* Rhomboid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rhomboid.swift; sourceTree = "<group>"; };
 		B537D24427C805180027D69D /* TriangleIsosceles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleIsosceles.swift; sourceTree = "<group>"; };
+		B537D26A27C929870027D69D /* Moon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon.swift; sourceTree = "<group>"; };
+		B537D27127CB3EDA0027D69D /* SwiftLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +63,14 @@
 		B537D22D27C71BBF0027D69D /* ShapesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B537D26927C929790027D69D /* BabyToy */,
 				B537D23F27C733A60027D69D /* Tangram */,
 				B537D23C27C7330D0027D69D /* Shapes */,
 				B537D22E27C71BBF0027D69D /* ShapesDemoApp.swift */,
 				B537D23027C71BBF0027D69D /* TriforceView.swift */,
 				B537D23227C71BC00027D69D /* Assets.xcassets */,
 				B537D23427C71BC00027D69D /* Preview Content */,
+				B537D27127CB3EDA0027D69D /* SwiftLogo.swift */,
 			);
 			path = ShapesDemo;
 			sourceTree = "<group>";
@@ -93,6 +99,14 @@
 				B537D24027C733AE0027D69D /* TangramView.swift */,
 			);
 			path = Tangram;
+			sourceTree = "<group>";
+		};
+		B537D26927C929790027D69D /* BabyToy */ = {
+			isa = PBXGroup;
+			children = (
+				B537D26A27C929870027D69D /* Moon.swift */,
+			);
+			path = BabyToy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B537D27227CB3EDA0027D69D /* SwiftLogo.swift in Sources */,
 				B537D24527C805180027D69D /* TriangleIsosceles.swift in Sources */,
+				B537D26B27C929870027D69D /* Moon.swift in Sources */,
 				B537D24327C738310027D69D /* Rhomboid.swift in Sources */,
 				B537D23E27C7331B0027D69D /* Triangle90Degrees.swift in Sources */,
 				B537D24127C733AE0027D69D /* TangramView.swift in Sources */,
