@@ -63,14 +63,14 @@
 		B537D22D27C71BBF0027D69D /* ShapesDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B537D26927C929790027D69D /* BabyToy */,
+				B537D28927CDCF510027D69D /* SwiftLogo */,
+				B537D26927C929790027D69D /* ControlPoints */,
 				B537D23F27C733A60027D69D /* Tangram */,
 				B537D23C27C7330D0027D69D /* Shapes */,
 				B537D22E27C71BBF0027D69D /* ShapesDemoApp.swift */,
 				B537D23027C71BBF0027D69D /* TriforceView.swift */,
 				B537D23227C71BC00027D69D /* Assets.xcassets */,
 				B537D23427C71BC00027D69D /* Preview Content */,
-				B537D27127CB3EDA0027D69D /* SwiftLogo.swift */,
 			);
 			path = ShapesDemo;
 			sourceTree = "<group>";
@@ -101,12 +101,20 @@
 			path = Tangram;
 			sourceTree = "<group>";
 		};
-		B537D26927C929790027D69D /* BabyToy */ = {
+		B537D26927C929790027D69D /* ControlPoints */ = {
 			isa = PBXGroup;
 			children = (
 				B537D26A27C929870027D69D /* Moon.swift */,
 			);
-			path = BabyToy;
+			path = ControlPoints;
+			sourceTree = "<group>";
+		};
+		B537D28927CDCF510027D69D /* SwiftLogo */ = {
+			isa = PBXGroup;
+			children = (
+				B537D27127CB3EDA0027D69D /* SwiftLogo.swift */,
+			);
+			path = SwiftLogo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
