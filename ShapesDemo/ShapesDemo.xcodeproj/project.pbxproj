@@ -17,6 +17,9 @@
 		B537D24527C805180027D69D /* TriangleIsosceles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D24427C805180027D69D /* TriangleIsosceles.swift */; };
 		B537D26B27C929870027D69D /* Moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D26A27C929870027D69D /* Moon.swift */; };
 		B537D27227CB3EDA0027D69D /* SwiftLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537D27127CB3EDA0027D69D /* SwiftLogo.swift */; };
+		B5D5A18A27CEDFB300B2BF4D /* SwiftLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18927CEDFB300B2BF4D /* SwiftLogoView.swift */; };
+		B5D5A18C27CEDFE200B2BF4D /* SwiftUILogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18B27CEDFE200B2BF4D /* SwiftUILogoView.swift */; };
+		B5D5A18E27CEE08300B2BF4D /* SwiftLogosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18D27CEE08300B2BF4D /* SwiftLogosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		B537D24427C805180027D69D /* TriangleIsosceles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleIsosceles.swift; sourceTree = "<group>"; };
 		B537D26A27C929870027D69D /* Moon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon.swift; sourceTree = "<group>"; };
 		B537D27127CB3EDA0027D69D /* SwiftLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogo.swift; sourceTree = "<group>"; };
+		B5D5A18927CEDFB300B2BF4D /* SwiftLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogoView.swift; sourceTree = "<group>"; };
+		B5D5A18B27CEDFE200B2BF4D /* SwiftUILogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILogoView.swift; sourceTree = "<group>"; };
+		B5D5A18D27CEE08300B2BF4D /* SwiftLogosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				B537D27127CB3EDA0027D69D /* SwiftLogo.swift */,
+				B5D5A18927CEDFB300B2BF4D /* SwiftLogoView.swift */,
+				B5D5A18B27CEDFE200B2BF4D /* SwiftUILogoView.swift */,
+				B5D5A18D27CEE08300B2BF4D /* SwiftLogosView.swift */,
 			);
 			path = SwiftLogo;
 			sourceTree = "<group>";
@@ -188,7 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B537D27227CB3EDA0027D69D /* SwiftLogo.swift in Sources */,
+				B5D5A18A27CEDFB300B2BF4D /* SwiftLogoView.swift in Sources */,
 				B537D24527C805180027D69D /* TriangleIsosceles.swift in Sources */,
+				B5D5A18C27CEDFE200B2BF4D /* SwiftUILogoView.swift in Sources */,
+				B5D5A18E27CEE08300B2BF4D /* SwiftLogosView.swift in Sources */,
 				B537D26B27C929870027D69D /* Moon.swift in Sources */,
 				B537D24327C738310027D69D /* Rhomboid.swift in Sources */,
 				B537D23E27C7331B0027D69D /* Triangle90Degrees.swift in Sources */,
