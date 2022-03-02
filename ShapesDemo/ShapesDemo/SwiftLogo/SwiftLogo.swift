@@ -13,7 +13,7 @@ struct SwiftLogo: Shape {
         let width = rect.width
         let height = rect.height
         
-        let startPoint = CGPoint(x: rect.minX, y: rect.height * 0.63)
+        let startPoint = CGPoint(x: rect.minX, y: height * 0.63)
         
         path.move(to: startPoint)
         path.addCurve(

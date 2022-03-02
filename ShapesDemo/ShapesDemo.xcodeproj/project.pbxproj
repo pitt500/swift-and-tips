@@ -20,6 +20,7 @@
 		B5D5A18A27CEDFB300B2BF4D /* SwiftLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18927CEDFB300B2BF4D /* SwiftLogoView.swift */; };
 		B5D5A18C27CEDFE200B2BF4D /* SwiftUILogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18B27CEDFE200B2BF4D /* SwiftUILogoView.swift */; };
 		B5D5A18E27CEE08300B2BF4D /* SwiftLogosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18D27CEE08300B2BF4D /* SwiftLogosView.swift */; };
+		B5D5A19027CEE6BF00B2BF4D /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5A18F27CEE6BF00B2BF4D /* DemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B5D5A18927CEDFB300B2BF4D /* SwiftLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogoView.swift; sourceTree = "<group>"; };
 		B5D5A18B27CEDFE200B2BF4D /* SwiftUILogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILogoView.swift; sourceTree = "<group>"; };
 		B5D5A18D27CEE08300B2BF4D /* SwiftLogosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogosView.swift; sourceTree = "<group>"; };
+		B5D5A18F27CEE6BF00B2BF4D /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B537D23027C71BBF0027D69D /* TriforceView.swift */,
 				B537D23227C71BC00027D69D /* Assets.xcassets */,
 				B537D23427C71BC00027D69D /* Preview Content */,
+				B5D5A18F27CEE6BF00B2BF4D /* DemoView.swift */,
 			);
 			path = ShapesDemo;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B537D27227CB3EDA0027D69D /* SwiftLogo.swift in Sources */,
+				B5D5A19027CEE6BF00B2BF4D /* DemoView.swift in Sources */,
 				B5D5A18A27CEDFB300B2BF4D /* SwiftLogoView.swift in Sources */,
 				B537D24527C805180027D69D /* TriangleIsosceles.swift in Sources */,
 				B5D5A18C27CEDFE200B2BF4D /* SwiftUILogoView.swift in Sources */,
