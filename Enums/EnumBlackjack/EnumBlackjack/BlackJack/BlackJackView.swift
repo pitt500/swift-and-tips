@@ -21,7 +21,7 @@ struct BlackJackView: View {
                     .padding(.top, 10)
                 PlayerHandView(
                     hand: viewModel.cpuHand,
-                    isHidden: true
+                    isHidden: !viewModel.showResult
                 )
                     .padding(-20)
                 VStack {
